@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import Logo from '../assets/yonsei_highq_1200x630.png';
 
 function Header() {
 	return (
 		<HeaderContainerCss>
 			<Nav>
-				<div />
+				<HeaderLogo />
 				<NavMenuCss>
 					<NavMenuUlCss>
 						<NavMenuLiCss>ADDS소개</NavMenuLiCss>
@@ -13,10 +14,27 @@ function Header() {
 						<NavMenuLiCss>소통공간</NavMenuLiCss>
 					</NavMenuUlCss>
 				</NavMenuCss>
-				<div />
+				<HeaderInput />
 			</Nav>
 		</HeaderContainerCss>
 	);
+}
+
+function HeaderLogo() {
+	return (
+		<HeaderLogoCss>
+			<img src={Logo} width='175' height='90' alt='Logo' />
+		</HeaderLogoCss>
+	);
+}
+
+const HeaderLogoCss = styled.div`
+	width: 18rem;
+	height: 9rem;
+`;
+
+function HeaderInput() {
+	return <div />;
 }
 
 const HeaderContainerCss = styled.header`
@@ -31,6 +49,8 @@ const Nav = styled.nav`
 	grid-template-columns: 1fr 7fr 1fr;
 	align-items: center;
 `;
+
+const NavLogoCss = styled.div``;
 
 const NavMenuCss = styled.div`
 	width: fit-content;
