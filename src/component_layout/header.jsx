@@ -14,27 +14,10 @@ function Header() {
 						<NavMenuLiCss>소통공간</NavMenuLiCss>
 					</NavMenuUlCss>
 				</NavMenuCss>
-				<HeaderInput />
+				<HeaderSelect />
 			</Nav>
 		</HeaderContainerCss>
 	);
-}
-
-function HeaderLogo() {
-	return (
-		<HeaderLogoCss>
-			<img src={Logo} width='175' height='90' alt='Logo' />
-		</HeaderLogoCss>
-	);
-}
-
-const HeaderLogoCss = styled.div`
-	width: 18rem;
-	height: 9rem;
-`;
-
-function HeaderInput() {
-	return <div />;
 }
 
 const HeaderContainerCss = styled.header`
@@ -50,7 +33,36 @@ const Nav = styled.nav`
 	align-items: center;
 `;
 
-const NavLogoCss = styled.div``;
+function HeaderLogo() {
+	return (
+		<HeaderLogoCss>
+			<img src={Logo} width='175' height='90' alt='Logo' />
+		</HeaderLogoCss>
+	);
+}
+
+const HeaderLogoCss = styled.div`
+	width: 18rem;
+	height: 9rem;
+`;
+
+function HeaderSelect() {
+	return (
+		<HeaderSelectCss>
+			<option value='한국어'>한국어</option>
+			<option value='영어'>영어</option>
+		</HeaderSelectCss>
+	);
+}
+
+const HeaderSelectCss = styled.select`
+	color: #767676;
+	border-color: #e0e0e0;
+	width: 11.8rem;
+	height: 3rem;
+	padding: 0 0.3rem;
+	margin-top: 1rem;
+`;
 
 const NavMenuCss = styled.div`
 	width: fit-content;

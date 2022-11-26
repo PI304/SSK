@@ -17,7 +17,6 @@ function Layout() {
 const LayoutContainerCss = styled.div`
 	display: flex;
 	flex-direction: column;
-	min-hight: 100vh;
 	overflow: hidden;
 `;
 export default Layout;

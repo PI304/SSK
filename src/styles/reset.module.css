@@ -89,6 +89,7 @@ video {
 	font-size: 62.5%;
 	vertical-align: baseline;
 	-webkit-font-smoothing: auto;
+	color: #333333;
 }
 /* HTML5 display-role reset for older browsers */
 article,
