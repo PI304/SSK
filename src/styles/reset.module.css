@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 html,
 body,
@@ -86,9 +87,8 @@ video {
 	padding: 0;
 	border: 0;
 	font-size: 62.5%;
-	font: inherit;
 	vertical-align: baseline;
-	font-family: 'Noto Sans KR', sans-serif;
+	-webkit-font-smoothing: auto;
 }
 /* HTML5 display-role reset for older browsers */
 article,
