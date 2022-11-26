@@ -1,6 +1,7 @@
 * {
 	box-sizing: border-box;
 	font-family: 'Noto Sans KR', sans-serif;
+	list-style: none;
 }
 html,
 body,
@@ -90,6 +91,8 @@ video {
 	vertical-align: baseline;
 	-webkit-font-smoothing: auto;
 	color: #333333;
+	text-decoration: none;
+	outline: none;
 }
 /* HTML5 display-role reset for older browsers */
 article,
