@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Logo from '../assets/yonsei_highq_1200x630.png';
+import PageIntro from '../Routes/intro';
 
 function Header() {
 	return (
@@ -14,7 +15,7 @@ function Header() {
 						<NavMenuLiCss>소통공간</NavMenuLiCss>
 					</NavMenuUlCss>
 				</NavMenuCss>
-				<HeaderInput />
+				<HeaderSelect />
 			</Nav>
 		</HeaderContainerCss>
 	);
@@ -22,20 +23,36 @@ function Header() {
 
 function HeaderLogo() {
 	return (
-		<HeaderLogoCss>
-			<img src={Logo} width='175' height='90' alt='Logo' />
-		</HeaderLogoCss>
+		<a href='http://localhost:3000/'>
+			<HeaderLogoCss>
+				<img src={Logo} width='170' height='90' alt='Logo' />
+			</HeaderLogoCss>
+		</a>
 	);
 }
 
 const HeaderLogoCss = styled.div`
-	width: 18rem;
+	width: 17.5rem;
 	height: 9rem;
 `;
 
-function HeaderInput() {
-	return <div />;
+function HeaderSelect() {
+	return (
+		<HeaderSelectCss>
+			<option value='한국어'>한국어</option>
+			<option value='영어'>영어</option>
+		</HeaderSelectCss>
+	);
 }
+
+const HeaderSelectCss = styled.select`
+	color: #767676;
+	border-color: #e0e0e0;
+	width: 11rem;
+	height: 3rem;
+	padding: 0 0.3rem;
+	top: 2px;
+`;
 
 const HeaderContainerCss = styled.header`
 	box-shadow: 0px 2px 10px rgb(0 0 0 / 10%);
@@ -50,13 +67,11 @@ const Nav = styled.nav`
 	align-items: center;
 `;
 
-const NavLogoCss = styled.div``;
-
 const NavMenuCss = styled.div`
 	width: fit-content;
 	justify-self: end;
 	margin-right: 6.3rem;
-	margin-top: 1rem;
+	margin-top: 0.5rem;
 `;
 
 const NavMenuUlCss = styled.ul`
