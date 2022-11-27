@@ -1,6 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import styled from 'styled-components';
 import Logo from '../assets/yonsei_highq_1200x630.png';
+// eslint-disable-next-line import/no-cycle
+import Intro from '../routers/intro';
+// eslint-disable-next-line import/no-cycle
+import Publication from '../routers/publication';
+// eslint-disable-next-line import/no-cycle
+import Resources from '../routers/resources';
+// eslint-disable-next-line import/no-cycle
+import Notice from '../routers/notice';
 
 function Header() {
 	return (
@@ -79,7 +87,7 @@ const NavMenuUlCss = styled.ul`
 function NavMenuLi1() {
 	return (
 		<NavMenuLiCss>
-			<a href='https://www.yonsei.ac.kr/sc/'>ADDS소개</a>
+			<a href='../routers/intro'>ADDS소개</a>
 			<NavSubMenuCss>
 				<li>
 					<a>ADDS 소개</a>
@@ -98,7 +106,7 @@ function NavMenuLi1() {
 function NavMenuLi2() {
 	return (
 		<NavMenuLiCss>
-			<a href='https://www.yonsei.ac.kr/sc/'>발간물</a>
+			<a href='../routers/publication'>발간물</a>
 			<NavSubMenuCss>
 				<li>
 					<a>발간물</a>
@@ -111,7 +119,7 @@ function NavMenuLi2() {
 function NavMenuLi3() {
 	return (
 		<NavMenuLiCss>
-			<a href='https://www.yonsei.ac.kr/sc/'>데이터</a>
+			<a href='../routers/resources'>데이터</a>
 			<NavSubMenuCss>
 				<li>
 					<a>자료안내</a>
@@ -127,7 +135,7 @@ function NavMenuLi3() {
 function NavMenuLi4() {
 	return (
 		<NavMenuLiCss>
-			<a href='https://www.yonsei.ac.kr/sc/'>소통공간</a>
+			<a href='../routers/notice'>소통공간</a>
 			<NavSubMenuCss>
 				<li>
 					<a>공지사항</a>
