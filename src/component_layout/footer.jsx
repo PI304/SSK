@@ -40,7 +40,7 @@ function FooterLogo() {
 
 const FooterLogoCss = styled.div`
 	display: flex;
-	margin-right: 1.5rem;
+	margin-right: 1.6rem;
 `;
 
 /* 푸터 제목 컴포넌트 및 CSS */
@@ -57,8 +57,8 @@ function FooterTitle() {
 
 const FooterTitleCss = styled.div`
 	font-weight: 550;
-	margin-right: 1.5rem;
-	font-size: 1.6rem;
+	margin-right: 1.6rem;
+	font-size: 1.5rem;
 	gap: 1rem;
 `;
 
@@ -66,17 +66,17 @@ const FooterTitleCss = styled.div`
 
 function FooterAddress() {
 	return (
-		<div>
+		<FooterAddressCss>
 			(03722) 서울시 서대문구 연세로 50 연세우유(708동) 309호
 			<br />
-			COPYRIGHTS (C) COLLEGE OF HUMAN ECOLOGY OF YONSEI.
-			<span>ALL RIGHTS RESERVED.</span>
-		</div>
+			COPYRIGHTS (C) COLLEGE OF HUMAN ECOLOGY OF YONSEI. ALL RIGHTS RESERVED.
+		</FooterAddressCss>
 	);
 }
 
 const FooterAddressCss = styled.div`
-	font-size: 0.875rem;
+	font-size: 1.5rem;
+	align-self: flex-center;
 `;
 
 export default Footer;

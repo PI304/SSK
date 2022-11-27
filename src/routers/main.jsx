@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import Header from './header';
-import Footer from './footer';
+import Header from '../component_layout/header';
+import Footer from '../component_layout/footer';
 
-function Layout() {
+function Main() {
 	return (
 		<LayoutContainerCss>
 			<Header />
@@ -20,4 +20,5 @@ const LayoutContainerCss = styled.div`
 	overflow: hidden;
 	min-height: 100vh;
 `;
-export default Layout;
+
+export default Main;
