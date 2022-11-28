@@ -1,13 +1,6 @@
 import styled from 'styled-components';
 import Logo from '../assets/yonsei_highq_1200x630.png';
 
-import Intro from '../routers/intro';
-
-import Publication from '../routers/publication';
-
-import Resources from '../routers/resources';
-import Notice from '../routers/notice';
-
 function Header() {
 	return (
 		<HeaderContainerCss>
