@@ -100,7 +100,7 @@ function NavMenuLi2() {
 			<a href='../routers/publication'>발간물</a>
 			<NavSubMenuCss>
 				<li>
-					<a>발간물</a>
+					<a href='../routers/publication'>발간물</a>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
