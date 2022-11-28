@@ -1,13 +1,11 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import styled from 'styled-components';
 import Logo from '../assets/yonsei_highq_1200x630.png';
-// eslint-disable-next-line import/no-cycle
+
 import Intro from '../routers/intro';
-// eslint-disable-next-line import/no-cycle
+
 import Publication from '../routers/publication';
-// eslint-disable-next-line import/no-cycle
+
 import Resources from '../routers/resources';
-// eslint-disable-next-line import/no-cycle
 import Notice from '../routers/notice';
 
 function Header() {
