@@ -81,7 +81,7 @@ function NavMenuLi1() {
 			<a href='../routers/intro'>ADDS소개</a>
 			<NavSubMenuCss>
 				<li>
-					<a>ADDS 소개</a>
+					<a href='../routers/intro'>ADDS 소개</a>
 				</li>
 				<li>
 					<a>연구진 소개</a>
