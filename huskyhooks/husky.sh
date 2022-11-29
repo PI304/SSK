@@ -1,7 +1,7 @@
 #!/bin/sh
 
-FORBIDDEN_SSH_URL="https://github.com/PI304/SSK.git" # insert your remote url (ssh)
-FORBIDDEN_SSH_URL="https://github.com/PI304/SSK.git" # insert your remote url (ssh)
+FORBIDDEN_HTTPS_URL="https://github.com/PI304/SSK.git" # insert your remote url (https)
+FORBIDDEN_SSH_URL="git@github.com:PI304/SSK.git" # insert your remote url (ssh)
 FORBIDDEN_REF="Desktop/ssk/master" # insert branch ref
 
 ARR_GIT_PARAMS=($(echo $HUSKY_GIT_PARAMS))
