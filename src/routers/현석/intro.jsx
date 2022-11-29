@@ -7,7 +7,7 @@ function Intro() {
 	return (
 		<LayoutContainerCss>
 			<Header />
-
+			<h2>intro</h2>
 			<main>Intro</main>
 
 			<Footer />
