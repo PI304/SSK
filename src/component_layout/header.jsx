@@ -62,32 +62,31 @@ const HeaderLogoCss = styled.div`
 /* 헤더 메뉴 컴포넌트 및 CSS */
 
 const NavMenuCss = styled.div`
-	width: fit-content;
-	height: 8rem;
+	width: 60rem;
+	height: 9rem;
 	justify-self: end;
-	margin-right: 7rem;
 `;
 
 const NavMenuUlCss = styled.ul`
 	display: flex;
 	justify-content: flex-end;
-	gap: 1rem 6.8rem;
-	height: 8rem;
+	width: 60rem;
+	height: 9rem;
 `;
 
 function NavMenuLi1() {
 	return (
 		<NavMenuLiCss>
-			<a href='./routers/현석/intro'>ADDS소개</a>
+			<a href='../routers/현석/intro'>ADDS소개</a>
 			<NavSubMenuCss>
 				<li>
-					<a href='./routers/현석/intro'>ADDS 소개</a>
+					<a href='../routers/현석/intro'>ADDS 소개</a>
 				</li>
 				<li>
-					<a href='./routers/현아/members'>연구진 소개</a>
+					<a href='../routers/현아/members'>연구진 소개</a>
 				</li>
 				<li>
-					<a href='./routers/주현/research'>조사설계</a>
+					<a href='../routers/주현/research'>조사설계</a>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -97,7 +96,7 @@ function NavMenuLi1() {
 function NavMenuLi2() {
 	return (
 		<NavMenuLiCss>
-			<a href='./routers/주현/publication'>발간물</a>
+			<a href='../routers/주현/publication'>발간물</a>
 			<NavSubMenuCss>
 				<li>
 					<a href='../routers/주현/publication'>발간물</a>
@@ -113,10 +112,10 @@ function NavMenuLi3() {
 			<a href='../routers/현아/resources'>데이터</a>
 			<NavSubMenuCss>
 				<li>
-					<a href='./routers/현아/resources'>자료안내</a>
+					<a href='../routers/현아/resources'>자료안내</a>
 				</li>
 				<li>
-					<a href='./routers/현석/paper'>데이터활용논문</a>
+					<a href='../routers/현석/paper'>데이터활용논문</a>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -126,19 +125,19 @@ function NavMenuLi3() {
 function NavMenuLi4() {
 	return (
 		<NavMenuLiCss>
-			<a href='./routers/현아/notice'>소통공간</a>
+			<a href='../routers/현아/notice'>소통공간</a>
 			<NavSubMenuCss>
 				<li>
-					<a href='./routers/현아/notice'>공지사항</a>
+					<a href='../routers/현아/notice'>공지사항</a>
 				</li>
 				<li>
-					<a href='./routers/주현/reports'>보도자료</a>
+					<a href='../routers/주현/reports'>보도자료</a>
 				</li>
 				<li>
-					<a href='./routers/주현/FAQ'>FAQ</a>
+					<a href='../routers/주현/FAQ'>FAQ</a>
 				</li>
 				<li>
-					<a href='./routers/현석/contact'>Contact</a>
+					<a href='../routers/현석/contact'>Contact</a>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -148,9 +147,12 @@ const NavMenuLiCss = styled.li`
 	font-size: 3rem;
 	display: flex;
 	flex-direction: column;
+	width: 15rem;
 `;
 
 const NavSubMenuCss = styled.ul`
+	width: 9rem;
+	height: 5rem;
 	margin-top: 2rem;
 	display: block;
 	background: rgba(226, 237, 251, 0.9);

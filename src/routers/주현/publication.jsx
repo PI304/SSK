@@ -7,7 +7,7 @@ function Publication() {
 	return (
 		<LayoutContainerCss>
 			<Header />
-
+			<h2>publication</h2>
 			<main />
 
 			<Footer />
