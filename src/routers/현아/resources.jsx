@@ -7,7 +7,7 @@ function Resources() {
 	return (
 		<LayoutContainerCss>
 			<Header />
-
+			<h2>resources</h2>
 			<main />
 
 			<Footer />

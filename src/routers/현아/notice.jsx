@@ -7,7 +7,7 @@ function Notice() {
 	return (
 		<LayoutContainerCss>
 			<Header />
-
+			<h2>notice</h2>
 			<main />
 
 			<Footer />
