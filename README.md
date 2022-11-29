@@ -64,15 +64,35 @@ feature 브랜치의 커밋 내용을 합쳐 새로운 단일 커밋으로 만�
 > feature 브랜치에서 작업한 커밋이 여러 개일 경우, feature 브랜치의 이름으로 스쿼시된 후 머지되며 커밋의 이름들이 세부 내용으로 남는다.
 
 ```
-Feature/Home-button  <= 브랜치 이름
+Feature  <= 브랜치 이름
 
-* 추가: reset css 적용
+* feature: reset css 적용
 
-* 추가: Headcomponet 추가
+* feature: Headcomponet 추가
 
-* 추가: HeadcomponetCss 추가
+* feature: HeadcomponetCss 추가
 
-* 고침: FootercomponetCss 고침
+```
+<img width="729" alt="스크린샷 2022-11-29 23 15 31" src="https://user-images.githubusercontent.com/110515401/204552979-7de9e25d-be13-4045-a9cd-0d469a149b1a.png">
+
+사진의 자세한 내용
+
+```  
+만약 커밋 내용이 여러개일 경우 브랜치는 Feature로 생성하고 이 칸에 commit 내용을 써주면 됩니다
+
+주의사항: Feature 기능만 commit을 추가하는 것이지 Fix 브랜치로 올려야 할 때는 나누어 올려야 합니다
+---------------------
+올바른 예시
+
+feature: master branch push 막기
+
+feature: intro 페이지 추가
+----------------------
+잘못된 예시
+
+feature: master branch push 막기
+
+fix: intro 페이지 수정
 ```
 
 ---
