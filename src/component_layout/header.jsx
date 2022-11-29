@@ -78,16 +78,16 @@ const NavMenuUlCss = styled.ul`
 function NavMenuLi1() {
 	return (
 		<NavMenuLiCss>
-			<a href='../routers/intro'>ADDS소개</a>
+			<a href='./routers/현석/intro'>ADDS소개</a>
 			<NavSubMenuCss>
 				<li>
-					<a href='../routers/intro'>ADDS 소개</a>
+					<a href='./routers/현석/intro'>ADDS 소개</a>
 				</li>
 				<li>
-					<a>연구진 소개</a>
+					<a href='./routers/현아/members'>연구진 소개</a>
 				</li>
 				<li>
-					<a>조사설계</a>
+					<a href='./routers/주현/research'>조사설계</a>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -97,10 +97,10 @@ function NavMenuLi1() {
 function NavMenuLi2() {
 	return (
 		<NavMenuLiCss>
-			<a href='../routers/publication'>발간물</a>
+			<a href='./routers/주현/publication'>발간물</a>
 			<NavSubMenuCss>
 				<li>
-					<a href='../routers/publication'>발간물</a>
+					<a href='../routers/주현/publication'>발간물</a>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -110,13 +110,13 @@ function NavMenuLi2() {
 function NavMenuLi3() {
 	return (
 		<NavMenuLiCss>
-			<a href='../routers/resources'>데이터</a>
+			<a href='../routers/현아/resources'>데이터</a>
 			<NavSubMenuCss>
 				<li>
-					<a>자료안내</a>
+					<a href='./routers/현아/resources'>자료안내</a>
 				</li>
 				<li>
-					<a>데이터활용논문</a>
+					<a href='./routers/현석/paper'>데이터활용논문</a>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -126,19 +126,19 @@ function NavMenuLi3() {
 function NavMenuLi4() {
 	return (
 		<NavMenuLiCss>
-			<a href='../routers/notice'>소통공간</a>
+			<a href='./routers/현아/notice'>소통공간</a>
 			<NavSubMenuCss>
 				<li>
-					<a>공지사항</a>
+					<a href='./routers/현아/notice'>공지사항</a>
 				</li>
 				<li>
-					<a>보도자료</a>
+					<a href='./routers/주현/reports'>보도자료</a>
 				</li>
 				<li>
-					<a>FAQ</a>
+					<a href='./routers/주현/FAQ'>FAQ</a>
 				</li>
 				<li>
-					<a>Contact</a>
+					<a href='./routers/현석/contact'>Contact</a>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>

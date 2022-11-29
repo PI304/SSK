@@ -1,9 +1,8 @@
-/* eslint-disable import/no-cycle */
 import styled from 'styled-components';
-import Header from '../component_layout/header';
-import Footer from '../component_layout/footer';
+import Header from '../../component_layout/header';
+import Footer from '../../component_layout/footer';
 
-function Resources() {
+function Main() {
 	return (
 		<LayoutContainerCss>
 			<Header />
@@ -22,4 +21,4 @@ const LayoutContainerCss = styled.div`
 	min-height: 100vh;
 `;
 
-export default Resources;
+export default Main;
