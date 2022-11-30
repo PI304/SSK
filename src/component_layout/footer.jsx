@@ -40,7 +40,7 @@ function FooterLogo() {
 
 const FooterLogoCss = styled.div`
 	display: flex;
-	margin-right: 1.6rem;
+	margin-right: 2rem;
 `;
 
 /* 푸터 제목 컴포넌트 및 CSS */
@@ -58,8 +58,9 @@ function FooterTitle() {
 const FooterTitleCss = styled.div`
 	font-weight: 550;
 	margin-right: 1.6rem;
-	font-size: 1.5rem;
-	gap: 1rem;
+	font-size: 1.6rem;
+	width: 28.2rem;
+	line-height: 2.4rem;
 `;
 
 /* 푸터 주소 컴포넌트 및 CSS */
@@ -77,6 +78,7 @@ function FooterAddress() {
 const FooterAddressCss = styled.div`
 	font-size: 1.5rem;
 	align-self: flex-center;
+	line-height: 2rem;
 `;
 
 export default Footer;
