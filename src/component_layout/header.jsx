@@ -66,6 +66,8 @@ const NavMenuCss = styled.div`
 	width: 60rem;
 	height: 9rem;
 	justify-self: end;
+	display: flex;
+	justify-content: center;
 `;
 
 const NavMenuUlCss = styled.ul`
