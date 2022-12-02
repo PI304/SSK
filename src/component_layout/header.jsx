@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Logo from '../assets/yonsei_highq_1200x630.png';
 
@@ -77,16 +78,16 @@ const NavMenuUlCss = styled.ul`
 function NavMenuLi1() {
 	return (
 		<NavMenuLiCss>
-			<a href='../routers/현석/intro'>ADDS소개</a>
+			<Link to='../routers/현석/intro'>ADDS소개</Link>
 			<NavSubMenuCss>
 				<li>
-					<a href='../routers/현석/intro'>ADDS 소개</a>
+					<Link to='../routers/현석/intro'>ADDS 소개</Link>
 				</li>
 				<li>
-					<a href='../routers/현아/members'>연구진 소개</a>
+					<Link to='../routers/현아/members'>연구진 소개</Link>
 				</li>
 				<li>
-					<a href='../routers/주현/research'>조사설계</a>
+					<Link to='../routers/주현/research'>조사설계</Link>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -96,10 +97,10 @@ function NavMenuLi1() {
 function NavMenuLi2() {
 	return (
 		<NavMenuLiCss>
-			<a href='../routers/주현/publication'>발간물</a>
+			<Link to='../routers/주현/publication'>발간물</Link>
 			<NavSubMenuCss>
 				<li>
-					<a href='../routers/주현/publication'>발간물</a>
+					<Link to='../routers/주현/publication'>발간물</Link>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -109,13 +110,13 @@ function NavMenuLi2() {
 function NavMenuLi3() {
 	return (
 		<NavMenuLiCss>
-			<a href='../routers/현아/resources'>데이터</a>
+			<Link to='../routers/현아/resources'>데이터</Link>
 			<NavSubMenuCss>
 				<li>
-					<a href='../routers/현아/resources'>자료안내</a>
+					<Link to='../routers/현아/resources'>자료안내</Link>
 				</li>
 				<li>
-					<a href='../routers/현석/paper'>데이터활용논문</a>
+					<Link to='../routers/현석/papers'>데이터활용논문</Link>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -125,19 +126,19 @@ function NavMenuLi3() {
 function NavMenuLi4() {
 	return (
 		<NavMenuLiCss>
-			<a href='../routers/현아/notice'>소통공간</a>
+			<Link to='../routers/현아/notice'>소통공간</Link>
 			<NavSubMenuCss>
 				<li>
-					<a href='../routers/현아/notice'>공지사항</a>
+					<Link to='../routers/현아/notice'>공지사항</Link>
 				</li>
 				<li>
-					<a href='../routers/주현/reports'>보도자료</a>
+					<Link to='../routers/주현/reports'>보도자료</Link>
 				</li>
 				<li>
-					<a href='../routers/주현/FAQ'>FAQ</a>
+					<Link to='../routers/주현/FAQ'>FAQ</Link>
 				</li>
 				<li>
-					<a href='../routers/현석/contact'>Contact</a>
+					<Link to='../routers/현석/contact'>Contact</Link>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
