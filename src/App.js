@@ -19,16 +19,16 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route path='/' element={<Main />} />
-				<Route path='intro' element={<Intro />} />
-				<Route path='papers' element={<Papers />} />
-				<Route path='contact' element={<Contact />} />
-				<Route path='research' element={<Research />} />
-				<Route path='publication' element={<Publication />} />
-				<Route path='reports' element={<Reports />} />
-				<Route path='FAQ' element={<FAQ />} />
-				<Route path='members' element={<Members />} />
-				<Route path='notice' element={<Notice />} />
-				<Route path='resources' element={<Resources />} />
+				<Route path='routers/현석/intro' element={<Intro />} />
+				<Route path='routers/현석/papers' element={<Papers />} />
+				<Route path='routers/현석/contact' element={<Contact />} />
+				<Route path='routers/주현/research' element={<Research />} />
+				<Route path='routers/주현/publication' element={<Publication />} />
+				<Route path='routers/주현/reports' element={<Reports />} />
+				<Route path='routers/주현/FAQ' element={<FAQ />} />
+				<Route path='routers/현아/members' element={<Members />} />
+				<Route path='routers/현아/notice' element={<Notice />} />
+				<Route path='routers/현아/resources' element={<Resources />} />
 			</Routes>
 		</BrowserRouter>
 	);
