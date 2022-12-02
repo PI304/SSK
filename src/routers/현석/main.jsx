@@ -108,7 +108,7 @@ const MainCarouselCss = styled.div`
 	height: 20rem;
 `;
 
-/* 사이트맵1 CSS */
+/* 사이트맵 Box CSS */
 
 const MainSiteMapCss = styled.div`
 	display: flex;
@@ -122,6 +122,8 @@ const MainSiteMapBoxCss = styled.div`
 	width: 27.7rem;
 	height: 27.7rem;
 `;
+
+/* 사이트맵1 CSS */
 
 const MainSiteMapBackGroundCss1 = styled.div`
 	background-image: url(${IMG1});
