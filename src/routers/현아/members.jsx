@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-// eslint-disable-next-line import/no-cycle
-import KimHyeonGyeong from '../../assets/김현경 교수님.png';
 import Header from '../../component_layout/header';
 import Footer from '../../component_layout/footer';
 
@@ -59,7 +57,7 @@ function Researchers() {
 function TopMember() {
 	return (
 		<TopMemberCss>
-			{/* <img src={KimHyeonGyeong} alt='profile' /> */}
+			{}
 			김현경교수님 사진 및 정보
 		</TopMemberCss>
 	);
