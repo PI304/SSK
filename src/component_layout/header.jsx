@@ -68,6 +68,7 @@ const NavMenuCss = styled.div`
 	justify-self: end;
 	display: flex;
 	justify-content: center;
+	margin-right: 5rem;
 `;
 
 const NavMenuUlCss = styled.ul`
@@ -80,16 +81,16 @@ const NavMenuUlCss = styled.ul`
 function NavMenuLi1() {
 	return (
 		<NavMenuLiCss>
-			<Link to='../routers/현석/intro'>ADDS소개</Link>
+			<NavMenuACss to='../routers/현석/intro'>ADDS소개</NavMenuACss>
 			<NavSubMenuCss>
 				<li>
-					<Link to='../routers/현석/intro'>ADDS 소개</Link>
+					<NavSubMenuTopACss to='../routers/현석/intro'>ADDS 소개</NavSubMenuTopACss>
 				</li>
 				<li>
-					<Link to='../routers/현아/members'>연구진 소개</Link>
+					<NavSubMenuACss to='../routers/현아/members'>연구진 소개</NavSubMenuACss>
 				</li>
 				<li>
-					<Link to='../routers/주현/research'>조사설계</Link>
+					<NavSubMenuACss to='../routers/주현/research'>조사설계</NavSubMenuACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -99,10 +100,10 @@ function NavMenuLi1() {
 function NavMenuLi2() {
 	return (
 		<NavMenuLiCss>
-			<Link to='../routers/주현/publication'>발간물</Link>
+			<NavMenuACss to='../routers/주현/publication'>발간물</NavMenuACss>
 			<NavSubMenuCss>
 				<li>
-					<Link to='../routers/주현/publication'>발간물</Link>
+					<NavSubMenuTopACss to='../routers/주현/publication'>발간물</NavSubMenuTopACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -112,13 +113,13 @@ function NavMenuLi2() {
 function NavMenuLi3() {
 	return (
 		<NavMenuLiCss>
-			<Link to='../routers/현아/resources'>데이터</Link>
+			<NavMenuACss to='../routers/현아/resources'>데이터</NavMenuACss>
 			<NavSubMenuCss>
 				<li>
-					<Link to='../routers/현아/resources'>자료안내</Link>
+					<NavSubMenuTopACss to='../routers/현아/resources'>자료안내</NavSubMenuTopACss>
 				</li>
 				<li>
-					<Link to='../routers/현석/papers'>데이터활용논문</Link>
+					<NavSubMenuACss to='../routers/현석/papers'>데이터활용논문</NavSubMenuACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -128,19 +129,19 @@ function NavMenuLi3() {
 function NavMenuLi4() {
 	return (
 		<NavMenuLiCss>
-			<Link to='../routers/현아/notice'>소통공간</Link>
+			<NavMenuACss to='../routers/현아/notice'>소통공간</NavMenuACss>
 			<NavSubMenuCss>
 				<li>
-					<Link to='../routers/현아/notice'>공지사항</Link>
+					<NavSubMenuTopACss to='../routers/현아/notice'>공지사항</NavSubMenuTopACss>
 				</li>
 				<li>
-					<Link to='../routers/주현/reports'>보도자료</Link>
+					<NavSubMenuACss to='../routers/주현/reports'>보도자료</NavSubMenuACss>
 				</li>
 				<li>
-					<Link to='../routers/주현/FAQ'>FAQ</Link>
+					<NavSubMenuACss to='../routers/주현/FAQ'>FAQ</NavSubMenuACss>
 				</li>
 				<li>
-					<Link to='../routers/현석/contact'>Contact</Link>
+					<NavSubMenuACss to='../routers/현석/contact'>Contact</NavSubMenuACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -150,17 +151,48 @@ const NavMenuLiCss = styled.li`
 	font-size: 3rem;
 	display: flex;
 	flex-direction: column;
-	width: 15rem;
+	width: 13rem;
+	height: 30rem;
+	}
+`;
+
+const NavMenuACss = styled(Link)`
+	height: 9rem;
+	text-align: center;
+	padding-top: 4rem;
 `;
 
 const NavSubMenuCss = styled.ul`
-	width: 9rem;
+	height: 20rem;
 	height: 5rem;
-	margin-top: 2rem;
+	width: 13rem;
 	display: block;
 	background: rgba(226, 237, 251, 0.9);
 	text-align: center;
 	border-top: 4px solid #8dbcff;
+	position: relative;
+	top: -3px;
+	z-index: 1;
+`;
+
+const NavSubMenuTopACss = styled(Link)`
+	height: 5rem;
+	width: 13rem;
+	display: block;
+	background: rgba(226, 237, 251, 0.9);
+	text-align: center;
+	border-top: 4px solid #8dbcff;
+	position: relative;
+	top: -3px;
+	z-index: 1;
+`;
+
+const NavSubMenuACss = styled(Link)`
+	height: 5rem;
+	width: 13rem;
+	display: block;
+	background: rgba(226, 237, 251, 0.9);
+	text-align: center;
 	position: relative;
 	top: -3px;
 	z-index: 1;
