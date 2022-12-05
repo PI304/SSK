@@ -5,7 +5,7 @@ import Header from '../../component_layout/Header';
 import Footer from '../../component_layout/Footer';
 import WhitePattern from '../../assets/pattern_white.png';
 import BluePattern from '../../assets/pattern_blue.png';
-import CardContent from './Cardcontent';
+import CardContent from './CardContent';
 
 function Research() {
 	const [value, setValue] = useState(0);
