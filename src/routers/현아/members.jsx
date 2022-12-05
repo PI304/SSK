@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Header from '../../component_layout/header';
-import Footer from '../../component_layout/footer';
+import Header from '../../component_layout/Header';
+import Footer from '../../component_layout/Footer';
 
 function Members() {
 	return (

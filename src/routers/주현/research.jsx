@@ -1,33 +1,17 @@
 import { useState } from 'react';
-<<<<<<< HEAD
 import styled from 'styled-components';
-=======
-import styled, { keyframes } from 'styled-components';
->>>>>>> b5662c5 (feature: 조사 설계 페이지 구성)
 // eslint-disable-next-line import/no-cycle
-import Header from '../../component_layout/header';
-import Footer from '../../component_layout/footer';
+import Header from '../../component_layout/Header';
+import Footer from '../../component_layout/Footer';
 import WhitePattern from '../../assets/pattern_white.png';
 import BluePattern from '../../assets/pattern_blue.png';
-import CardContent from './CardContent';
+import CardContent from './Cardcontent';
 
 function Research() {
-<<<<<<< HEAD
-	const [value, setValue] = useState(1);
-
-	const changeValue = () => {
-		setValue(2);
-	};
-
-	const onMouseOver = () => {
-		console.log('a');
-	};
-=======
 	const [value, setValue] = useState(0);
 
 	const onMouseOver = () => setValue(1);
 	const onMouseleave = () => setValue(0);
->>>>>>> b5662c5 (feature: 조사 설계 페이지 구성)
 
 	return (
 		<LayoutContainerCss>
@@ -92,10 +76,6 @@ function Research() {
 							<CardDecoBoxCss />
 						</CardDecoCss>
 					</ResearchCardCss>
-<<<<<<< HEAD
-					<SpaceCss />
-					<CardContent />
-=======
 					<CardContent
 						outTitle=''
 						innerTitle=''
@@ -103,7 +83,6 @@ function Research() {
 						onMouseOver={onMouseOver}
 						onMouseleave={onMouseleave}
 					/>
->>>>>>> b5662c5 (feature: 조사 설계 페이지 구성)
 				</WrapperCss>
 			</MainContainerCss>
 
