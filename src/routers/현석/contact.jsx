@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 // eslint-disable-next-line import/no-cycle
-import Header from '../../component_layout/header';
-import Footer from '../../component_layout/footer';
+import Header from '../../component_layout/Header';
+import Footer from '../../component_layout/Footer';
 
 function Contact() {
 	return (
