@@ -1,11 +1,23 @@
-import styled, { keyframes } from 'styled-components';
+import { useState } from 'react';
+import styled from 'styled-components';
 // eslint-disable-next-line import/no-cycle
 import Header from '../../component_layout/header';
 import Footer from '../../component_layout/footer';
 import WhitePattern from '../../assets/pattern_white.png';
 import BluePattern from '../../assets/pattern_blue.png';
+import CardContent from './CardContent';
 
 function Research() {
+	const [value, setValue] = useState(1);
+
+	const changeValue = () => {
+		setValue(2);
+	};
+
+	const onMouseOver = () => {
+		console.log('a');
+	};
+
 	return (
 		<LayoutContainerCss>
 			<Header />
@@ -69,6 +81,8 @@ function Research() {
 							<CardDecoBoxCss />
 						</CardDecoCss>
 					</ResearchCardCss>
+					<SpaceCss />
+					<CardContent />
 				</WrapperCss>
 			</MainContainerCss>
 
