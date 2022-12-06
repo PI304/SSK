@@ -8,17 +8,7 @@ function Header() {
 			<Nav>
 				<HeaderLogo />
 
-				<NavMenuCss>
-					<NavMenuUlCss>
-						<NavMenuLi1 />
-
-						<NavMenuLi2 />
-
-						<NavMenuLi3 />
-
-						<NavMenuLi4 />
-					</NavMenuUlCss>
-				</NavMenuCss>
+				<NavMenu />
 
 				<HeaderSelect />
 			</Nav>
@@ -60,6 +50,24 @@ const HeaderLogoCss = styled.div`
 	height: 9rem;
 `;
 
+/* 헤더 메뉴 */
+
+function NavMenu() {
+	return (
+		<NavMenuCss>
+			<NavMenuUlCss>
+				<NavMenuLi1 />
+
+				<NavMenuLi2 />
+
+				<NavMenuLi3 />
+
+				<NavMenuLi4 />
+			</NavMenuUlCss>
+		</NavMenuCss>
+	);
+}
+
 /* 헤더 메뉴 컴포넌트 및 CSS */
 
 const NavMenuCss = styled.div`
@@ -84,19 +92,13 @@ function NavMenuLi1() {
 			<NavMenuACss to='../routers/현석/Intro'>ADDS소개</NavMenuACss>
 			<NavSubMenuCss className='dropDownMenu'>
 				<li>
-					<NavSubMenuTopACss to='../routers/현석/Intro' className='hoverChangeColor'>
-						ADDS 소개
-					</NavSubMenuTopACss>
+					<NavSubMenuTopACss to='../routers/현석/Intro'>ADDS 소개</NavSubMenuTopACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/현아/Members' className='hoverChangeColor'>
-						연구진 소개
-					</NavSubMenuACss>
+					<NavSubMenuACss to='../routers/현아/Members'>연구진 소개</NavSubMenuACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/주현/Research' className='hoverChangeColor'>
-						조사설계
-					</NavSubMenuACss>
+					<NavSubMenuACss to='../routers/주현/Research'>조사설계</NavSubMenuACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -109,9 +111,7 @@ function NavMenuLi2() {
 			<NavMenuACss to='../routers/주현/Publication'>발간물</NavMenuACss>
 			<NavSubMenuCss className='dropDownMenu'>
 				<li>
-					<NavSubMenuTopACss to='../routers/주현/Publication' className='hoverChangeColor'>
-						발간물
-					</NavSubMenuTopACss>
+					<NavSubMenuTopACss to='../routers/주현/Publication'>발간물</NavSubMenuTopACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -124,14 +124,10 @@ function NavMenuLi3() {
 			<NavMenuACss to='../routers/현아/Resources'>데이터</NavMenuACss>
 			<NavSubMenuCss className='dropDownMenu'>
 				<li>
-					<NavSubMenuTopACss to='../routers/현아/Resources' className='hoverChangeColor'>
-						자료안내
-					</NavSubMenuTopACss>
+					<NavSubMenuTopACss to='../routers/현아/Resources'>자료안내</NavSubMenuTopACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/현석/Papers' className='hoverChangeColor'>
-						데이터활용논문
-					</NavSubMenuACss>
+					<NavSubMenuACss to='../routers/현석/Papers'>데이터활용논문</NavSubMenuACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -144,24 +140,16 @@ function NavMenuLi4() {
 			<NavMenuACss to='../routers/현아/notice'>소통공간</NavMenuACss>
 			<NavSubMenuCss className='dropDownMenu'>
 				<li>
-					<NavSubMenuTopACss to='../routers/현아/Notice' className='hoverChangeColor'>
-						공지사항
-					</NavSubMenuTopACss>
+					<NavSubMenuTopACss to='../routers/현아/Notice'>공지사항</NavSubMenuTopACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/주현/Reports' className='hoverChangeColor'>
-						보도자료
-					</NavSubMenuACss>
+					<NavSubMenuACss to='../routers/주현/Reports'>보도자료</NavSubMenuACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/주현/FAQ' className='hoverChangeColor'>
-						FAQ
-					</NavSubMenuACss>
+					<NavSubMenuACss to='../routers/주현/FAQ'>FAQ</NavSubMenuACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/현석/Contact' className='hoverChangeColor'>
-						Contact
-					</NavSubMenuACss>
+					<NavSubMenuACss to='../routers/현석/Contact'>Contact</NavSubMenuACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>

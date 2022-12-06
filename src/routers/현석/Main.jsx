@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from '../../component_layout/Header';
 import Footer from '../../component_layout/Footer';
@@ -11,68 +12,13 @@ function Main() {
 		<LayoutContainerCss>
 			<Header />
 
-			<main>
-				<MainContainerCss>
-					<MainThumnailCss>hi</MainThumnailCss>
-					<MainCarouselCss>bye</MainCarouselCss>
+			<MainContainerCss>
+				<MainThumnailCss>hi</MainThumnailCss>
 
-					<MainSiteMapCss>
-						<MainSiteMapBoxCss>
-							<MainSiteMapBackGroundCss1>
-								<MainSiteMapGoToSiteCss1>
-									<MainSiteMapGoToSiteFont1>ADDS소개</MainSiteMapGoToSiteFont1>
-									<MainSiteMapGoToSiteSubFont1>
-										ADDS소개
-										<br />
-										연구진소개
-										<br />
-										조사설계
-									</MainSiteMapGoToSiteSubFont1>
-								</MainSiteMapGoToSiteCss1>
-							</MainSiteMapBackGroundCss1>
-						</MainSiteMapBoxCss>
+				<MainCarouselCss>bye</MainCarouselCss>
 
-						<MainSiteMapBoxCss>
-							<MainSiteMapBackGroundCss2>
-								<MainSiteMapGoToSiteCss2>
-									<MainSiteMapGoToSiteFont2>발간물</MainSiteMapGoToSiteFont2>
-									<MainSiteMapGoToSiteSubFont2>발간물</MainSiteMapGoToSiteSubFont2>
-								</MainSiteMapGoToSiteCss2>
-							</MainSiteMapBackGroundCss2>
-						</MainSiteMapBoxCss>
-
-						<MainSiteMapBoxCss>
-							<MainSiteMapBackGroundCss3>
-								<MainSiteMapGoToSiteCss3>
-									<MainSiteMapGoToSiteFont3>데이터</MainSiteMapGoToSiteFont3>
-									<MainSiteMapGoToSiteSubFont3>
-										자료안내
-										<br />
-										데이터활용논문
-									</MainSiteMapGoToSiteSubFont3>
-								</MainSiteMapGoToSiteCss3>
-							</MainSiteMapBackGroundCss3>
-						</MainSiteMapBoxCss>
-
-						<MainSiteMapBoxCss>
-							<MainSiteMapBackGroundCss4>
-								<MainSiteMapGoToSiteCss4>
-									<MainSiteMapGoToSiteFont4>소통공간</MainSiteMapGoToSiteFont4>
-									<MainSiteMapGoToSiteSubFont4>
-										공지사항
-										<br />
-										보도자료
-										<br />
-										FAQ
-										<br />
-										contact
-									</MainSiteMapGoToSiteSubFont4>
-								</MainSiteMapGoToSiteCss4>
-							</MainSiteMapBackGroundCss4>
-						</MainSiteMapBoxCss>
-					</MainSiteMapCss>
-				</MainContainerCss>
-			</main>
+				<MainSiteMap />
+			</MainContainerCss>
 
 			<Footer />
 		</LayoutContainerCss>
@@ -108,6 +54,69 @@ const MainCarouselCss = styled.div`
 	height: 20rem;
 `;
 
+/* MainSiteMap */
+
+function MainSiteMap() {
+	return (
+		<MainSiteMapCss>
+			<MainSiteMapBoxCss>
+				<MainSiteMapBackGroundCss1>
+					<MainSiteMapGoToSiteCss1>
+						<MainSiteMapGoToSiteFont1>ADDS소개</MainSiteMapGoToSiteFont1>
+						<MainSiteMapGoToSiteSubFont1>
+							ADDS소개
+							<br />
+							연구진소개
+							<br />
+							조사설계
+						</MainSiteMapGoToSiteSubFont1>
+					</MainSiteMapGoToSiteCss1>
+					<MainSiteHover />
+				</MainSiteMapBackGroundCss1>
+			</MainSiteMapBoxCss>
+
+			<MainSiteMapBoxCss>
+				<MainSiteMapBackGroundCss2>
+					<MainSiteMapGoToSiteCss2>
+						<MainSiteMapGoToSiteFont2>발간물</MainSiteMapGoToSiteFont2>
+						<MainSiteMapGoToSiteSubFont2>발간물</MainSiteMapGoToSiteSubFont2>
+					</MainSiteMapGoToSiteCss2>
+				</MainSiteMapBackGroundCss2>
+			</MainSiteMapBoxCss>
+
+			<MainSiteMapBoxCss>
+				<MainSiteMapBackGroundCss3>
+					<MainSiteMapGoToSiteCss3>
+						<MainSiteMapGoToSiteFont3>데이터</MainSiteMapGoToSiteFont3>
+						<MainSiteMapGoToSiteSubFont3>
+							자료안내
+							<br />
+							데이터활용논문
+						</MainSiteMapGoToSiteSubFont3>
+					</MainSiteMapGoToSiteCss3>
+				</MainSiteMapBackGroundCss3>
+			</MainSiteMapBoxCss>
+
+			<MainSiteMapBoxCss>
+				<MainSiteMapBackGroundCss4>
+					<MainSiteMapGoToSiteCss4>
+						<MainSiteMapGoToSiteFont4>소통공간</MainSiteMapGoToSiteFont4>
+						<MainSiteMapGoToSiteSubFont4>
+							공지사항
+							<br />
+							보도자료
+							<br />
+							FAQ
+							<br />
+							contact
+						</MainSiteMapGoToSiteSubFont4>
+					</MainSiteMapGoToSiteCss4>
+				</MainSiteMapBackGroundCss4>
+			</MainSiteMapBoxCss>
+		</MainSiteMapCss>
+	);
+}
+
 /* 사이트맵 Box CSS */
 
 const MainSiteMapCss = styled.div`
@@ -134,6 +143,10 @@ const MainSiteMapBackGroundCss1 = styled.div`
 	width: 27.7rem;
 	height: 27.7rem;
 	background-color: #e2edfb;
+	&: hover .mainSiteHover {
+		display: block;
+		position: relative;
+	}
 `;
 
 const MainSiteMapGoToSiteCss1 = styled.div`
@@ -151,6 +164,58 @@ const MainSiteMapGoToSiteFont1 = styled.div`
 const MainSiteMapGoToSiteSubFont1 = styled.div`
 	font-size: 1.7rem;
 	line-height: 2.5rem;
+`;
+
+/* Hover */
+
+function MainSiteHover() {
+	return (
+		<MainSiteHoverContainer className='mainSiteHover'>
+			<MainSiteHoverCss>
+				<MainSiteHoverLiCss>
+					<MainSiteSubHoverCss to='../routers/현석/Intro'>ADDS소개</MainSiteSubHoverCss>
+				</MainSiteHoverLiCss>
+				<MainSiteHoverLiCss>
+					<MainSiteSubHoverCss to='../routers/현아/Members'>연구진소개</MainSiteSubHoverCss>
+				</MainSiteHoverLiCss>
+				<MainSiteHoverLiCss>
+					<MainSiteSubHoverCss to='../routers/주현/Research'>조사설계</MainSiteSubHoverCss>
+				</MainSiteHoverLiCss>
+			</MainSiteHoverCss>
+		</MainSiteHoverContainer>
+	);
+}
+const MainSiteHoverContainer = styled.div`
+	display: none;
+	position: absolute;
+	bottom: 20.2rem;
+`;
+
+const MainSiteHoverCss = styled.ul`
+	width: 27.7rem;
+	height: 27.7rem;
+	display: flex;
+	flex-direction: column;
+	transform: scaleX(-1);
+`;
+
+const MainSiteHoverLiCss = styled.li`
+	height: 9.23rem;
+	text-align: center;
+	font-size: 1.5rem;
+`;
+
+const MainSiteSubHoverCss = styled(Link)`
+	display: block;
+	width: 27.7rem;
+	height: 9.23rem;
+	padding-top: 4rem;
+	text-align: center;
+	font-size: 1.5rem;
+	background: #ffffff;
+	&: hover {
+		background: rgba(141, 188, 255, 0.5);
+	}
 `;
 
 /* 사이트맵2 CSS */
