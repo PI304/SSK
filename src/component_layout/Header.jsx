@@ -81,16 +81,22 @@ const NavMenuUlCss = styled.ul`
 function NavMenuLi1() {
 	return (
 		<NavMenuLiCss>
-			<NavMenuACss to='../routers/현석/intro'>ADDS소개</NavMenuACss>
-			<NavSubMenuCss>
+			<NavMenuACss to='../routers/현석/Intro'>ADDS소개</NavMenuACss>
+			<NavSubMenuCss className='dropDownMenu'>
 				<li>
-					<NavSubMenuTopACss to='../routers/현석/intro'>ADDS 소개</NavSubMenuTopACss>
+					<NavSubMenuTopACss to='../routers/현석/Intro' className='hoverChangeColor'>
+						ADDS 소개
+					</NavSubMenuTopACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/현아/members'>연구진 소개</NavSubMenuACss>
+					<NavSubMenuACss to='../routers/현아/Members' className='hoverChangeColor'>
+						연구진 소개
+					</NavSubMenuACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/주현/research'>조사설계</NavSubMenuACss>
+					<NavSubMenuACss to='../routers/주현/Research' className='hoverChangeColor'>
+						조사설계
+					</NavSubMenuACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -100,10 +106,12 @@ function NavMenuLi1() {
 function NavMenuLi2() {
 	return (
 		<NavMenuLiCss>
-			<NavMenuACss to='../routers/주현/publication'>발간물</NavMenuACss>
-			<NavSubMenuCss>
+			<NavMenuACss to='../routers/주현/Publication'>발간물</NavMenuACss>
+			<NavSubMenuCss className='dropDownMenu'>
 				<li>
-					<NavSubMenuTopACss to='../routers/주현/publication'>발간물</NavSubMenuTopACss>
+					<NavSubMenuTopACss to='../routers/주현/Publication' className='hoverChangeColor'>
+						발간물
+					</NavSubMenuTopACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -113,13 +121,17 @@ function NavMenuLi2() {
 function NavMenuLi3() {
 	return (
 		<NavMenuLiCss>
-			<NavMenuACss to='../routers/현아/resources'>데이터</NavMenuACss>
-			<NavSubMenuCss>
+			<NavMenuACss to='../routers/현아/Resources'>데이터</NavMenuACss>
+			<NavSubMenuCss className='dropDownMenu'>
 				<li>
-					<NavSubMenuTopACss to='../routers/현아/resources'>자료안내</NavSubMenuTopACss>
+					<NavSubMenuTopACss to='../routers/현아/Resources' className='hoverChangeColor'>
+						자료안내
+					</NavSubMenuTopACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/현석/papers'>데이터활용논문</NavSubMenuACss>
+					<NavSubMenuACss to='../routers/현석/Papers' className='hoverChangeColor'>
+						데이터활용논문
+					</NavSubMenuACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -130,18 +142,26 @@ function NavMenuLi4() {
 	return (
 		<NavMenuLiCss>
 			<NavMenuACss to='../routers/현아/notice'>소통공간</NavMenuACss>
-			<NavSubMenuCss>
+			<NavSubMenuCss className='dropDownMenu'>
 				<li>
-					<NavSubMenuTopACss to='../routers/현아/notice'>공지사항</NavSubMenuTopACss>
+					<NavSubMenuTopACss to='../routers/현아/Notice' className='hoverChangeColor'>
+						공지사항
+					</NavSubMenuTopACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/주현/reports'>보도자료</NavSubMenuACss>
+					<NavSubMenuACss to='../routers/주현/Reports' className='hoverChangeColor'>
+						보도자료
+					</NavSubMenuACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/주현/FAQ'>FAQ</NavSubMenuACss>
+					<NavSubMenuACss to='../routers/주현/FAQ' className='hoverChangeColor'>
+						FAQ
+					</NavSubMenuACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/현석/contact'>Contact</NavSubMenuACss>
+					<NavSubMenuACss to='../routers/현석/Contact' className='hoverChangeColor'>
+						Contact
+					</NavSubMenuACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -152,7 +172,9 @@ const NavMenuLiCss = styled.li`
 	display: flex;
 	flex-direction: column;
 	width: 13rem;
-	height: 30rem;
+	height: 35rem;
+	&: hover .dropDownMenu {
+		display: block;
 	}
 `;
 
@@ -163,20 +185,11 @@ const NavMenuACss = styled(Link)`
 `;
 
 const NavSubMenuCss = styled.ul`
-	height: 20rem;
-	height: 5rem;
-	width: 13rem;
-	display: block;
-	background: rgba(226, 237, 251, 0.9);
-	text-align: center;
-	border-top: 4px solid #8dbcff;
-	position: relative;
-	top: -3px;
-	z-index: 1;
+	display: none;
 `;
 
 const NavSubMenuTopACss = styled(Link)`
-	height: 5rem;
+	height: 6rem;
 	width: 13rem;
 	display: block;
 	background: rgba(226, 237, 251, 0.9);
@@ -185,10 +198,15 @@ const NavSubMenuTopACss = styled(Link)`
 	position: relative;
 	top: -3px;
 	z-index: 1;
+	font-size: 1.5rem;
+	padding-top: 2.2rem;
+	&: hover {
+		background: rgba(141, 188, 255, 0.5);
+	}
 `;
 
 const NavSubMenuACss = styled(Link)`
-	height: 5rem;
+	height: 6rem;
 	width: 13rem;
 	display: block;
 	background: rgba(226, 237, 251, 0.9);
@@ -196,6 +214,11 @@ const NavSubMenuACss = styled(Link)`
 	position: relative;
 	top: -3px;
 	z-index: 1;
+	font-size: 1.5rem;
+	padding-top: 2.2rem;
+	&: hover {
+		background: rgba(141, 188, 255, 0.5);
+	}
 `;
 
 /* 헤더 셀렉터 컴포넌트 및 CSS */
