@@ -168,8 +168,10 @@ const NavMenuLiCss = styled.li`
 
 const NavMenuACss = styled(Link)`
 	height: 9rem;
-	text-align: center;
-	padding-top: 4rem;
+	display: flex;
+	align-self: center;
+	justify-content: center;
+	flex-direction: column;
 `;
 
 const NavSubMenuCss = styled.ul`
