@@ -206,11 +206,12 @@ const MainSiteHoverLiCss = styled.li`
 `;
 
 const MainSiteSubHoverCss = styled(Link)`
-	display: block;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center
 	width: 27.7rem;
 	height: 9.23rem;
-	padding-top: 4rem;
-	text-align: center;
 	font-size: 1.5rem;
 	background: #ffffff;
 	&: hover {
