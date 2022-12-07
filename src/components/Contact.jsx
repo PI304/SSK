@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 // eslint-disable-next-line import/no-cycle
-import Header from '../../component_layout/Header';
-import Footer from '../../component_layout/Footer';
+import Header from '../component_layout/Header';
+import Footer from '../component_layout/Footer';
 
-function Notice() {
+function Contact() {
 	return (
 		<LayoutContainerCss>
 			<Header />
-			<h2>notice</h2>
+			<h2>contact</h2>
 			<main />
 
 			<Footer />
@@ -22,4 +22,4 @@ const LayoutContainerCss = styled.div`
 	min-height: 100vh;
 `;
 
-export default Notice;
+export default Contact;

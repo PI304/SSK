@@ -89,16 +89,16 @@ const NavMenuUlCss = styled.ul`
 function NavMenuLi1() {
 	return (
 		<NavMenuLiCss>
-			<NavMenuACss to='../routers/현석/Intro'>ADDS소개</NavMenuACss>
+			<NavMenuACss to='../components/Intro'>ADDS소개</NavMenuACss>
 			<NavSubMenuCss className='dropDownMenu'>
 				<li>
-					<NavSubMenuTopACss to='../routers/현석/Intro'>ADDS 소개</NavSubMenuTopACss>
+					<NavSubMenuTopACss to='../components/Intro'>ADDS 소개</NavSubMenuTopACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/현아/Members'>연구진 소개</NavSubMenuACss>
+					<NavSubMenuACss to='../components/Members'>연구진 소개</NavSubMenuACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/주현/Research'>조사설계</NavSubMenuACss>
+					<NavSubMenuACss to='../components/Research'>조사설계</NavSubMenuACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -108,10 +108,10 @@ function NavMenuLi1() {
 function NavMenuLi2() {
 	return (
 		<NavMenuLiCss>
-			<NavMenuACss to='../routers/주현/Publication'>발간물</NavMenuACss>
+			<NavMenuACss to='../components/Publication'>발간물</NavMenuACss>
 			<NavSubMenuCss className='dropDownMenu'>
 				<li>
-					<NavSubMenuTopACss to='../routers/주현/Publication'>발간물</NavSubMenuTopACss>
+					<NavSubMenuTopACss to='../components/Publication'>발간물</NavSubMenuTopACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -121,13 +121,13 @@ function NavMenuLi2() {
 function NavMenuLi3() {
 	return (
 		<NavMenuLiCss>
-			<NavMenuACss to='../routers/현아/Resources'>데이터</NavMenuACss>
+			<NavMenuACss to='../components/Resources'>데이터</NavMenuACss>
 			<NavSubMenuCss className='dropDownMenu'>
 				<li>
-					<NavSubMenuTopACss to='../routers/현아/Resources'>자료안내</NavSubMenuTopACss>
+					<NavSubMenuTopACss to='../components/Resources'>자료안내</NavSubMenuTopACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/현석/Papers'>데이터활용논문</NavSubMenuACss>
+					<NavSubMenuACss to='../components/Papers'>데이터활용논문</NavSubMenuACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>
@@ -137,19 +137,19 @@ function NavMenuLi3() {
 function NavMenuLi4() {
 	return (
 		<NavMenuLiCss>
-			<NavMenuACss to='../routers/현아/notice'>소통공간</NavMenuACss>
+			<NavMenuACss to='../components/Notice'>소통공간</NavMenuACss>
 			<NavSubMenuCss className='dropDownMenu'>
 				<li>
-					<NavSubMenuTopACss to='../routers/현아/Notice'>공지사항</NavSubMenuTopACss>
+					<NavSubMenuTopACss to='../components/Notice'>공지사항</NavSubMenuTopACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/주현/Reports'>보도자료</NavSubMenuACss>
+					<NavSubMenuACss to='../components/Reports'>보도자료</NavSubMenuACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/주현/FAQ'>FAQ</NavSubMenuACss>
+					<NavSubMenuACss to='../components/FAQ'>FAQ</NavSubMenuACss>
 				</li>
 				<li>
-					<NavSubMenuACss to='../routers/현석/Contact'>Contact</NavSubMenuACss>
+					<NavSubMenuACss to='../components/Contact'>Contact</NavSubMenuACss>
 				</li>
 			</NavSubMenuCss>
 		</NavMenuLiCss>

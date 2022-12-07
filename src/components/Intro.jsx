@@ -1,14 +1,14 @@
+/* eslint-disable import/no-cycle */
 import styled from 'styled-components';
-// eslint-disable-next-line import/no-cycle
-import Header from '../../component_layout/Header';
-import Footer from '../../component_layout/Footer';
+import Header from '../component_layout/Header';
+import Footer from '../component_layout/Footer';
 
-function FAQ() {
+function Intro() {
 	return (
 		<LayoutContainerCss>
 			<Header />
-			<h2>FAQ</h2>
-			<main />
+			<h2>intro</h2>
+			<main>Intro</main>
 
 			<Footer />
 		</LayoutContainerCss>
@@ -22,4 +22,4 @@ const LayoutContainerCss = styled.div`
 	min-height: 100vh;
 `;
 
-export default FAQ;
+export default Intro;
