@@ -3,8 +3,8 @@ import styled from 'styled-components';
 // eslint-disable-next-line import/no-cycle
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
-import WhitePattern from '../assets/pattern_white.png';
-import BluePattern from '../assets/pattern_blue.png';
+import WhitePattern from '../../assets/pattern_white.png';
+import BluePattern from '../../assets/pattern_blue.png';
 import CardContent from './CardContent';
 
 function Research() {
