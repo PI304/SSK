@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Colors from '../../constants/colors';
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
 import IMG1 from '../../assets/handshake.svg';
@@ -142,7 +143,7 @@ const MainSiteMapBackGroundCss1 = styled.div`
 	transform: scaleX(-1);
 	width: 27.7rem;
 	height: 27.7rem;
-	background-color: #e2edfb;
+	background-color: ${Colors.blue4};
 	&: hover .mainSiteHover {
 		display: block;
 		position: relative;
@@ -213,9 +214,9 @@ const MainSiteSubHoverCss = styled(Link)`
 	width: 27.7rem;
 	height: 9.23rem;
 	font-size: 1.5rem;
-	background: #ffffff;
+	background: ${Colors.white};
 	&: hover {
-		background: rgba(141, 188, 255, 0.5);
+		background: ${Colors.blue_hover};
 	}
 `;
 
