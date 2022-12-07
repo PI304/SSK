@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Colors from '../constants/colors';
 import Logo from '../assets/yonsei_highq_1200x630.png';
 
 function Header() {
@@ -182,7 +183,7 @@ const NavSubMenuTopACss = styled(Link)`
 	height: 6rem;
 	width: 13rem;
 	display: block;
-	background: rgba(226, 237, 251, 0.9);
+	background: ${Colors.blue4};
 	text-align: center;
 	border-top: 4px solid #8dbcff;
 	position: relative;
@@ -191,7 +192,7 @@ const NavSubMenuTopACss = styled(Link)`
 	font-size: 1.5rem;
 	padding-top: 2.2rem;
 	&: hover {
-		background: rgba(141, 188, 255, 0.5);
+		background: ${Colors.blue_hover};
 	}
 `;
 
@@ -199,7 +200,7 @@ const NavSubMenuACss = styled(Link)`
 	height: 6rem;
 	width: 13rem;
 	display: block;
-	background: rgba(226, 237, 251, 0.9);
+	background: ${Colors.blue4};
 	text-align: center;
 	position: relative;
 	top: -3px;
@@ -207,7 +208,7 @@ const NavSubMenuACss = styled(Link)`
 	font-size: 1.5rem;
 	padding-top: 2.2rem;
 	&: hover {
-		background: rgba(141, 188, 255, 0.5);
+		background: ${Colors.blue_hover};
 	}
 `;
 

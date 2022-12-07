@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Logo from '../assets/yonsei.png';
+import Colors from '../constants/colors';
 
 function Footer() {
 	return (
@@ -17,7 +18,7 @@ const FooterCss = styled.footer`
 	height: 12rem;
 	display: flex;
 	align-items: center;
-	background-color: #e4e9f0;
+	background-color: ${Colors.gray};
 `;
 
 const InfoCss = styled.div`
