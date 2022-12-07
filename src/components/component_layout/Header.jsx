@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Colors from '../constants/colors';
-import Logo from '../assets/yonsei_highq_1200x630.png';
+import Colors from '../../constants/colors';
+import Logo from '../../assets/yonsei_highq_1200x630.png';
 
 function Header() {
 	return (

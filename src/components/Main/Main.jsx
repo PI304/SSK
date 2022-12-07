@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
-import IMG1 from '../assets/handshake.svg';
-import IMG2 from '../assets/news.svg';
-import IMG3 from '../assets/document.svg';
-import IMG4 from '../assets/info.svg';
+import IMG1 from '../../assets/handshake.svg';
+import IMG2 from '../../assets/news.svg';
+import IMG3 from '../../assets/document.svg';
+import IMG4 from '../../assets/info.svg';
 
 function Main() {
 	return (
@@ -173,13 +173,13 @@ function MainSiteHover() {
 		<MainSiteHoverContainer className='mainSiteHover'>
 			<MainSiteHoverCss>
 				<MainSiteHoverLiCss>
-					<MainSiteSubHoverCss to='../components/현석/Intro'>ADDS소개</MainSiteSubHoverCss>
+					<MainSiteSubHoverCss to='../components/Intro'>ADDS소개</MainSiteSubHoverCss>
 				</MainSiteHoverLiCss>
 				<MainSiteHoverLiCss>
-					<MainSiteSubHoverCss to='../components/현아/Members'>연구진소개</MainSiteSubHoverCss>
+					<MainSiteSubHoverCss to='../components/Members'>연구진소개</MainSiteSubHoverCss>
 				</MainSiteHoverLiCss>
 				<MainSiteHoverLiCss>
-					<MainSiteSubHoverCss to='../components/주현/Research'>조사설계</MainSiteSubHoverCss>
+					<MainSiteSubHoverCss to='../components/Research'>조사설계</MainSiteSubHoverCss>
 				</MainSiteHoverLiCss>
 			</MainSiteHoverCss>
 		</MainSiteHoverContainer>

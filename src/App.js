@@ -1,18 +1,18 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from './components/Main';
-import Intro from './components/Intro';
-import Papers from './components/Papers';
-import Contact from './components/Contact';
+import Main from './components/Main/Main';
+import Intro from './components/Intro/Intro';
+import Papers from './components/Papers/Papers';
+import Contact from './components/Contact/Contact';
 // eslint-disable-next-line import/no-named-as-default
-import Research from './components/Research';
-import Publication from './components/Publication';
-import Reports from './components/Reports';
-import FAQ from './components/FAQ';
-import Members from './components/Members';
-import Notice from './components/Notice';
-import Resources from './components/Resources';
-import Layout from './component_layout/Layout';
+import Research from './components/Research/Research';
+import Publication from './components/Publication/Publication';
+import Reports from './components/Reports/Reports';
+import FAQ from './components/FAQ/FAQ';
+import Members from './components/Members/Members';
+import Notice from './components/Notice/Notice';
+import Resources from './components/Resources/Resources';
+import Layout from './components/component_layout/Layout';
 import reset from './styles/reset.module.css';
 
 function App() {

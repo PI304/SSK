@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Logo from '../assets/yonsei.png';
-import Colors from '../constants/colors';
+import Logo from '../../assets/yonsei.png';
+import Colors from '../../constants/colors';
 
 function Footer() {
 	return (
