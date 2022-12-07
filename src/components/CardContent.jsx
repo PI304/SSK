@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import WhitePattern from '../../assets/pattern_white.png';
-import BluePattern from '../../assets/pattern_blue.png';
+import WhitePattern from '../assets/pattern_white.png';
+import BluePattern from '../assets/pattern_blue.png';
 
 function CardContent({ outTitle, innerTitle, innerContent }) {
 	return (

@@ -1,17 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from './routers/현석/Main';
-import Intro from './routers/현석/Intro';
-import Papers from './routers/현석/Papers';
-import Contact from './routers/현석/Contact';
+import Main from './components/Main';
+import Intro from './components/Intro';
+import Papers from './components/Papers';
+import Contact from './components/Contact';
 // eslint-disable-next-line import/no-named-as-default
-import Research from './routers/주현/Research';
-import Publication from './routers/주현/Publication';
-import Reports from './routers/주현/Reports';
-import FAQ from './routers/주현/FAQ';
-import Members from './routers/현아/Members';
-import Notice from './routers/현아/Notice';
-import Resources from './routers/현아/Resources';
+import Research from './components/Research';
+import Publication from './components/Publication';
+import Reports from './components/Reports';
+import FAQ from './components/FAQ';
+import Members from './components/Members';
+import Notice from './components/Notice';
+import Resources from './components/Resources';
 import Layout from './component_layout/Layout';
 import reset from './styles/reset.module.css';
 
@@ -20,16 +20,16 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route path='/' element={<Main />} />
-				<Route path='routers/현석/Intro' element={<Intro />} />
-				<Route path='routers/현석/Papers' element={<Papers />} />
-				<Route path='routers/현석/Contact' element={<Contact />} />
-				<Route path='routers/주현/Research' element={<Research />} />
-				<Route path='routers/주현/Publication' element={<Publication />} />
-				<Route path='routers/주현/Reports' element={<Reports />} />
-				<Route path='routers/주현/FAQ' element={<FAQ />} />
-				<Route path='routers/현아/Members' element={<Members />} />
-				<Route path='routers/현아/Notice' element={<Notice />} />
-				<Route path='routers/현아/Resources' element={<Resources />} />
+				<Route path='components/Intro' element={<Intro />} />
+				<Route path='components/Papers' element={<Papers />} />
+				<Route path='components/Contact' element={<Contact />} />
+				<Route path='components/Research' element={<Research />} />
+				<Route path='components/Publication' element={<Publication />} />
+				<Route path='components/Reports' element={<Reports />} />
+				<Route path='components/FAQ' element={<FAQ />} />
+				<Route path='components/Members' element={<Members />} />
+				<Route path='components/Notice' element={<Notice />} />
+				<Route path='components/Resources' element={<Resources />} />
 			</Routes>
 		</BrowserRouter>
 	);
