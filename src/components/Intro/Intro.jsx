@@ -2,13 +2,14 @@
 import styled from 'styled-components';
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
+import IntroMain from './IntroMain';
 
 function Intro() {
 	return (
 		<LayoutContainerCss>
 			<Header />
-			<h2>intro</h2>
-			<main>Intro</main>
+
+			<IntroMain />
 
 			<Footer />
 		</LayoutContainerCss>
