@@ -13,13 +13,15 @@ function Main() {
 		<LayoutContainerCss>
 			<Header />
 
-			<MainContainerCss>
-				<MainThumnailCss>hi</MainThumnailCss>
+			<main>
+				<MainContainerCss>
+					<MainThumnailCss>hi</MainThumnailCss>
 
-				<MainCarouselCss>bye</MainCarouselCss>
+					<MainCarouselCss>bye</MainCarouselCss>
 
-				<MainSiteMap />
-			</MainContainerCss>
+					<MainSiteMap />
+				</MainContainerCss>
+			</main>
 
 			<Footer />
 		</LayoutContainerCss>
