@@ -11,14 +11,17 @@ import MainContainer from '../component_layout/MainContainer';
 function Research() {
 	const [over, setOver] = useState(false);
 	const [under, setUnder] = useState(true);
+	const [num, setNum] = useState(0);
 
-	const onMouseOver = () => {
+	const onMouseOver = (cardNum) => {
 		setOver(true);
 		setUnder(false);
+		setNum(cardNum);
 	};
 	const onMouseOut = () => {
 		setOver(false);
 		setUnder(true);
+		setNum(0);
 	};
 
 	return (
@@ -38,10 +41,59 @@ function Research() {
 							<br />,
 							'알파 세대 400명 대상 1~3차년도 연차별 1회 반복 수집',
 						]}
-						onMouseOver={onMouseOver}
+						onMouseOver={() => onMouseOver(1)}
 						onMouseOut={onMouseOut}
-						over={over}
-						under={under}
+						over={num === 1 ? over : undefined}
+						under={num === 1 ? under : undefined}
+					/>
+					<SpaceCss />
+					<CardContent
+						outTitle={['알파 세대 디지털 일상 데이터', <br />, '(ADDS-D; Daily)']}
+						innerTitle='알파 세대 디지털 일상 데이터 (ADDS-D; Daily)'
+						innerContent={[
+							'알파 세대의 스트레스, 수면, 운동, 식사, 건강행동, 디지털 사용에 대한 양적 설문조사',
+							<br />,
+							<br />,
+							'알파 세대 400명 대상 1~3차년도 연차별 1회 반복 수집',
+						]}
+						onMouseOver={() => onMouseOver(2)}
+						onMouseOut={onMouseOut}
+						over={num === 2 ? over : undefined}
+						under={num === 2 ? under : undefined}
+					/>
+					<SpaceCss />
+					<CardContent
+						outTitle={[
+							'알파 세대의 사회화 과정에 관한 질적 데이터',
+							<br />,
+							'(ADDS-Q; Qualitative)',
+						]}
+						innerTitle='알파 세대의 사회화 과정에 관한 질적 데이터 (ADDS-Q; Qualitative)'
+						innerContent={[
+							'알파 세대의 부모(1차년도), 교사(2차년도), 알파 세대 본인(3차년도) 대상 심층 인터뷰',
+							<br />,
+							<br />,
+							' 알파 세대 청소년과 주요 체계를 대상으로 디지털 일상과 사회화 과정 및 특성, 새로운 이슈에 대한 심층 인터뷰',
+						]}
+						onMouseOver={() => onMouseOver(3)}
+						onMouseOut={onMouseOut}
+						over={num === 3 ? over : undefined}
+						under={num === 3 ? under : undefined}
+					/>
+					<SpaceCss />
+					<CardContent
+						outTitle={['알파 세대 일상에 대한 스마트 디바이스 측정', <br />, '(ADDS-S; Smart)']}
+						innerTitle='생체 지표(ADDS-B; Bio)'
+						innerContent={[
+							'스마트 디바이스(스마트 워치)의 전기반응 센서와 행동기반 기술을 활용하여 알파 세대의 운동, 식사, 수면, 디지털 사용을 추적',
+							<br />,
+							<br />,
+							'2차와 3차년도에 200명을 대상으로 1일 3회(아침,점심,저녁) 1주일간 측정',
+						]}
+						onMouseOver={() => onMouseOver(4)}
+						onMouseOut={onMouseOut}
+						over={num === 4 ? over : undefined}
+						under={num === 4 ? under : undefined}
 					/>
 					<SpaceCss />
 					<CardContent
@@ -56,68 +108,13 @@ function Research() {
 							<br />,
 							'1차년도 프로토콜 세팅, 2차년도 20명 대상 파일럿 테스트 후, 3차년도 200명 대상 생체지표 측정',
 						]}
-						onMouseOver={onMouseOver}
+						onMouseOver={() => onMouseOver(5)}
 						onMouseOut={onMouseOut}
-						over={over}
-						under={under}
-					/>
-					<SpaceCss />
-					<CardContent
-						outTitle='생체 지표(ADDS-B; Bio)'
-						innerTitle='생체 지표(ADDS-B; Bio)'
-						innerContent={[
-							'(타액) 타액(Salivary) 코티졸, DHEA(Dehydroepiandrosterone), ACTH(adrenocorticotropic), 카테콜아민(Catecholamine)등의 지표를 통해 스트레스에 대한 생리적 반응 측정',
-							<br />,
-							<br />,
-							'(전기 반응 센서) EMG(Electro–myography), BIA(Bio-Impedence Analysis), DOMA(Detection OfMuscle Activation), ECG(Electro- cardiogram)',
-							<br />,
-							<br />,
-							'1차년도 프로토콜 세팅, 2차년도 20명 대상 파일럿 테스트 후, 3차년도 200명 대상 생체지표 측정',
-						]}
-						onMouseOver={onMouseOver}
-						onMouseOut={onMouseOut}
-						over={over}
-						under={under}
-					/>
-					<SpaceCss />
-					<CardContent
-						outTitle='생체 지표(ADDS-B; Bio)'
-						innerTitle='생체 지표(ADDS-B; Bio)'
-						innerContent={[
-							'(타액) 타액(Salivary) 코티졸, DHEA(Dehydroepiandrosterone), ACTH(adrenocorticotropic), 카테콜아민(Catecholamine)등의 지표를 통해 스트레스에 대한 생리적 반응 측정',
-							<br />,
-							<br />,
-							'(전기 반응 센서) EMG(Electro–myography), BIA(Bio-Impedence Analysis), DOMA(Detection OfMuscle Activation), ECG(Electro- cardiogram)',
-							<br />,
-							<br />,
-							'1차년도 프로토콜 세팅, 2차년도 20명 대상 파일럿 테스트 후, 3차년도 200명 대상 생체지표 측정',
-						]}
-						onMouseOver={onMouseOver}
-						onMouseOut={onMouseOut}
-						over={over}
-						under={under}
-					/>
-					<SpaceCss />
-					<CardContent
-						outTitle='생체 지표(ADDS-B; Bio)'
-						innerTitle='생체 지표(ADDS-B; Bio)'
-						innerContent={[
-							'(타액) 타액(Salivary) 코티졸, DHEA(Dehydroepiandrosterone), ACTH(adrenocorticotropic), 카테콜아민(Catecholamine)등의 지표를 통해 스트레스에 대한 생리적 반응 측정',
-							<br />,
-							<br />,
-							'(전기 반응 센서) EMG(Electro–myography), BIA(Bio-Impedence Analysis), DOMA(Detection OfMuscle Activation), ECG(Electro- cardiogram)',
-							<br />,
-							<br />,
-							'1차년도 프로토콜 세팅, 2차년도 20명 대상 파일럿 테스트 후, 3차년도 200명 대상 생체지표 측정',
-						]}
-						onMouseOver={onMouseOver}
-						onMouseOut={onMouseOut}
-						over={over}
-						under={under}
+						over={num === 5 ? over : undefined}
+						under={num === 5 ? under : undefined}
 					/>
 				</WrapperCss>
 			</MainContainer>
-
 			<Footer />
 		</LayoutContainerCss>
 	);
@@ -137,15 +134,6 @@ const TitleCss = styled.div`
 	font-size: 4rem;
 `;
 
-// const MainContainerCss = styled.div`
-// 	width: 120rem;
-// 	margin: 5rem auto;
-// 	margin-bottom: 10rem;
-// 	display: grid;
-// 	grid-template-columns: 16rem 100rem;
-// 	grid-gap: 5rem;
-// `;
-
 const WrapperCss = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -153,46 +141,6 @@ const WrapperCss = styled.div`
 
 const SpaceCss = styled.div`
 	height: 3rem;
-`;
-
-const ResearchCardCss = styled.div`
-	background-image: url(${WhitePattern});
-	background-repeat: no-repeat;
-	background-size: cover;
-	box-shadow: 0px 2px 10px rgb(0 0 0 / 10%);
-	height: 24rem;
-	font-size: 3rem;
-	font-weight: 700;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	// &:hover{
-	// 	background-image: url(${BluePattern});
-	// 	transition: 0.5s;
-	// }
-	}
-`;
-
-const CardSpaceCss = styled.div`
-	height: 3.5rem;
-`;
-
-const CardTitleCss = styled.div`
-	padding: 0 4.5rem;
-	font-size: 1.875rem;
-	font-weight: 700;
-`;
-
-const CardDecoCss = styled.div`
-	display: flex;
-	justify-content: flex-end;
-`;
-
-const CardDecoBoxCss = styled.div`
-	width: 0;
-	height: 0;
-	border-top: 3.5rem solid #e2edfb;
-	border-right: 3.5rem solid #6e98d4;
 `;
 
 export default Research;
