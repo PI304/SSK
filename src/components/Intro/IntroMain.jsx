@@ -1,30 +1,20 @@
 import styled from 'styled-components';
 import Sidebar from '../component_layout/Sidebar';
+import MainContainerCss from '../component_layout/MainContainer';
 import IntroContent from './IntroMainContent';
 
 function IntroMain() {
 	return (
 		<main>
-			<MainContainer>
+			<MainContainerCss>
 				<IntroBlock />
 				<IntroTitle>ADDS 소개</IntroTitle>
 				<Sidebar />
 				<IntroContent />
-			</MainContainer>
+			</MainContainerCss>
 		</main>
 	);
 }
-
-const MainContainer = styled.div`
-	display: grid;
-	margin: 3rem auto;
-	margin-top: 6rem;
-	margin-bottom: 6rem;
-	width: 120rem;
-	height: 164.63rem;
-	grid-template-columns: 18rem 99rem;
-	grid-gap: 3rem;
-`;
 
 const IntroBlock = styled.div`
 	width: 16rem;
