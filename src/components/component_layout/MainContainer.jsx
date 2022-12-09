@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const MainContainerCss = styled.div`
+const MainContainer = styled.div`
 	width: 120rem;
 	margin: 5rem auto;
 	margin-bottom: 10rem;
@@ -9,4 +9,4 @@ const MainContainerCss = styled.div`
 	grid-gap: 5rem;
 `;
 
-export default MainContainerCss;
+export default MainContainer;

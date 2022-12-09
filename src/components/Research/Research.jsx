@@ -6,7 +6,7 @@ import Footer from '../component_layout/Footer';
 import WhitePattern from '../../assets/pattern_white.png';
 import BluePattern from '../../assets/pattern_blue.png';
 import CardContent from './CardContent';
-import MainContainerCss from '../component_layout/MainContainer';
+import MainContainer from '../component_layout/MainContainer';
 
 function Research() {
 	const [over, setOver] = useState(false);
@@ -24,7 +24,7 @@ function Research() {
 	return (
 		<LayoutContainerCss>
 			<Header />
-			<MainContainerCss>
+			<MainContainer>
 				<div />
 				<TitleCss>조사 설계</TitleCss>
 				<div />
@@ -116,7 +116,7 @@ function Research() {
 						under={under}
 					/>
 				</WrapperCss>
-			</MainContainerCss>
+			</MainContainer>
 
 			<Footer />
 		</LayoutContainerCss>

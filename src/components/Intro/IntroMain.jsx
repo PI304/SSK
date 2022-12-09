@@ -1,27 +1,27 @@
 import styled from 'styled-components';
 import Sidebar from '../component_layout/Sidebar';
-import MainContainerCss from '../component_layout/MainContainer';
+import MainContainer from '../component_layout/MainContainer';
 import IntroContent from './IntroMainContent';
 
 function IntroMain() {
 	return (
 		<main>
-			<MainContainerCss>
-				<IntroBlock />
-				<IntroTitle>ADDS 소개</IntroTitle>
+			<MainContainer>
+				<SIntroBlockD />
+				<SIntroTitleD>ADDS 소개</SIntroTitleD>
 				<Sidebar />
 				<IntroContent />
-			</MainContainerCss>
+			</MainContainer>
 		</main>
 	);
 }
 
-const IntroBlock = styled.div`
+const SIntroBlockD = styled.div`
 	width: 16rem;
 	height: 5.8rem;
 `;
 
-const IntroTitle = styled.div`
+const SIntroTitleD = styled.div`
 	width: 99.2rem;
 	height: 5.8rem;
 	display: flex;
