@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Colors from '../../constants/colors';
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
+import MainSlide from './MainSlide';
 import MainSiteMap from './MainSite';
 
 function Main() {
@@ -11,7 +11,7 @@ function Main() {
 
 			<main>
 				<MainContainerCss>
-					<MainThumnailCss>hi</MainThumnailCss>
+					<MainSlide>hi</MainSlide>
 
 					<MainCarouselCss>bye</MainCarouselCss>
 
@@ -38,12 +38,6 @@ const MainContainerCss = styled.div`
 	flex-direction: column;
 	width: 120rem;
 	margin: auto;
-`;
-
-/* 썸네일 CSS */
-const MainThumnailCss = styled.div`
-	width: 120rem;
-	height: 48rem;
 `;
 
 /* 캐러쉘 CSS */
