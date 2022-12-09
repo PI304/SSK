@@ -156,7 +156,6 @@ const MainSiteHoverCss = styled.ul`
 const MainSiteHoverLiCss = styled.li`
 	height: 9.23rem;
 	text-align: center;
-	font-size: 1.5rem;
 `;
 
 const MainSiteSubHoverCss = styled(Link)`
@@ -166,9 +165,10 @@ const MainSiteSubHoverCss = styled(Link)`
 	align-items: center
 	width: 27.7rem;
 	height: 9.23rem;
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 	&: hover {
 		background: ${Colors.blue_hover};
+        transition: all 0.5s;
 	}
 `;
 
@@ -234,7 +234,6 @@ const MainSiteHoverCss2 = styled.ul`
 const MainSiteHoverLiCss2 = styled.li`
 	height: 27.7rem;
 	text-align: center;
-	font-size: 1.5rem;
 `;
 
 const MainSiteSubHoverCss2 = styled(Link)`
@@ -244,9 +243,10 @@ const MainSiteSubHoverCss2 = styled(Link)`
 	align-items: center
 	width: 27.7rem;
 	height: 27.7rem;
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 	&: hover {
 		background: ${Colors.blue_hover};
+        transition: all 0.5s;
 	}
 `;
 
@@ -314,7 +314,6 @@ const MainSiteHoverCss3 = styled.ul`
 const MainSiteHoverLiCss3 = styled.li`
 	height: 13.85rem;
 	text-align: center;
-	font-size: 1.5rem;
 `;
 
 const MainSiteSubHoverCss3 = styled(Link)`
@@ -324,9 +323,10 @@ const MainSiteSubHoverCss3 = styled(Link)`
 	align-items: center
 	width: 27.7rem;
 	height: 13.85rem;
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 	&: hover {
 		background: ${Colors.blue_hover};
+        transition: all 0.5s;
 	}
 `;
 
@@ -399,7 +399,6 @@ const MainSiteHoverCss4 = styled.ul`
 const MainSiteHoverLiCss4 = styled.li`
 	height: 6.925rem;
 	text-align: center;
-	font-size: 1.5rem;
 `;
 
 const MainSiteSubHoverCss4 = styled(Link)`
@@ -409,9 +408,10 @@ const MainSiteSubHoverCss4 = styled(Link)`
 	align-items: center
 	width: 27.7rem;
 	height: 6.925rem;
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 	&: hover {
 		background: ${Colors.blue_hover};
+        transition: all 0.5s;
 	}
 `;
 
