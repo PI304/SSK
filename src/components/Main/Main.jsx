@@ -2,29 +2,29 @@ import styled from 'styled-components';
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
 import MainSlide from './MainSlide';
-import MainSiteMap from './MainSite';
+import MainSite from './MainSite';
 
 function Main() {
 	return (
-		<LayoutContainerCss>
+		<SLayoutContainer>
 			<Header />
 
 			<main>
-				<MainContainerCss>
+				<SMainContainer>
 					<MainSlide>hi</MainSlide>
 
 					<MainCarouselCss>bye</MainCarouselCss>
 
-					<MainSiteMap />
-				</MainContainerCss>
+					<MainSite />
+				</SMainContainer>
 			</main>
 
 			<Footer />
-		</LayoutContainerCss>
+		</SLayoutContainer>
 	);
 }
 
-const LayoutContainerCss = styled.div`
+const SLayoutContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
@@ -33,7 +33,7 @@ const LayoutContainerCss = styled.div`
 
 /* 메인 컨테이너 박스 CSS */
 
-const MainContainerCss = styled.div`
+const SMainContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 120rem;

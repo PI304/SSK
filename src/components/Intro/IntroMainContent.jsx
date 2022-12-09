@@ -6,86 +6,86 @@ import IMG2 from '../../assets/introImage.PNG';
 
 function IntroContent() {
 	return (
-		<IntroContentContainer>
+		<SIntroContentContainer>
 			<div>
 				<div>
-					<IntroBox1>
-						<IntroFont>ADDS</IntroFont>
-						<IntroFont2>Alpha generation Digital Daily Survey</IntroFont2>
-					</IntroBox1>
+					<SBoxD1>
+						<SFontP>ADDS</SFontP>
+						<SFontP2>Alpha generation Digital Daily Survey</SFontP2>
+					</SBoxD1>
 				</div>
 
 				<div>
-					<IntroTitle>알파 세대에 대한 새로운 이해의 필요성</IntroTitle>
+					<STitleD>알파 세대에 대한 새로운 이해의 필요성</STitleD>
 
-					<IntroBox2>
-						<Circle />
-						<IntroSubBox>
-							<IntroSubBoxFont1>
+					<SBoxD2>
+						<SCircleD />
+						<SSubBoxD>
+							<SSubBoxFontD1>
 								A세대의 시작,
 								<br />
 								그리고 COVID_19 펜데믹
-							</IntroSubBoxFont1>
-							<IntroSubBoxFont2>
-								<IntroSubBoxFont3>
-									<IntroSubBoxFont4>언택트 세대</IntroSubBoxFont4>
+							</SSubBoxFontD1>
+							<SSubBoxFontD2>
+								<SSubBoxFontU3>
+									<SSubBoxFontL4>언택트 세대</SSubBoxFontL4>
 									<li>비대면 선호도 증가</li>
-								</IntroSubBoxFont3>
-								<IntroSubBoxFont3>
-									<IntroSubBoxFont4>초연결 세대</IntroSubBoxFont4>
+								</SSubBoxFontU3>
+								<SSubBoxFontU3>
+									<SSubBoxFontL4>초연결 세대</SSubBoxFontL4>
 									<li>24시간 정보, 또래관계 연결</li>
-								</IntroSubBoxFont3>
-								<IntroSubBoxFont3>
-									<IntroSubBoxFont4>멀티페르소나 세대</IntroSubBoxFont4>
+								</SSubBoxFontU3>
+								<SSubBoxFontU3>
+									<SSubBoxFontL4>멀티페르소나 세대</SSubBoxFontL4>
 									<li>복수의 디지털 정체성</li>
-								</IntroSubBoxFont3>
-								<IntroSubBoxFont3>
-									<IntroSubBoxFont4>영상 세대</IntroSubBoxFont4>
+								</SSubBoxFontU3>
+								<SSubBoxFontU3>
+									<SSubBoxFontL4>영상 세대</SSubBoxFontL4>
 									<li>시각적 정보에 민감</li>
-								</IntroSubBoxFont3>
-							</IntroSubBoxFont2>
-						</IntroSubBox>
+								</SSubBoxFontU3>
+							</SSubBoxFontD2>
+						</SSubBoxD>
 
-						<IntroSubBox>
-							<IntroSubBoxFont1>
+						<SSubBoxD>
+							<SSubBoxFontD1>
 								피할 수 없는 디지털 전환시대,
 								<br />
 								새로운 이론/교육/서비스 필요
-							</IntroSubBoxFont1>
-							<IntroSubBoxFont2>
+							</SSubBoxFontD1>
+							<SSubBoxFontD2>
 								<ul>
 									<li>e세대 새로운 디지털 일상</li>
 									<li>새로운 a 교육</li>
 									<li>새로운 a 정책, 서비스</li>
 								</ul>
-							</IntroSubBoxFont2>
-						</IntroSubBox>
-					</IntroBox2>
-					<IntroTitle2>연도별 조사 실시 계획</IntroTitle2>
+							</SSubBoxFontD2>
+						</SSubBoxD>
+					</SBoxD2>
+					<STitleD2>연도별 조사 실시 계획</STitleD2>
 					<div>
 						<img src={IMG2} alt='intro' width='95%' />
 					</div>
-					<IntroTitle2>소개자료</IntroTitle2>
+					<STitleD2>소개자료</STitleD2>
 					<a
 						href='https://sookyeong-ssk.s3.ap-northeast-2.amazonaws.com/adds/Yonsei-ADDS.pdf'
 						target='_blank'
 						rel='noreferrer'>
-						<Buttton type='button'>Yonsei ADDS PDF</Buttton>
+						<SButtton type='button'>Yonsei ADDS PDF</SButtton>
 					</a>
 				</div>
 			</div>
-		</IntroContentContainer>
+		</SIntroContentContainer>
 	);
 }
 
 /* container */
-const IntroContentContainer = styled.div`
+const SIntroContentContainer = styled.div`
 	width: 99.2rem;
 	height: 154rem;
 `;
 
 /* 본문 1 */
-const IntroBox1 = styled.div`
+const SBoxD1 = styled.div`
 	background-image: url(${IMG});
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -97,19 +97,19 @@ const IntroBox1 = styled.div`
 	gap: 1.2rem 0;
 `;
 
-const IntroFont = styled.p`
+const SFontP = styled.p`
 	font-size: 4.3rem;
 	font-weight: 750;
 	color: ${Colors.white};
 `;
 
-const IntroFont2 = styled.p`
+const SFontP2 = styled.p`
 	font-size: 3.4rem;
 	color: ${Colors.white};
 `;
 
 /* 본문 2 */
-const IntroBox2 = styled.div`
+const SBoxD2 = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -117,7 +117,7 @@ const IntroBox2 = styled.div`
 	position: relative;
 `;
 
-const Circle = styled.div`
+const SCircleD = styled.div`
 	width: 40rem;
 	height: 40rem;
 	border: 3px solid ${Colors.circle};
@@ -129,7 +129,7 @@ const Circle = styled.div`
 	z-index: -1;
 `;
 
-const IntroSubBox = styled.div`
+const SSubBoxD = styled.div`
 	background-color: ${Colors.white};
 	box-shadow: 0 2rem 10rem 0 rgb(0 0 0 / 10%);
 	position: relative;
@@ -140,7 +140,7 @@ const IntroSubBox = styled.div`
 	height: 28.119rem;
 `;
 
-const IntroSubBoxFont1 = styled.div`
+const SSubBoxFontD1 = styled.div`
 	padding: 1.5rem;
 	text-align: center;
 	line-height: 3rem;
@@ -149,7 +149,7 @@ const IntroSubBoxFont1 = styled.div`
 	font-size: 2.1rem;
 `;
 
-const IntroSubBoxFont2 = styled.div`
+const SSubBoxFontD2 = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -158,13 +158,13 @@ const IntroSubBoxFont2 = styled.div`
 	width: 100%;
 `;
 
-const IntroSubBoxFont3 = styled.ul`
+const SSubBoxFontU3 = styled.ul`
 	display: flex;
 	font-size: 2.7rem;
 	gap: 3rem 2rem;
 `;
 
-const IntroSubBoxFont4 = styled.li`
+const SSubBoxFontL4 = styled.li`
 	flex-shrink: 0;
 	width: 12rem;
 	font-weight: 500;
@@ -172,7 +172,7 @@ const IntroSubBoxFont4 = styled.li`
 
 /* 본문 4 */
 
-const Buttton = styled.button`
+const SButtton = styled.button`
 	border: none;
 	padding: 1rem 2rem;
 	background-color: ${Colors.button};
@@ -186,7 +186,7 @@ const Buttton = styled.button`
 
 /* 제목 1, 2, 3 */
 
-const IntroTitle = styled.div`
+const STitleD = styled.div`
 	font-size: 2.1rem;
 	font-weight: 700;
 	margin: 5rem 0 7rem 0;
@@ -194,7 +194,7 @@ const IntroTitle = styled.div`
 	border-left: solid 0.6rem ${Colors.blue3_point};
 `;
 
-const IntroTitle2 = styled.div`
+const STitleD2 = styled.div`
 	font-size: 2.1rem;
 	font-weight: 700;
 	margin: 8rem 0 4rem 0;

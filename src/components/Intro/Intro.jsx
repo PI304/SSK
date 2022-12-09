@@ -6,17 +6,17 @@ import IntroMain from './IntroMain';
 
 function Intro() {
 	return (
-		<LayoutContainerCss>
+		<SLayoutContainer>
 			<Header />
 
 			<IntroMain />
 
 			<Footer />
-		</LayoutContainerCss>
+		</SLayoutContainer>
 	);
 }
 
-const LayoutContainerCss = styled.div`
+const SLayoutContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
