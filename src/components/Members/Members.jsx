@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
+import MainContainerCss from '../component_layout/MainContainer';
 import KimHyeonGyeong from '../../assets/김현경 교수님.png';
 
 function Members() {
@@ -24,12 +25,12 @@ const LayoutContainerCss = styled.div`
 
 function Container() {
 	return (
-		<ContainerCss>
+		<MainContainerCss>
 			<div />
 			<Title />
 			<Sidebar />
 			<Researchers />
-		</ContainerCss>
+		</MainContainerCss>
 	);
 }
 
