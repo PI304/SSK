@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import Colors from '../../constants/colors';
 import IMG from '../../assets/pattern_blue.png';
+// eslint-disable-next-line import/no-unresolved
+import IMG2 from '../../assets/introImage.PNG';
 
 function IntroContent() {
 	return (
@@ -14,7 +16,7 @@ function IntroContent() {
 				</div>
 
 				<div>
-					<IntroTitle1>알파 세대에 대한 새로운 이해의 필요성</IntroTitle1>
+					<IntroTitle>알파 세대에 대한 새로운 이해의 필요성</IntroTitle>
 
 					<IntroBox2>
 						<Circle />
@@ -24,24 +26,24 @@ function IntroContent() {
 								<br />
 								그리고 COVID_19 펜데믹
 							</IntroSubBoxFont1>
-							<div>
-								<ul>
-									<li>언택트 세대</li>
+							<IntroSubBoxFont2>
+								<IntroSubBoxFont3>
+									<IntroSubBoxFont4>언택트 세대</IntroSubBoxFont4>
 									<li>비대면 선호도 증가</li>
-								</ul>
-								<ul>
-									<li>초연결 세대</li>
+								</IntroSubBoxFont3>
+								<IntroSubBoxFont3>
+									<IntroSubBoxFont4>초연결 세대</IntroSubBoxFont4>
 									<li>24시간 정보, 또래관계 연결</li>
-								</ul>
-								<ul>
-									<li>멀티페르소나 세대</li>
+								</IntroSubBoxFont3>
+								<IntroSubBoxFont3>
+									<IntroSubBoxFont4>멀티페르소나 세대</IntroSubBoxFont4>
 									<li>복수의 디지털 정체성</li>
-								</ul>
-								<ul>
-									<li>영상 세대</li>
+								</IntroSubBoxFont3>
+								<IntroSubBoxFont3>
+									<IntroSubBoxFont4>영상 세대</IntroSubBoxFont4>
 									<li>시각적 정보에 민감</li>
-								</ul>
-							</div>
+								</IntroSubBoxFont3>
+							</IntroSubBoxFont2>
 						</IntroSubBox>
 
 						<IntroSubBox>
@@ -50,19 +52,26 @@ function IntroContent() {
 								<br />
 								새로운 이론/교육/서비스 필요
 							</IntroSubBoxFont1>
-							<div>
+							<IntroSubBoxFont2>
 								<ul>
 									<li>e세대 새로운 디지털 일상</li>
 									<li>새로운 a 교육</li>
 									<li>새로운 a 정책, 서비스</li>
 								</ul>
-							</div>
+							</IntroSubBoxFont2>
 						</IntroSubBox>
 					</IntroBox2>
-					<div />
-					<div />
-					<div />
-					<div />
+					<IntroTitle2>연도별 조사 실시 계획</IntroTitle2>
+					<div>
+						<img src={IMG2} alt='intro' width='95%' />
+					</div>
+					<IntroTitle2>소개자료</IntroTitle2>
+					<a
+						href='https://sookyeong-ssk.s3.ap-northeast-2.amazonaws.com/adds/Yonsei-ADDS.pdf'
+						target='_blank'
+						rel='noreferrer'>
+						<Buttton type='button'>Yonsei ADDS PDF</Buttton>
+					</a>
 				</div>
 			</div>
 		</IntroContentContainer>
@@ -99,19 +108,11 @@ const IntroFont2 = styled.p`
 	color: ${Colors.white};
 `;
 
-/* 제목 1 */
-const IntroTitle1 = styled.div`
-	font-size: 2.1rem;
-	font-weight: 700;
-	margin: 5rem 0 7rem 0;
-	padding: 0.4rem 1.5rem 0.3rem 1.7rem;
-	border-left: solid 0.6rem ${Colors.blue3_point};
-`;
-
 /* 본문 2 */
 const IntroBox2 = styled.div`
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	margin: 11rem 0 13rem 0;
 `;
 
@@ -146,11 +147,58 @@ const IntroSubBoxFont1 = styled.div`
 	font-weight: 750;
 	font-size: 2.1rem;
 `;
-/* 제목 2 */
 
-/* 본문 3 *
+const IntroSubBoxFont2 = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 2rem;
+	width: 100%;
+`;
 
-/* 제목 3 */
+const IntroSubBoxFont3 = styled.ul`
+	display: flex;
+	font-size: 2.7rem;
+	gap: 3rem 2rem;
+`;
+
+const IntroSubBoxFont4 = styled.li`
+	flex-shrink: 0;
+	width: 12rem;
+	font-weight: 500;
+`;
 
 /* 본문 4 */
+
+const Buttton = styled.button`
+	border: none;
+	padding: 1rem 2rem;
+	background-color: ${Colors.button};
+	transition: 0.2s ease;
+	color: ${Colors.white};
+	cursor: pointer;
+	margin: 0 1rem;
+	display: block;
+	font-size: 1.8rem;
+`;
+
+/* 제목 1, 2, 3 */
+
+const IntroTitle = styled.div`
+	font-size: 2.1rem;
+	font-weight: 700;
+	margin: 5rem 0 7rem 0;
+	padding: 0.4rem 1.5rem 0.3rem 1.7rem;
+	border-left: solid 0.6rem ${Colors.blue3_point};
+`;
+
+const IntroTitle2 = styled.div`
+	font-size: 2.1rem;
+	font-weight: 700;
+	margin: 8rem 0 4rem 0;
+	padding: 0.4rem 1.5rem 0.3rem 1.7rem;
+	border-left: solid 0.6rem ${Colors.blue3_point};
+`;
+
 export default IntroContent;

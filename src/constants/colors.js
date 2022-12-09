@@ -22,4 +22,6 @@ export default class Colors {
 	static blue_hover = 'rgba(141, 188, 255, 0.5)';
 
 	static circle = '#d9d9d9;';
+
+	static button = '#3b79d0';
 }
