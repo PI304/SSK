@@ -114,16 +114,17 @@ const IntroBox2 = styled.div`
 	justify-content: center;
 	align-items: center;
 	margin: 11rem 0 13rem 0;
+	position: relative;
 `;
 
 const Circle = styled.div`
 	width: 40rem;
 	height: 40rem;
-	border: 0.3rem solid ${Colors.circle};
+	border: 3px solid ${Colors.circle};
 	border-radius: 50%;
 	position: absolute;
-	top: 70%;
-	left: 58%;
+	top: 50%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: -1;
 `;
