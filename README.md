@@ -120,9 +120,9 @@ component와 styled-component를 구분 짓기 위해 네이밍 규칙을 임의
 * component
 
 ```
-C 간단한 기능이름 태그
+C 간단한 기능이름
 
-CMainD
+CMain
 
 ```
 
