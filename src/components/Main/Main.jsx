@@ -149,6 +149,7 @@ const MainSiteMapBackGroundCss1 = styled.div`
 	&: hover .mainSiteHover {
 		display: block;
 		position: relative;
+		background-color: ${Colors.white};
 	}
 `;
 
@@ -216,7 +217,6 @@ const MainSiteSubHoverCss = styled(Link)`
 	width: 27.7rem;
 	height: 9.23rem;
 	font-size: 1.5rem;
-	background: ${Colors.white};
 	&: hover {
 		background: ${Colors.blue_hover};
 	}
