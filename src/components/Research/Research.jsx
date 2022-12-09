@@ -6,6 +6,7 @@ import Footer from '../component_layout/Footer';
 import WhitePattern from '../../assets/pattern_white.png';
 import BluePattern from '../../assets/pattern_blue.png';
 import CardContent from './CardContent';
+import MainContainerCss from '../component_layout/MainContainer';
 
 function Research() {
 	const [over, setOver] = useState(false);
@@ -131,19 +132,19 @@ const LayoutContainerCss = styled.div`
 
 const TitleCss = styled.div`
 	position: relative;
-	left: 0.1rem;
-	font-weight: 500;
-	font-size: 2.5rem;
+	left: 0.2rem;
+	font-weight: 600;
+	font-size: 4rem;
 `;
 
-const MainContainerCss = styled.div`
-	width: 120rem;
-	margin: 3rem auto;
-	margin-bottom: 6rem;
-	display: grid;
-	grid-template-columns: 10rem 62rem;
-	grid-gap: 3rem;
-`;
+// const MainContainerCss = styled.div`
+// 	width: 120rem;
+// 	margin: 5rem auto;
+// 	margin-bottom: 10rem;
+// 	display: grid;
+// 	grid-template-columns: 16rem 100rem;
+// 	grid-gap: 5rem;
+// `;
 
 const WrapperCss = styled.div`
 	display: flex;
@@ -151,7 +152,7 @@ const WrapperCss = styled.div`
 `;
 
 const SpaceCss = styled.div`
-	height: 2rem;
+	height: 3rem;
 `;
 
 const ResearchCardCss = styled.div`
@@ -159,8 +160,8 @@ const ResearchCardCss = styled.div`
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: 0px 2px 10px rgb(0 0 0 / 10%);
-	height: 15rem;
-	font-size: 1.875rem;
+	height: 24rem;
+	font-size: 3rem;
 	font-weight: 700;
 	display: flex;
 	flex-direction: column;

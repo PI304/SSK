@@ -29,8 +29,8 @@ const ResearchCardCss = styled.div`
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: 0px 2px 10px rgb(0 0 0 / 10%);
-	height: 15rem;
-	font-size: 1.875rem;
+	height: 24rem;
+	font-size: 3rem;
 	font-weight: 700;
 	display: flex;
 	flex-direction: column;
@@ -43,12 +43,12 @@ const ResearchCardCss = styled.div`
 `;
 
 const CardSpaceCss = styled.div`
-	height: 3.5rem;
+	height: 5.5rem;
 `;
 
 const CardTitleCss = styled.div`
-	padding: 0 4.5rem;
-	font-size: 1.875rem;
+	padding: 0 7rem;
+	font-size: 3rem;
 	font-weight: 700;
 `;
 
@@ -60,13 +60,13 @@ const CardDecoCss = styled.div`
 const CardDecoBoxCss = styled.div`
 	width: 0;
 	height: 0;
-	border-top: 3.5rem solid #e2edfb;
-	border-right: 3.5rem solid #6e98d4;
+	border-top: 5.5rem solid #e2edfb;
+	border-right: 5.5rem solid #6e98d4;
 `;
 
 const CardInnerTitle = styled.div`
 	padding: 0 0 0.5rem 1rem;
-	font-size: 1.25rem;
+	font-size: 2rem;
 	font-weight: 700;
 	color: #e2edfb;
 `;

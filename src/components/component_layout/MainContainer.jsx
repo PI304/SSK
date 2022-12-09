@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
 const MainContainerCss = styled.div`
+	dwidth: 120rem;
+	margin: 5rem auto;
+	margin-bottom: 10rem;
 	display: grid;
-	margin: 3rem auto;
-	margin-top: 6rem;
-	margin-bottom: 6rem;
-	width: 120rem;
-	height: 164.63rem;
-	grid-template-columns: 18rem 99rem;
-	grid-gap: 3rem;
+	grid-template-columns: 16rem 100rem;
+	grid-gap: 5rem;
 `;
 
 export default MainContainerCss;
