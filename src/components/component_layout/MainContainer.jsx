@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const MainContainerCss = styled.div`
-	dwidth: 120rem;
+	width: 120rem;
 	margin: 5rem auto;
 	margin-bottom: 10rem;
 	display: grid;
