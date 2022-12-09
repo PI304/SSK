@@ -111,11 +111,11 @@ fix: intro 페이지 수정
 
 component와 styled-component를 구분 짓기 위해 네이밍 규칙을 임의로 만들었습니다
 
-**앞 component와 styled-componet를 구분 짓는 C / S는 대문자**
+>앞 component와 styled-componet를 구분 짓는 C / S는 대문자
 
-**간단한 기능이름: CamelCase**
+>간단한 기능이름: CamelCase
 
-**태그 이름 대문자**
+>태그 이름 대문자
 
 * component
 
