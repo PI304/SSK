@@ -161,13 +161,14 @@ const NavMenuLiCss = styled.li`
 	display: flex;
 	flex-direction: column;
 	width: 13rem;
-	height: 35rem;
 	&: hover .dropDownMenu {
 		display: block;
 	}
 `;
 
 const NavMenuACss = styled(Link)`
+	margin-top: 4rem;
+	margin-bottom: 3.2rem;
 	height: 9rem;
 	display: flex;
 	align-self: center;
