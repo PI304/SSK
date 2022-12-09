@@ -104,3 +104,34 @@ fix: intro 페이지 수정
 - 리뷰어로 지정을 받은 사람은 12시간 안에 코멘트를 남기도록 합니다.
 - 본인이 생성한 PR 에 대해서는 본인이 머지를 수행하도록 합니다.
 - PR 의 단위는 light 하게 설계합니다.
+
+---
+
+### 네이밍 규칙
+
+component와 styled-component를 구분 짓기 위해 네이밍 규칙을 임의로 만들었습니다
+
+**앞 component와 styled-componet를 구분 짓는 C / S는 대문자**
+
+**간단한 기능이름: CamelCase**
+
+**태그 이름 대문자**
+
+* component
+
+```
+C 간단한 기능이름 태그
+
+CMainD
+
+```
+
+* styled-component
+
+```
+S 간단한 기능이름 태그
+
+SMainD
+```
+
+뒤에 태그 같은 경우에는 태그 앞 스펠링을 따와 적는 것으로 하겠습니다
