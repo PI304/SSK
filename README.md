@@ -111,6 +111,14 @@ fix: intro 페이지 수정
 
 component와 styled-component를 구분 짓기 위해 네이밍 규칙을 임의로 만들었습니다
 
+**렌더링 되는 컴포넌트 이름은 파일이름과 같게 짓습니다**
+
+```
+파일이름: main
+
+컴포넌트 이름: main
+```
+
 >앞 component와 styled-componet를 구분 짓는 C / S는 대문자
 
 >간단한 기능이름: CamelCase
