@@ -2,7 +2,15 @@ import styled, { keyframes } from 'styled-components';
 import WhitePattern from '../../assets/pattern_white.png';
 import BluePattern from '../../assets/pattern_blue.png';
 
-function CardContent({ outTitle, innerTitle, innerContent, over, under, onMouseOver, onMouseOut }) {
+function CardContent({
+	outTitle,
+	innerTitle,
+	innerContent,
+	over = false,
+	under = true,
+	onMouseOver,
+	onMouseOut,
+}) {
 	return (
 		<ResearchCardCss onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
 			{under && (
@@ -75,11 +83,20 @@ const CardInnerContent = styled.div`
 	padding: 1rem 5rem 3rem 2rem;
 	font-size: 1rem;
 	font-weight: 500;
-	white-space: pre-wrap;
-	display: inline-block;
+`;
+
+const content = keyframes`
+	from {
+	  opacity: 1;
+	}
+	to {
+	  opacity: 0;
+	}
 `;
 
 const InnerCss = styled.div`
 	padding: 3rem;
+	animation: content 0.5s 
+	animation-fill-mode: forwards
 `;
 export default CardContent;
