@@ -1,10 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 // eslint-disable-next-line import/no-cycle
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
-import WhitePattern from '../../assets/pattern_white.png';
-import BluePattern from '../../assets/pattern_blue.png';
 import CardContent from './CardContent';
 import MainContainer from '../component_layout/MainContainer';
 import TitleCss from '../component_layout/Title';
