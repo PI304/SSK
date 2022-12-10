@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Sidebar from '../component_layout/Sidebar';
 import MainContainer from '../component_layout/MainContainer';
+import STitle from '../component_layout/Title';
 import IntroContent from './IntroMainContent';
 
 function IntroMain() {
@@ -8,7 +9,7 @@ function IntroMain() {
 		<main>
 			<MainContainer>
 				<SIntroBlockD />
-				<SIntroTitleD>ADDS 소개</SIntroTitleD>
+				<STitle>ADDS 소개</STitle>
 				<Sidebar />
 				<IntroContent />
 			</MainContainer>
@@ -21,12 +22,4 @@ const SIntroBlockD = styled.div`
 	height: 5.8rem;
 `;
 
-const SIntroTitleD = styled.div`
-	width: 99.2rem;
-	height: 5.8rem;
-	display: flex;
-	align-items: center;
-	font-weight: 600;
-	font-size: 4.3rem;
-`;
 export default IntroMain;
