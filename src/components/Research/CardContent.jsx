@@ -31,6 +31,14 @@ function CardContent({
 		</ResearchCardCss>
 	);
 }
+const content = keyframes`
+	from {
+	  opacity: 0;
+	}
+	to {
+	  opacity: 1;
+	}
+`;
 
 const ResearchCardCss = styled.div`
 	background-image: url(${WhitePattern});
@@ -73,30 +81,21 @@ const CardDecoBoxCss = styled.div`
 `;
 
 const CardInnerTitle = styled.div`
-	padding: 0 0 0.5rem 1rem;
+	padding: 2.5rem 0 0.5rem 3rem;
 	font-size: 2rem;
 	font-weight: 700;
 	color: #e2edfb;
+	animation: ${content} 0.5s;
 `;
 
 const CardInnerContent = styled.div`
-	padding: 1rem 5rem 3rem 2rem;
-	font-size: 1rem;
-	font-weight: 500;
-`;
-
-const content = keyframes`
-	from {
-	  opacity: 1;
-	}
-	to {
-	  opacity: 0;
-	}
+	padding: 1rem 5rem 3rem 4.5rem;
+	font-size: 1.5rem;
+	font-weight: 600;
+	animation: ${content} 0.5s;
 `;
 
 const InnerCss = styled.div`
 	padding: 3rem;
-	animation: content 0.5s 
-	animation-fill-mode: forwards
 `;
 export default CardContent;
