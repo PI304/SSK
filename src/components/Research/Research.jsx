@@ -7,6 +7,7 @@ import WhitePattern from '../../assets/pattern_white.png';
 import BluePattern from '../../assets/pattern_blue.png';
 import CardContent from './CardContent';
 import MainContainer from '../component_layout/MainContainer';
+import TitleCss from '../component_layout/Title';
 
 function Research() {
 	const [over, setOver] = useState(false);
@@ -125,13 +126,6 @@ const LayoutContainerCss = styled.div`
 	flex-direction: column;
 	overflow: hidden;
 	min-height: 100vh;
-`;
-
-const TitleCss = styled.div`
-	position: relative;
-	left: 0.2rem;
-	font-weight: 600;
-	font-size: 4rem;
 `;
 
 const WrapperCss = styled.div`
