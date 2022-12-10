@@ -1,5 +1,5 @@
 /* eslint-disable import/no-cycle */
-import styled from 'styled-components';
+import SLayoutContainer from '../component_layout/LayoutContainer';
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
 import IntroMain from './IntroMain';
@@ -15,12 +15,5 @@ function Intro() {
 		</SLayoutContainer>
 	);
 }
-
-const SLayoutContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	min-height: 100vh;
-`;
 
 export default Intro;
