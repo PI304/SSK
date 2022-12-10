@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import SLayoutContainer from '../component_layout/LayoutContainer';
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
 import MainSlide from './MainSlide';
@@ -23,13 +24,6 @@ function Main() {
 		</SLayoutContainer>
 	);
 }
-
-const SLayoutContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	min-height: 100vh;
-`;
 
 /* 메인 컨테이너 박스 CSS */
 

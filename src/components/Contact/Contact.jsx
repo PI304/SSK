@@ -1,25 +1,20 @@
 import styled from 'styled-components';
 // eslint-disable-next-line import/no-cycle
+import SLayoutContainer from '../component_layout/LayoutContainer';
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
+import ContactMain from './ContactMain';
 
 function Contact() {
 	return (
-		<LayoutContainerCss>
+		<SLayoutContainer>
 			<Header />
-			<h2>contact</h2>
-			<main />
+
+			<ContactMain />
 
 			<Footer />
-		</LayoutContainerCss>
+		</SLayoutContainer>
 	);
 }
-
-const LayoutContainerCss = styled.div`
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	min-height: 100vh;
-`;
 
 export default Contact;
