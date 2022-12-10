@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Colors from '../../constants/colors';
 import IMG from '../../assets/pattern_blue.png';
-// eslint-disable-next-line import/no-unresolved
 import IMG2 from '../../assets/introImage.PNG';
 
 function IntroContent() {
@@ -27,39 +26,39 @@ function IntroContent() {
 								그리고 COVID_19 펜데믹
 							</SSubBoxFontD1>
 							<SSubBoxFontD2>
-								<SSubBoxFontU3>
-									<SSubBoxFontL4>언택트 세대</SSubBoxFontL4>
+								<SSubBoxFontU>
+									<SSubBoxFontL>언택트 세대</SSubBoxFontL>
 									<li>비대면 선호도 증가</li>
-								</SSubBoxFontU3>
-								<SSubBoxFontU3>
-									<SSubBoxFontL4>초연결 세대</SSubBoxFontL4>
+								</SSubBoxFontU>
+								<SSubBoxFontU>
+									<SSubBoxFontL>초연결 세대</SSubBoxFontL>
 									<li>24시간 정보, 또래관계 연결</li>
-								</SSubBoxFontU3>
-								<SSubBoxFontU3>
-									<SSubBoxFontL4>멀티페르소나 세대</SSubBoxFontL4>
+								</SSubBoxFontU>
+								<SSubBoxFontU>
+									<SSubBoxFontL>멀티페르소나 세대</SSubBoxFontL>
 									<li>복수의 디지털 정체성</li>
-								</SSubBoxFontU3>
-								<SSubBoxFontU3>
-									<SSubBoxFontL4>영상 세대</SSubBoxFontL4>
+								</SSubBoxFontU>
+								<SSubBoxFontU>
+									<SSubBoxFontL>영상 세대</SSubBoxFontL>
 									<li>시각적 정보에 민감</li>
-								</SSubBoxFontU3>
+								</SSubBoxFontU>
 							</SSubBoxFontD2>
 						</SSubBoxD>
 
-						<SSubBoxD>
+						<SSubBoxD2>
 							<SSubBoxFontD1>
 								피할 수 없는 디지털 전환시대,
 								<br />
 								새로운 이론/교육/서비스 필요
 							</SSubBoxFontD1>
 							<SSubBoxFontD2>
-								<ul>
-									<li>e세대 새로운 디지털 일상</li>
-									<li>새로운 a 교육</li>
-									<li>새로운 a 정책, 서비스</li>
-								</ul>
+								<SSubBoxFontU2>
+									<SSubBoxFontL2>e세대 새로운 디지털 일상</SSubBoxFontL2>
+									<SSubBoxFontL2>새로운 a 교육</SSubBoxFontL2>
+									<SSubBoxFontL2>새로운 a 정책, 서비스</SSubBoxFontL2>
+								</SSubBoxFontU2>
 							</SSubBoxFontD2>
-						</SSubBoxD>
+						</SSubBoxD2>
 					</SBoxD2>
 					<STitleD2>연도별 조사 실시 계획</STitleD2>
 					<div>
@@ -137,11 +136,24 @@ const SSubBoxD = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 38.4rem;
-	height: 28.119rem;
+	height: 28.12rem;
+	margin-right: 1.6rem;
+`;
+
+const SSubBoxD2 = styled.div`
+	background-color: ${Colors.white};
+	box-shadow: 0 2rem 10rem 0 rgb(0 0 0 / 10%);
+	position: relative;
+	z-index: 0;
+	display: flex;
+	flex-direction: column;
+	width: 38.4rem;
+	height: 28.12rem;
+	margin-left: 1.6rem;
 `;
 
 const SSubBoxFontD1 = styled.div`
-	padding: 1.5rem;
+	padding: 1.7rem;
 	text-align: center;
 	line-height: 3rem;
 	background-color: ${Colors.blue4};
@@ -154,20 +166,35 @@ const SSubBoxFontD2 = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 1rem 2rem;
+	padding: 2.6rem 2rem;
 	width: 100%;
+	font-size: 4.2rem;
 `;
 
-const SSubBoxFontU3 = styled.ul`
+const SSubBoxFontU = styled.ul`
 	display: flex;
-	font-size: 2.7rem;
-	gap: 3rem 2rem;
+	margin: 1rem 0;
+	width: 33.3rem;
 `;
 
-const SSubBoxFontL4 = styled.li`
+const SSubBoxFontU2 = styled.ul`
+	display: block;
+	list-style: none;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+`;
+
+const SSubBoxFontL = styled.li`
+	margin-right: 1.3rem;
 	flex-shrink: 0;
-	width: 12rem;
 	font-weight: 500;
+	width: 14rem;
+`;
+
+const SSubBoxFontL2 = styled.li`
+	margin: 2rem auto;
+	font-weight: 600;
 `;
 
 /* 본문 4 */
