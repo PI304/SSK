@@ -5,7 +5,8 @@ import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
 import CardContent from './CardContent';
 import MainContainer from '../component_layout/MainContainer';
-import TitleCss from '../component_layout/Title';
+import STitle from '../component_layout/Title';
+import SLayoutContainer from '../component_layout/LayoutContainer';
 
 function Research() {
 	const [over, setOver] = useState(false);
@@ -24,11 +25,10 @@ function Research() {
 	};
 
 	return (
-		<LayoutContainerCss>
+		<SLayoutContainer>
 			<Header />
 			<MainContainer>
-				<div />
-				<TitleCss>조사 설계</TitleCss>
+				<STitle>조사 설계</STitle>
 				<div />
 				<WrapperCss>
 					<CardContent
@@ -115,16 +115,9 @@ function Research() {
 				</WrapperCss>
 			</MainContainer>
 			<Footer />
-		</LayoutContainerCss>
+		</SLayoutContainer>
 	);
 }
-
-const LayoutContainerCss = styled.div`
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	min-height: 100vh;
-`;
 
 const WrapperCss = styled.div`
 	display: flex;
