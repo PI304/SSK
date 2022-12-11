@@ -7,17 +7,11 @@ import ContactContent from './ContactContent';
 function ContactMain() {
 	return (
 		<MainContainer>
-			<SContactBlockD />
 			<STitle>Contact</STitle>
 			<Sidebar />
 			<ContactContent />
 		</MainContainer>
 	);
 }
-
-const SContactBlockD = styled.div`
-	width: 16rem;
-	height: 5.8rem;
-`;
 
 export default ContactMain;
