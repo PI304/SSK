@@ -6,72 +6,68 @@ import IMG2 from '../../assets/introImage.PNG';
 function IntroContent() {
 	return (
 		<SIntroContentContainer>
+			<SBoxD1>
+				<SFontP>ADDS</SFontP>
+				<SFontP2>Alpha generation Digital Daily Survey</SFontP2>
+			</SBoxD1>
+
 			<div>
+				<STitleD>알파 세대에 대한 새로운 이해의 필요성</STitleD>
+
+				<SBoxD2>
+					<SCircleD />
+					<SSubBoxD>
+						<SSubBoxFontD1>
+							A세대의 시작,
+							<br />
+							그리고 COVID_19 펜데믹
+						</SSubBoxFontD1>
+						<SSubBoxFontD2>
+							<SSubBoxFontU>
+								<SSubBoxFontL>언택트 세대</SSubBoxFontL>
+								<li>비대면 선호도 증가</li>
+							</SSubBoxFontU>
+							<SSubBoxFontU>
+								<SSubBoxFontL>초연결 세대</SSubBoxFontL>
+								<li>24시간 정보, 또래관계 연결</li>
+							</SSubBoxFontU>
+							<SSubBoxFontU>
+								<SSubBoxFontL>멀티페르소나 세대</SSubBoxFontL>
+								<li>복수의 디지털 정체성</li>
+							</SSubBoxFontU>
+							<SSubBoxFontU>
+								<SSubBoxFontL>영상 세대</SSubBoxFontL>
+								<li>시각적 정보에 민감</li>
+							</SSubBoxFontU>
+						</SSubBoxFontD2>
+					</SSubBoxD>
+
+					<SSubBoxD2>
+						<SSubBoxFontD1>
+							피할 수 없는 디지털 전환시대,
+							<br />
+							새로운 이론/교육/서비스 필요
+						</SSubBoxFontD1>
+						<SSubBoxFontD2>
+							<SSubBoxFontU2>
+								<SSubBoxFontL2>e세대 새로운 디지털 일상</SSubBoxFontL2>
+								<SSubBoxFontL2>새로운 a 교육</SSubBoxFontL2>
+								<SSubBoxFontL2>새로운 a 정책, 서비스</SSubBoxFontL2>
+							</SSubBoxFontU2>
+						</SSubBoxFontD2>
+					</SSubBoxD2>
+				</SBoxD2>
+				<STitleD2>연도별 조사 실시 계획</STitleD2>
 				<div>
-					<SBoxD1>
-						<SFontP>ADDS</SFontP>
-						<SFontP2>Alpha generation Digital Daily Survey</SFontP2>
-					</SBoxD1>
+					<img src={IMG2} alt='intro' width='95%' />
 				</div>
-
-				<div>
-					<STitleD>알파 세대에 대한 새로운 이해의 필요성</STitleD>
-
-					<SBoxD2>
-						<SCircleD />
-						<SSubBoxD>
-							<SSubBoxFontD1>
-								A세대의 시작,
-								<br />
-								그리고 COVID_19 펜데믹
-							</SSubBoxFontD1>
-							<SSubBoxFontD2>
-								<SSubBoxFontU>
-									<SSubBoxFontL>언택트 세대</SSubBoxFontL>
-									<li>비대면 선호도 증가</li>
-								</SSubBoxFontU>
-								<SSubBoxFontU>
-									<SSubBoxFontL>초연결 세대</SSubBoxFontL>
-									<li>24시간 정보, 또래관계 연결</li>
-								</SSubBoxFontU>
-								<SSubBoxFontU>
-									<SSubBoxFontL>멀티페르소나 세대</SSubBoxFontL>
-									<li>복수의 디지털 정체성</li>
-								</SSubBoxFontU>
-								<SSubBoxFontU>
-									<SSubBoxFontL>영상 세대</SSubBoxFontL>
-									<li>시각적 정보에 민감</li>
-								</SSubBoxFontU>
-							</SSubBoxFontD2>
-						</SSubBoxD>
-
-						<SSubBoxD2>
-							<SSubBoxFontD1>
-								피할 수 없는 디지털 전환시대,
-								<br />
-								새로운 이론/교육/서비스 필요
-							</SSubBoxFontD1>
-							<SSubBoxFontD2>
-								<SSubBoxFontU2>
-									<SSubBoxFontL2>e세대 새로운 디지털 일상</SSubBoxFontL2>
-									<SSubBoxFontL2>새로운 a 교육</SSubBoxFontL2>
-									<SSubBoxFontL2>새로운 a 정책, 서비스</SSubBoxFontL2>
-								</SSubBoxFontU2>
-							</SSubBoxFontD2>
-						</SSubBoxD2>
-					</SBoxD2>
-					<STitleD2>연도별 조사 실시 계획</STitleD2>
-					<div>
-						<img src={IMG2} alt='intro' width='95%' />
-					</div>
-					<STitleD2>소개자료</STitleD2>
-					<a
-						href='https://sookyeong-ssk.s3.ap-northeast-2.amazonaws.com/adds/Yonsei-ADDS.pdf'
-						target='_blank'
-						rel='noreferrer'>
-						<SButtton type='button'>Yonsei ADDS PDF</SButtton>
-					</a>
-				</div>
+				<STitleD2>소개자료</STitleD2>
+				<a
+					href='https://sookyeong-ssk.s3.ap-northeast-2.amazonaws.com/adds/Yonsei-ADDS.pdf'
+					target='_blank'
+					rel='noreferrer'>
+					<SButtton type='button'>Yonsei ADDS PDF</SButtton>
+				</a>
 			</div>
 		</SIntroContentContainer>
 	);
