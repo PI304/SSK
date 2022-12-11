@@ -142,7 +142,7 @@ function CMainSiteHover() {
 const SSiteHoverContainer = styled.div`
 	display: none;
 	position: absolute;
-	bottom: 20.2rem;
+	bottom: 20.3rem;
 `;
 
 const SSiteHoverU = styled.ul`
@@ -211,7 +211,7 @@ function CMainSiteHover2() {
 		<SSiteHoverContainer2 className='mainSiteHover'>
 			<SSiteHoverU2>
 				<SSiteHoverL2>
-					<SSiteSubHoverA2 to='../components/Intro'>발간물</SSiteSubHoverA2>
+					<SSiteSubHoverA2 to='../components/Publication'>발간물</SSiteSubHoverA2>
 				</SSiteHoverL2>
 			</SSiteHoverU2>
 		</SSiteHoverContainer2>
@@ -221,7 +221,7 @@ function CMainSiteHover2() {
 const SSiteHoverContainer2 = styled.div`
 	display: none;
 	position: absolute;
-	bottom: 15.2rem;
+	bottom: 15.3rem;
 `;
 
 const SSiteHoverU2 = styled.ul`
@@ -288,10 +288,10 @@ function CMainSiteHover3() {
 		<SSiteHoverContainer3 className='mainSiteHover'>
 			<SSiteHoverU3>
 				<SSiteHoverL3>
-					<SSiteSubHoverA3 to='../components/Intro'>자료안내</SSiteSubHoverA3>
+					<SSiteSubHoverA3 to='../components/Resources'>자료안내</SSiteSubHoverA3>
 				</SSiteHoverL3>
 				<SSiteHoverL3>
-					<SSiteSubHoverA3 to='../components/Intro'>데이터활용논문</SSiteSubHoverA3>
+					<SSiteSubHoverA3 to='../components/Papers'>데이터활용논문</SSiteSubHoverA3>
 				</SSiteHoverL3>
 			</SSiteHoverU3>
 		</SSiteHoverContainer3>
@@ -301,7 +301,7 @@ function CMainSiteHover3() {
 const SSiteHoverContainer3 = styled.div`
 	display: none;
 	position: absolute;
-	bottom: 17.3rem;
+	bottom: 17.4rem;
 `;
 
 const SSiteHoverU3 = styled.ul`
@@ -367,16 +367,16 @@ function CMainSiteHover4() {
 		<SSiteHoverContainer4 className='mainSiteHover'>
 			<SSiteHoverU4>
 				<SSiteHoverL4>
-					<SSiteSubHoverA4 to='../components/Intro'>공지사항</SSiteSubHoverA4>
+					<SSiteSubHoverA4 to='../components/Notice'>공지사항</SSiteSubHoverA4>
 				</SSiteHoverL4>
 				<SSiteHoverL4>
-					<SSiteSubHoverA4 to='../components/Intro'>보도자료</SSiteSubHoverA4>
+					<SSiteSubHoverA4 to='../components/Reports'>보도자료</SSiteSubHoverA4>
 				</SSiteHoverL4>
 				<SSiteHoverL4>
-					<SSiteSubHoverA4 to='../components/Intro'>FAQ</SSiteSubHoverA4>
+					<SSiteSubHoverA4 to='../components/FAQ'>FAQ</SSiteSubHoverA4>
 				</SSiteHoverL4>
 				<SSiteHoverL4>
-					<SSiteSubHoverA4 to='../components/Intro'>contact</SSiteSubHoverA4>
+					<SSiteSubHoverA4 to='../components/Contact'>contact</SSiteSubHoverA4>
 				</SSiteHoverL4>
 			</SSiteHoverU4>
 		</SSiteHoverContainer4>
@@ -386,7 +386,7 @@ function CMainSiteHover4() {
 const SSiteHoverContainer4 = styled.div`
 	display: none;
 	position: absolute;
-	bottom: 21.7rem;
+	bottom: 21.8rem;
 `;
 
 const SSiteHoverU4 = styled.ul`
