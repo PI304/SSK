@@ -5,6 +5,7 @@ const STitle = styled.div`
 	left: 0.2rem;
 	font-weight: 600;
 	font-size: 4rem;
+	grid-column: 2 / 3;
 `;
 
 export default STitle;

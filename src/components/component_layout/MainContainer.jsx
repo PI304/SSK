@@ -6,7 +6,7 @@ const MainContainer = styled.div`
 	margin-bottom: 10rem;
 	display: grid;
 	grid-template-columns: 16rem 100rem;
-	grid-gap: 5rem;
+	grid-gap: 4rem;
 `;
 
 export default MainContainer;

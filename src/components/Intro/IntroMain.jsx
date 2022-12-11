@@ -8,7 +8,6 @@ function IntroMain() {
 	return (
 		<main>
 			<MainContainer>
-				<SIntroBlockD />
 				<STitle>ADDS 소개</STitle>
 				<Sidebar />
 				<IntroContent />
@@ -16,10 +15,5 @@ function IntroMain() {
 		</main>
 	);
 }
-
-const SIntroBlockD = styled.div`
-	width: 16rem;
-	height: 5.8rem;
-`;
 
 export default IntroMain;
