@@ -6,14 +6,13 @@ function CardContent({
 	outTitle,
 	innerTitle,
 	innerContent,
-	over = false,
 	under = true,
 	onMouseOver,
 	onMouseOut,
 }) {
 	return (
 		<ResearchCardCss onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
-			{under && (
+			{under ? (
 				<>
 					<CardSpaceCss />
 					<CardTitleCss>{outTitle}</CardTitleCss>
@@ -21,8 +20,7 @@ function CardContent({
 						<CardDecoBoxCss />
 					</CardDecoCss>
 				</>
-			)}
-			{over && (
+			) : (
 				<InnerCss>
 					<CardInnerTitle>{innerTitle}</CardInnerTitle>
 					<CardInnerContent>{innerContent}</CardInnerContent>
@@ -31,6 +29,7 @@ function CardContent({
 		</ResearchCardCss>
 	);
 }
+
 const content = keyframes`
 	from {
 	  opacity: 0;
@@ -51,11 +50,11 @@ const ResearchCardCss = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	position: realative;
 	&:hover {
 		background-image: url(${BluePattern});
 		transition: 0.5s ease-out;
 	}
-	position: realative;
 `;
 
 const CardSpaceCss = styled.div`
@@ -98,4 +97,5 @@ const CardInnerContent = styled.div`
 const InnerCss = styled.div`
 	padding: 3rem;
 `;
+
 export default CardContent;
