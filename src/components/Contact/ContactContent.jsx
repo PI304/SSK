@@ -41,6 +41,7 @@ function ContactContent() {
 						</STextD>
 					</SCircle1D>
 				</SCircleWrapperD>
+				<SText3D />
 			</SContactContainer>
 		</div>
 	);
@@ -124,4 +125,7 @@ const SText2D = styled.div`
 	transition: 1s ease;
 `;
 
+const SText3D = styled.div`
+	font-size: 2rem;
+`;
 export default ContactContent;
