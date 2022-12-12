@@ -7,83 +7,45 @@ import IMG4 from '../../assets/pattern_contact.png';
 import Colors from '../../constants/colors';
 
 function ContactContent() {
-	const [hover, setHover] = useState(false);
+	const [isHover, setIsHover] = useState(false);
 	return (
 		<div>
-			<SContactContainer onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-				{hover ? (
-					<>
-						<SInfoD>
-							연구 및 데이터 관련 문의사항은 FAQ를 확인하시고
-							<br />
-							추가 문의사항은 연락처로 문의 바랍니다
-						</SInfoD>
-						<SCircleWrapperD>
-							<SHoverCircleD>
-								<div>
-									<SImgI src={IMG1} alt='mail' />
-								</div>
-								<STextD>
-									<a href='mailto:adds@yonsei.ac.kr'>adds@yonsei.ac.kr</a>
-								</STextD>
-							</SHoverCircleD>
-							<SHoverCircle2D>
-								<div>
-									<SImg2I src={IMG2} alt='building' />
-								</div>
-								<SText2D>
-									<a href='https://map.naver.com/v5/search/서울시 서대문구 연세로 50 삼성관 220호'>
-										(03722) 서울시 서대문구 연세로 50 삼성관 220호
-									</a>
-								</SText2D>
-							</SHoverCircle2D>
-							<SHoverCircleD>
-								<div>
-									<SImgI src={IMG3} alt='phone' />
-								</div>
-								<STextD>
-									<a href='tel:01026733149'>010 - 2673 - 3149</a>
-								</STextD>
-							</SHoverCircleD>
-						</SCircleWrapperD>
-					</>
-				) : (
-					<>
-						<SInfoD>
-							연구 및 데이터 관련 문의사항은 FAQ를 확인하시고
-							<br />
-							추가 문의사항은 연락처로 문의 바랍니다
-						</SInfoD>
-						<SCircleWrapperD>
-							<SCircle1D>
-								<div>
-									<SImgI src={IMG1} alt='mail' />
-								</div>
-								<STextD>
-									<a href='mailto:adds@yonsei.ac.kr'>adds@yonsei.ac.kr</a>
-								</STextD>
-							</SCircle1D>
-							<SCircle2D>
-								<div>
-									<SImg2I src={IMG2} alt='building' />
-								</div>
-								<SText2D>
-									<a href='https://map.naver.com/v5/search/서울시 서대문구 연세로 50 삼성관 220호'>
-										(03722) 서울시 서대문구 연세로 50 삼성관 220호
-									</a>
-								</SText2D>
-							</SCircle2D>
-							<SCircle1D>
-								<div>
-									<SImgI src={IMG3} alt='phone' />
-								</div>
-								<STextD>
-									<a href='tel:01026733149'>010 - 2673 - 3149</a>
-								</STextD>
-							</SCircle1D>
-						</SCircleWrapperD>
-					</>
-				)}
+			<SContactContainer
+				onMouseEnter={() => setIsHover(true)}
+				onMouseLeave={() => setIsHover(false)}>
+				<SInfoD>
+					연구 및 데이터 관련 문의사항은 FAQ를 확인하시고
+					<br />
+					추가 문의사항은 연락처로 문의 바랍니다
+				</SInfoD>
+				<SCircleWrapperD>
+					<SCircle1D setIsHover={isHover}>
+						<div>
+							<SImgI src={IMG1} alt='mail' />
+						</div>
+						<STextD>
+							<a href='mailto:adds@yonsei.ac.kr'>adds@yonsei.ac.kr</a>
+						</STextD>
+					</SCircle1D>
+					<SCircle2D setIsHover={isHover}>
+						<div>
+							<SImg2I src={IMG2} alt='building' />
+						</div>
+						<SText2D>
+							<a href='https://map.naver.com/v5/search/서울시 서대문구 연세로 50 삼성관 220호'>
+								(03722) 서울시 서대문구 연세로 50 삼성관 220호
+							</a>
+						</SText2D>
+					</SCircle2D>
+					<SCircle1D setIsHover={isHover}>
+						<div>
+							<SImgI src={IMG3} alt='phone' />
+						</div>
+						<STextD>
+							<a href='tel:01026733149'>010 - 2673 - 3149</a>
+						</STextD>
+					</SCircle1D>
+				</SCircleWrapperD>
 			</SContactContainer>
 		</div>
 	);
@@ -135,6 +97,12 @@ const SCircle1D = styled.div`
 	text-align: center;
 	word-break: break-all;
 	padding: 1.6rem;
+	&: hover {
+		background-color: ${(props) => props.isHover || 'white'};
+		transition: ${(props) => props.isHover || '1s ease'};
+		width: ${(props) => props.isHover || '20.8rem'};
+		height: ${(props) => props.isHover || '20.8rem'};
+	}
 `;
 
 const SImgI = styled.img`
@@ -161,6 +129,13 @@ const SCircle2D = styled.div`
 	text-align: center;
 	word-break: break-all;
 	padding: 2.4rem;
+	&: hover {
+		background-color: ${(props) => props.isHover || 'white'};
+		transition: ${(props) => props.isHover || '1s ease'};
+		box-shadow: ${(props) => props.isHover || '0px 2px 10px rgb(0 0 0 / 10%)'};
+		width: ${(props) => props.isHover || '35.2rem'};
+		height: ${(props) => props.isHover || '35.2rem'};
+	}
 `;
 
 const SImg2I = styled.img`
@@ -172,36 +147,6 @@ const SText2D = styled.div`
 	font-weight: 500;
 	font-size: 2.9rem;
 	transition: 1s ease;
-`;
-
-/* Hover circle */
-const SHoverCircleD = styled.div`
-	margin: 0 1.6rem;
-	width: 20.8rem;
-	height: 20.8rem;
-	border-radius: 50%;
-	background-color: ${Colors.white};
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	transition: 1s ease;
-	text-align: center;
-	word-break: break-all;
-	padding: 1.6rem;
-`;
-
-const SHoverCircle2D = styled.div`
-	width: 35.2rem;
-	height: 35.2rem;
-	border-radius: 50%;
-	background-color: ${Colors.white};
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	transition: 1s ease;
-	text-align: center;
-	word-break: break-all;
-	padding: 2.4rem;
 `;
 
 export default ContactContent;
