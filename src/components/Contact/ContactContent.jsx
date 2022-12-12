@@ -1,46 +1,89 @@
 import styled from 'styled-components';
+import { useState } from 'react';
 import IMG1 from '../../assets/envelope.svg';
 import IMG2 from '../../assets/building.svg';
 import IMG3 from '../../assets/phone.svg';
+import IMG4 from '../../assets/pattern_contact.png';
 import Colors from '../../constants/colors';
 
 function ContactContent() {
+	const [hover, setHover] = useState(false);
 	return (
 		<div>
-			<SContactContainer>
-				<SInfoD>
-					연구 및 데이터 관련 문의사항은 FAQ를 확인하시고
-					<br />
-					추가 문의사항은 연락처로 문의 바랍니다
-				</SInfoD>
-				<SCircleWrapperD>
-					<SCircle1D>
-						<div>
-							<SImgI src={IMG1} alt='mail' />
-						</div>
-						<STextD>
-							<a href='mailto:adds@yonsei.ac.kr'>adds@yonsei.ac.kr</a>
-						</STextD>
-					</SCircle1D>
-					<SCircle2D>
-						<div>
-							<SImg2I src={IMG2} alt='building' />
-						</div>
-						<SText2D>
-							<a href='https://map.naver.com/v5/search/서울시 서대문구 연세로 50 삼성관 220호'>
-								(03722) 서울시 서대문구 연세로 50 삼성관 220호
-							</a>
-						</SText2D>
-					</SCircle2D>
-					<SCircle1D>
-						<div>
-							<SImgI src={IMG3} alt='phone' />
-						</div>
-						<STextD>
-							<a href='tel:01026733149'>010 - 2673 - 3149</a>
-						</STextD>
-					</SCircle1D>
-				</SCircleWrapperD>
+			<SContactContainer onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+				{hover ? (
+					<>
+						<SInfoD>
+							연구 및 데이터 관련 문의사항은 FAQ를 확인하시고
+							<br />
+							추가 문의사항은 연락처로 문의 바랍니다
+						</SInfoD>
+						<SCircleWrapperD>
+							<SHoverCircleD>
+								<div>
+									<SImgI src={IMG1} alt='mail' />
+								</div>
+								<STextD>
+									<a href='mailto:adds@yonsei.ac.kr'>adds@yonsei.ac.kr</a>
+								</STextD>
+							</SHoverCircleD>
+							<SHoverCircle2D>
+								<div>
+									<SImg2I src={IMG2} alt='building' />
+								</div>
+								<SText2D>
+									<a href='https://map.naver.com/v5/search/서울시 서대문구 연세로 50 삼성관 220호'>
+										(03722) 서울시 서대문구 연세로 50 삼성관 220호
+									</a>
+								</SText2D>
+							</SHoverCircle2D>
+							<SHoverCircleD>
+								<div>
+									<SImgI src={IMG3} alt='phone' />
+								</div>
+								<STextD>
+									<a href='tel:01026733149'>010 - 2673 - 3149</a>
+								</STextD>
+							</SHoverCircleD>
+						</SCircleWrapperD>
+					</>
+				) : (
+					<>
+						<SInfoD>
+							연구 및 데이터 관련 문의사항은 FAQ를 확인하시고
+							<br />
+							추가 문의사항은 연락처로 문의 바랍니다
+						</SInfoD>
+						<SCircleWrapperD>
+							<SCircle1D>
+								<div>
+									<SImgI src={IMG1} alt='mail' />
+								</div>
+								<STextD>
+									<a href='mailto:adds@yonsei.ac.kr'>adds@yonsei.ac.kr</a>
+								</STextD>
+							</SCircle1D>
+							<SCircle2D>
+								<div>
+									<SImg2I src={IMG2} alt='building' />
+								</div>
+								<SText2D>
+									<a href='https://map.naver.com/v5/search/서울시 서대문구 연세로 50 삼성관 220호'>
+										(03722) 서울시 서대문구 연세로 50 삼성관 220호
+									</a>
+								</SText2D>
+							</SCircle2D>
+							<SCircle1D>
+								<div>
+									<SImgI src={IMG3} alt='phone' />
+								</div>
+								<STextD>
+									<a href='tel:01026733149'>010 - 2673 - 3149</a>
+								</STextD>
+							</SCircle1D>
+						</SCircleWrapperD>
+					</>
+				)}
 			</SContactContainer>
 		</div>
 	);
@@ -49,6 +92,13 @@ function ContactContent() {
 const SContactContainer = styled.div`
 	background-color: ${Colors.white};
 	transition: 1s ease;
+	&: hover {
+		background-image: url(${IMG4});
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: 0 0;
+		transition: 1s ease;
+	}
 `;
 
 /* 본문 1 */
@@ -122,6 +172,36 @@ const SText2D = styled.div`
 	font-weight: 500;
 	font-size: 2.9rem;
 	transition: 1s ease;
+`;
+
+/* Hover circle */
+const SHoverCircleD = styled.div`
+	margin: 0 1.6rem;
+	width: 20.8rem;
+	height: 20.8rem;
+	border-radius: 50%;
+	background-color: ${Colors.white};
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transition: 1s ease;
+	text-align: center;
+	word-break: break-all;
+	padding: 1.6rem;
+`;
+
+const SHoverCircle2D = styled.div`
+	width: 35.2rem;
+	height: 35.2rem;
+	border-radius: 50%;
+	background-color: ${Colors.white};
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transition: 1s ease;
+	text-align: center;
+	word-break: break-all;
+	padding: 2.4rem;
 `;
 
 export default ContactContent;
