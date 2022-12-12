@@ -84,13 +84,13 @@ Feature  <= 브랜치 이름
 ---------------------
 올바른 예시
 
-feature: master branch push 막기
+feat: master branch push 막기
 
-feature: intro 페이지 추가
+feat: intro 페이지 추가
 ----------------------
 잘못된 예시
 
-feature: master branch push 막기
+feat: master branch push 막기
 
 fix: intro 페이지 수정
 ```
