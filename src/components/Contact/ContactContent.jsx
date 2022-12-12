@@ -41,6 +41,7 @@ function ContactContent() {
 						</STextD>
 					</SCircle1D>
 				</SCircleWrapperD>
+				<SText3D />
 			</SContactContainer>
 		</div>
 	);
