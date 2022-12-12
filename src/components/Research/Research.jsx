@@ -9,17 +9,14 @@ import STitle from '../component_layout/Title';
 import SLayoutContainer from '../component_layout/LayoutContainer';
 
 function Research() {
-	const [over, setOver] = useState(false);
 	const [under, setUnder] = useState(true);
 	const [num, setNum] = useState(0);
 
 	const onMouseOver = (cardNum) => {
-		setOver(true);
 		setUnder(false);
 		setNum(cardNum);
 	};
 	const onMouseOut = () => {
-		setOver(false);
 		setUnder(true);
 		setNum(0);
 	};
@@ -42,10 +39,8 @@ function Research() {
 						]}
 						onMouseOver={() => onMouseOver(1)}
 						onMouseOut={onMouseOut}
-						over={num === 1 ? over : undefined}
 						under={num === 1 ? under : undefined}
 					/>
-					<SpaceCss />
 					<CardContent
 						outTitle={['알파 세대 디지털 일상 데이터', <br />, '(ADDS-D; Daily)']}
 						innerTitle='알파 세대 디지털 일상 데이터 (ADDS-D; Daily)'
@@ -57,10 +52,8 @@ function Research() {
 						]}
 						onMouseOver={() => onMouseOver(2)}
 						onMouseOut={onMouseOut}
-						over={num === 2 ? over : undefined}
 						under={num === 2 ? under : undefined}
 					/>
-					<SpaceCss />
 					<CardContent
 						outTitle={[
 							'알파 세대의 사회화 과정에 관한 질적 데이터',
@@ -76,10 +69,8 @@ function Research() {
 						]}
 						onMouseOver={() => onMouseOver(3)}
 						onMouseOut={onMouseOut}
-						over={num === 3 ? over : undefined}
 						under={num === 3 ? under : undefined}
 					/>
-					<SpaceCss />
 					<CardContent
 						outTitle={['알파 세대 일상에 대한 스마트 디바이스 측정', <br />, '(ADDS-S; Smart)']}
 						innerTitle='생체 지표(ADDS-B; Bio)'
@@ -91,10 +82,8 @@ function Research() {
 						]}
 						onMouseOver={() => onMouseOver(4)}
 						onMouseOut={onMouseOut}
-						over={num === 4 ? over : undefined}
 						under={num === 4 ? under : undefined}
 					/>
-					<SpaceCss />
 					<CardContent
 						outTitle='생체 지표(ADDS-B; Bio)'
 						innerTitle='생체 지표(ADDS-B; Bio)'
@@ -109,7 +98,6 @@ function Research() {
 						]}
 						onMouseOver={() => onMouseOver(5)}
 						onMouseOut={onMouseOut}
-						over={num === 5 ? over : undefined}
 						under={num === 5 ? under : undefined}
 					/>
 				</WrapperCss>
@@ -122,10 +110,7 @@ function Research() {
 const WrapperCss = styled.div`
 	display: flex;
 	flex-direction: column;
-`;
-
-const SpaceCss = styled.div`
-	height: 3rem;
+	gap: 3rem;
 `;
 
 export default Research;
