@@ -96,20 +96,8 @@ function Member() {
 	return <MemberCss> 여기 정보</MemberCss>;
 }
 
-const ContainerCss = styled.div`
-	display: grid;
-	margin: 3rem auto;
-	margin-top: 6rem;
-	margin-bottom: 6rem;
-	width: 120rem;
-	// height: 164.63rem;
-	grid-template-columns: 18rem 99rem;
-	grid-gap: 3rem;
-`;
-
 const TitleCss = styled.div`
 	text-align: center;
-	color: #33333;
 	width: 19.3rem;
 	height: 5.8rem;
 	font-weight: 400;
@@ -129,7 +117,7 @@ const TopMemberCss = styled.div`
 
 	height: 32.7rem;
 
-	background: #FFFFFF;
+	background: #ffffff;
 
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 
@@ -142,7 +130,6 @@ const TopMemberCss = styled.div`
 	grid-column-end: 3;
 	grid-row-start: 1;
 	grid-row-end: 2;
-}
 `;
 
 const TopMemberImgCss = styled.div`
