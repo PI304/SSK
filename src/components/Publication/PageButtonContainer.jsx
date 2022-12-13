@@ -39,7 +39,11 @@ const SArrowButtonB = styled.button`
 
 const SButtonSymbolS = styled.span`
 	@font-face {
+		font-family: 'Material Symbols Outlined';
+		font-style: normal;
 		font-weight: 400;
+		src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v75/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1n-q_4MrImHCIJIZrDCvHOejbd5zrDAt.woff2)
+			format('woff2');
 	}
 	font-family: 'Material Symbols Outlined';
 	font-size: 1.7rem;
