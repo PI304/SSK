@@ -3,6 +3,7 @@ import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
 import MainContainer from '../component_layout/MainContainer';
 import Colors from '../../constants/colors';
+import STitle from '../component_layout/Title';
 import KimHyeonGyeong from '../../assets/김현경 교수님.png';
 
 function Members() {
@@ -28,15 +29,11 @@ function Container() {
 	return (
 		<MainContainer>
 			<div />
-			<Title />
+			<STitle>연구진소개</STitle>
 			<Sidebar />
 			<Researchers />
 		</MainContainer>
 	);
-}
-
-function Title() {
-	return <TitleCss>연구진소개</TitleCss>;
 }
 
 function Sidebar() {
@@ -96,15 +93,6 @@ function TopMember() {
 function Member() {
 	return <MemberCss> 여기 정보</MemberCss>;
 }
-
-const TitleCss = styled.div`
-	text-align: center;
-	width: 19.3rem;
-	height: 5.8rem;
-	font-weight: 400;
-	font-size: 4rem;
-	line-height: 5.8rem;
-`;
 
 const MembersCss = styled.div`
 	display: grid;
