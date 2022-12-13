@@ -6,20 +6,24 @@ import IMG3 from '../../assets/phone.svg';
 import IMG4 from '../../assets/pattern_contact.png';
 import Colors from '../../constants/colors';
 
-function ContactContent() {
+function ContactContent(props) {
 	const [isHover, setIsHover] = useState(false);
+	const onMouseEnter = () => {
+		setIsHover(true);
+	};
+	const onMouseLeave = () => {
+		setIsHover(false);
+	};
 	return (
 		<div>
-			<SContactContainer
-				onMouseEnter={() => setIsHover(true)}
-				onMouseLeave={() => setIsHover(false)}>
+			<SContactContainer onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
 				<SInfoD>
 					연구 및 데이터 관련 문의사항은 FAQ를 확인하시고
 					<br />
 					추가 문의사항은 연락처로 문의 바랍니다
 				</SInfoD>
 				<SCircleWrapperD>
-					<SCircle1D setIsHover={isHover}>
+					<SCircle1D onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
 						<div>
 							<SImgI src={IMG1} alt='mail' />
 						</div>
@@ -27,7 +31,7 @@ function ContactContent() {
 							<a href='mailto:adds@yonsei.ac.kr'>adds@yonsei.ac.kr</a>
 						</STextD>
 					</SCircle1D>
-					<SCircle2D setIsHover={isHover}>
+					<SCircle2D onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
 						<div>
 							<SImg2I src={IMG2} alt='building' />
 						</div>
@@ -37,7 +41,7 @@ function ContactContent() {
 							</a>
 						</SText2D>
 					</SCircle2D>
-					<SCircle1D setIsHover={isHover}>
+					<SCircle1D onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
 						<div>
 							<SImgI src={IMG3} alt='phone' />
 						</div>
