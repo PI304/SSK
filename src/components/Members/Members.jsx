@@ -5,6 +5,7 @@ import MainContainer from '../component_layout/MainContainer';
 import Colors from '../../constants/colors';
 import STitle from '../component_layout/Title';
 import KimHyeonGyeong from '../../assets/김현경 교수님.png';
+import Sidebar from '../component_layout/Sidebar';
 
 function Members() {
 	return (
@@ -34,10 +35,6 @@ function Container() {
 			<Researchers />
 		</MainContainer>
 	);
-}
-
-function Sidebar() {
-	return <div>여기는 사이드바</div>;
 }
 
 function Researchers() {
@@ -103,18 +100,13 @@ const MembersCss = styled.div`
 
 const TopMemberCss = styled.div`
 	width: 89.6rem;
-
 	height: 32.7rem;
-
 	background: ${Colors.white};
-
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-
 	display: grid;
 	grid-template-columns: 27.8rem 61.8rem;
 	// grid-template-rows: auto 9.3rem;
 	grid-template-rows: repeat(4, auto);
-
 	grid-column-start: 1;
 	grid-column-end: 3;
 	grid-row-start: 1;
@@ -126,7 +118,6 @@ const TopMemberImgCss = styled.div`
 	grid-column-end: 2;
 	grid-row-start: 1;
 	grid-row-end: 100;
-
 	> img {
 		width: 27.8rem;
 		height: 32.7rem;
@@ -139,7 +130,6 @@ const TopMemberTitleCss = styled.div`
 	font-weight: 400;
 	font-size: 1.8rem;
 	line-height: 2.6rem;
-
 	width: fit-content;
 	margin-left: 3.2rem;
 	margin-top: 7.6rem;
@@ -152,7 +142,6 @@ const TopMemberNameCss = styled.div`
 	font-weight: 700;
 	font-size: 3.4rem;
 	line-height: 4.9rem;
-
 	width: fit-content;
 	margin-left: 3.2rem;
 	color: ${Colors.gray50};
@@ -188,14 +177,12 @@ const TopMemberWorkTextCss = styled.div`
 	padding-bottom: 1.9rem;
 	padding-left: 3.4rem;
 	margin-top: 3.48rem;
-
 	font-family: 'Noto Sans KR';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 1.8rem;
 	line-height: 2.6rem;
 	color: ${Colors.gray50};
-
 	background: ${Colors.gray};
 `;
 
