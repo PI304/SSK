@@ -8,18 +8,22 @@ import Colors from '../../constants/colors';
 
 function ContactContent() {
 	const [isHover, setIsHover] = useState(false);
+	const onMouseEnter = () => {
+		setIsHover(true);
+	};
+	const onMouseLeave = () => {
+		setIsHover(false);
+	};
 	return (
 		<div>
-			<SContactContainer
-				onMouseEnter={() => setIsHover(true)}
-				onMouseLeave={() => setIsHover(false)}>
+			<SContactContainer onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
 				<SInfoD>
 					연구 및 데이터 관련 문의사항은 FAQ를 확인하시고
 					<br />
 					추가 문의사항은 연락처로 문의 바랍니다
 				</SInfoD>
 				<SCircleWrapperD>
-					<SCircle1D setIsHover={isHover}>
+					<SCircle1D isHover={isHover}>
 						<div>
 							<SImgI src={IMG1} alt='mail' />
 						</div>
@@ -27,7 +31,7 @@ function ContactContent() {
 							<a href='mailto:adds@yonsei.ac.kr'>adds@yonsei.ac.kr</a>
 						</STextD>
 					</SCircle1D>
-					<SCircle2D setIsHover={isHover}>
+					<SCircle2D isHover={isHover}>
 						<div>
 							<SImg2I src={IMG2} alt='building' />
 						</div>
@@ -37,7 +41,7 @@ function ContactContent() {
 							</a>
 						</SText2D>
 					</SCircle2D>
-					<SCircle1D setIsHover={isHover}>
+					<SCircle1D isHover={isHover}>
 						<div>
 							<SImgI src={IMG3} alt='phone' />
 						</div>
@@ -54,7 +58,7 @@ function ContactContent() {
 const SContactContainer = styled.div`
 	background-color: ${Colors.white};
 	transition: 1s ease;
-	&: hover {
+	&:hover {
 		background-image: url(${IMG4});
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
@@ -86,10 +90,7 @@ const SCircleWrapperD = styled.div`
 /* 본문 2 (원 1) */
 const SCircle1D = styled.div`
 	margin: 0 1.6rem;
-	width: 22.4rem;
-	height: 22.4rem;
 	border-radius: 50%;
-	background-color: ${Colors.blue4};
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -97,12 +98,9 @@ const SCircle1D = styled.div`
 	text-align: center;
 	word-break: break-all;
 	padding: 1.6rem;
-	&: hover {
-		background-color: ${(props) => props.isHover || 'white'};
-		transition: ${(props) => props.isHover || '1s ease'};
-		width: ${(props) => props.isHover || '20.8rem'};
-		height: ${(props) => props.isHover || '20.8rem'};
-	}
+	background-color: ${(props) => (props.isHover ? 'white' : Colors.blue4)};
+	width: ${(props) => (props.isHover ? '20.8rem' : '22.4rem')};
+	height: ${(props) => (props.isHover ? '20.8rem' : '22.4rem')};
 `;
 
 const SImgI = styled.img`
@@ -118,10 +116,7 @@ const STextD = styled.div`
 
 /* 본문 2 (원 2) */
 const SCircle2D = styled.div`
-	width: 32rem;
-	height: 32rem;
 	border-radius: 50%;
-	background-color: ${Colors.blue4};
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -129,13 +124,10 @@ const SCircle2D = styled.div`
 	text-align: center;
 	word-break: break-all;
 	padding: 2.4rem;
-	&: hover {
-		background-color: ${(props) => props.isHover || 'white'};
-		transition: ${(props) => props.isHover || '1s ease'};
-		box-shadow: ${(props) => props.isHover || '0px 2px 10px rgb(0 0 0 / 10%)'};
-		width: ${(props) => props.isHover || '35.2rem'};
-		height: ${(props) => props.isHover || '35.2rem'};
-	}
+	background-color: ${(props) => (props.isHover ? 'white' : Colors.blue4)};
+	box-shadow: ${(props) => (props.isHover ? '0px 2px 10px rgb(0 0 0 / 10%)' : 'none')};
+	width: ${(props) => (props.isHover ? '35.2rem' : '32rem')};
+	height: ${(props) => (props.isHover ? '35.2rem' : '32rem')};
 `;
 
 const SImg2I = styled.img`
