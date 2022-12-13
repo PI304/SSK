@@ -7,6 +7,7 @@ import CardContent from './CardContent';
 import MainContainer from '../component_layout/MainContainer';
 import STitle from '../component_layout/Title';
 import SLayoutContainer from '../component_layout/LayoutContainer';
+import Sidebar from '../component_layout/Sidebar';
 
 function Research() {
 	const [under, setUnder] = useState(true);
@@ -26,7 +27,7 @@ function Research() {
 			<Header />
 			<MainContainer>
 				<STitle>조사 설계</STitle>
-				<div />
+				<Sidebar nowPage='../components/Research' />
 				<WrapperCss>
 					<CardContent
 						outTitle='기초 설문조사 (ADDS-C; Core)'
@@ -73,7 +74,7 @@ function Research() {
 					/>
 					<CardContent
 						outTitle={['알파 세대 일상에 대한 스마트 디바이스 측정', <br />, '(ADDS-S; Smart)']}
-						innerTitle='생체 지표(ADDS-B; Bio)'
+						innerTitle='알파 세대 일상에 대한 스마트 디바이스 측정 (ADDS-S; Smart)'
 						innerContent={[
 							'스마트 디바이스(스마트 워치)의 전기반응 센서와 행동기반 기술을 활용하여 알파 세대의 운동, 식사, 수면, 디지털 사용을 추적',
 							<br />,

@@ -2,7 +2,10 @@ import styled from 'styled-components';
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
 import MainContainer from '../component_layout/MainContainer';
+import Colors from '../../constants/colors';
+import STitle from '../component_layout/Title';
 import KimHyeonGyeong from '../../assets/김현경 교수님.png';
+import Sidebar from '../component_layout/Sidebar';
 
 function Members() {
 	return (
@@ -27,19 +30,11 @@ function Container() {
 	return (
 		<MainContainer>
 			<div />
-			<Title />
+			<STitle>연구진소개</STitle>
 			<Sidebar />
 			<Researchers />
 		</MainContainer>
 	);
-}
-
-function Title() {
-	return <TitleCss>연구진소개</TitleCss>;
-}
-
-function Sidebar() {
-	return <div>여기는 사이드바</div>;
 }
 
 function Researchers() {
@@ -96,27 +91,6 @@ function Member() {
 	return <MemberCss> 여기 정보</MemberCss>;
 }
 
-const ContainerCss = styled.div`
-	display: grid;
-	margin: 3rem auto;
-	margin-top: 6rem;
-	margin-bottom: 6rem;
-	width: 120rem;
-	// height: 164.63rem;
-	grid-template-columns: 18rem 99rem;
-	grid-gap: 3rem;
-`;
-
-const TitleCss = styled.div`
-	text-align: center;
-	color: #33333;
-	width: 19.3rem;
-	height: 5.8rem;
-	font-weight: 400;
-	font-size: 4rem;
-	line-height: 5.8rem;
-`;
-
 const MembersCss = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -126,23 +100,17 @@ const MembersCss = styled.div`
 
 const TopMemberCss = styled.div`
 	width: 89.6rem;
-
 	height: 32.7rem;
-
-	background: #FFFFFF;
-
+	background: ${Colors.white};
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-
 	display: grid;
 	grid-template-columns: 27.8rem 61.8rem;
 	// grid-template-rows: auto 9.3rem;
 	grid-template-rows: repeat(4, auto);
-
 	grid-column-start: 1;
 	grid-column-end: 3;
 	grid-row-start: 1;
 	grid-row-end: 2;
-}
 `;
 
 const TopMemberImgCss = styled.div`
@@ -150,7 +118,6 @@ const TopMemberImgCss = styled.div`
 	grid-column-end: 2;
 	grid-row-start: 1;
 	grid-row-end: 100;
-
 	> img {
 		width: 27.8rem;
 		height: 32.7rem;
@@ -163,11 +130,10 @@ const TopMemberTitleCss = styled.div`
 	font-weight: 400;
 	font-size: 1.8rem;
 	line-height: 2.6rem;
-
 	width: fit-content;
 	margin-left: 3.2rem;
 	margin-top: 7.6rem;
-	color: #333333;
+	color: ${Colors.gray50};
 `;
 
 const TopMemberNameCss = styled.div`
@@ -176,10 +142,9 @@ const TopMemberNameCss = styled.div`
 	font-weight: 700;
 	font-size: 3.4rem;
 	line-height: 4.9rem;
-
 	width: fit-content;
 	margin-left: 3.2rem;
-	color: #333333;
+	color: ${Colors.gray50};
 `;
 
 const TopMemberInfoCss = styled.div`
@@ -202,7 +167,7 @@ const TopMemberInfoText = styled.div`
 	font-weight: 400;
 	font-size: 1.2rem;
 	line-height: 1.7rem;
-	color: #333333;
+	color: ${Colors.gray50};
 `;
 
 const TopMemberWorkTextCss = styled.div`
@@ -212,15 +177,13 @@ const TopMemberWorkTextCss = styled.div`
 	padding-bottom: 1.9rem;
 	padding-left: 3.4rem;
 	margin-top: 3.48rem;
-
 	font-family: 'Noto Sans KR';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 1.8rem;
 	line-height: 2.6rem;
-	color: #333333;
-
-	background: #e4e9f0;
+	color: ${Colors.gray50};
+	background: ${Colors.gray};
 `;
 
 const MemberCss = styled.div`

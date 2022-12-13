@@ -2,24 +2,22 @@ import styled from 'styled-components';
 // eslint-disable-next-line import/no-cycle
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
+import MainContainer from '../component_layout/MainContainer';
+import STitle from '../component_layout/Title';
+import SLayoutContainer from '../component_layout/LayoutContainer';
+import Sidebar from '../component_layout/Sidebar';
 
 function Notice() {
 	return (
-		<LayoutContainerCss>
+		<SLayoutContainer>
 			<Header />
-			<h2>notice</h2>
-			<main />
-
+			<MainContainer>
+				<STitle>공지사항</STitle>
+				<Sidebar />
+			</MainContainer>
 			<Footer />
-		</LayoutContainerCss>
+		</SLayoutContainer>
 	);
 }
-
-const LayoutContainerCss = styled.div`
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	min-height: 100vh;
-`;
 
 export default Notice;

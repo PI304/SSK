@@ -7,6 +7,7 @@ import STitle from '../component_layout/Title';
 import SLayoutContainer from '../component_layout/LayoutContainer';
 import PublicationContainer from './PublicationContainer';
 import PageButtonContainer from './PageButtonContainer';
+import Sidebar from '../component_layout/Sidebar';
 
 function Publication() {
 	return (
@@ -14,7 +15,7 @@ function Publication() {
 			<Header />
 			<MainContainer>
 				<STitle>발간물</STitle>
-				<div />
+				<Sidebar />
 				<div>
 					<SelectWrapper>
 						<SortSelect>
