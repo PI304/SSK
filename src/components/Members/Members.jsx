@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
 import MainContainer from '../component_layout/MainContainer';
+import Colors from '../../constants/colors';
 import KimHyeonGyeong from '../../assets/김현경 교수님.png';
 
 function Members() {
@@ -117,7 +118,7 @@ const TopMemberCss = styled.div`
 
 	height: 32.7rem;
 
-	background: #ffffff;
+	background: ${Colors.white};
 
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 
@@ -154,7 +155,7 @@ const TopMemberTitleCss = styled.div`
 	width: fit-content;
 	margin-left: 3.2rem;
 	margin-top: 7.6rem;
-	color: #333333;
+	color: ${Colors.gray50};
 `;
 
 const TopMemberNameCss = styled.div`
@@ -166,7 +167,7 @@ const TopMemberNameCss = styled.div`
 
 	width: fit-content;
 	margin-left: 3.2rem;
-	color: #333333;
+	color: ${Colors.gray50};
 `;
 
 const TopMemberInfoCss = styled.div`
@@ -189,7 +190,7 @@ const TopMemberInfoText = styled.div`
 	font-weight: 400;
 	font-size: 1.2rem;
 	line-height: 1.7rem;
-	color: #333333;
+	color: ${Colors.gray50};
 `;
 
 const TopMemberWorkTextCss = styled.div`
@@ -205,9 +206,9 @@ const TopMemberWorkTextCss = styled.div`
 	font-weight: 400;
 	font-size: 1.8rem;
 	line-height: 2.6rem;
-	color: #333333;
+	color: ${Colors.gray50};
 
-	background: #e4e9f0;
+	background: ${Colors.gray};
 `;
 
 const MemberCss = styled.div`
