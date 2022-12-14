@@ -89,6 +89,7 @@ function CMainSiteHover() {
 const SHoverContainer = styled.div`
 	position: relative;
 	z-index: 0;
+	box-shadow: 0px 2px 10px rgb(0 0 0 / 20%);
 `;
 
 const SSiteHoverU = styled.ul`

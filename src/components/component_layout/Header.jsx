@@ -161,7 +161,7 @@ const NavMenuLiCss = styled.li`
 	display: flex;
 	flex-direction: column;
 	width: 13rem;
-	&: hover .dropDownMenu {
+	&:hover .dropDownMenu {
 		display: block;
 	}
 `;
@@ -192,7 +192,7 @@ const NavSubMenuTopACss = styled(Link)`
 	z-index: 1;
 	font-size: 1.5rem;
 	padding-top: 2.2rem;
-	&: hover {
+	&:hover {
 		background: ${Colors.blue_hover};
 	}
 `;
@@ -208,7 +208,7 @@ const NavSubMenuACss = styled(Link)`
 	z-index: 1;
 	font-size: 1.5rem;
 	padding-top: 2.2rem;
-	&: hover {
+	&:hover {
 		background: ${Colors.blue_hover};
 	}
 `;
