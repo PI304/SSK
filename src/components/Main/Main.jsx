@@ -4,7 +4,6 @@ import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
 import MainSlide from './MainSlide';
 import MainSite from './MainSite';
-import MainSite2 from './MainSite2';
 
 function Main() {
 	return (
@@ -17,7 +16,7 @@ function Main() {
 
 					<MainCarouselCss>bye</MainCarouselCss>
 
-					<MainSite2 />
+					<MainSite />
 				</SMainContainer>
 			</main>
 
