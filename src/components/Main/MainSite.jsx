@@ -96,7 +96,7 @@ const SSiteMapBackGroundD1 = styled.div`
 	width: 27.7rem;
 	height: 27.7rem;
 	background-color: ${Colors.blue4};
-	&: hover .mainSiteHover {
+	&:hover .mainSiteHover {
 		display: block;
 		position: relative;
 		background-color: ${Colors.white};
@@ -162,13 +162,13 @@ const SSiteSubHoverA = styled(Link)`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center
+	align-items: center;
 	width: 27.7rem;
 	height: 9.23rem;
 	font-size: 1.7rem;
-	&: hover {
+	&:hover {
 		background: ${Colors.blue_hover};
-        transition: all 0.5s;
+		transition: all 0.5s;
 	}
 `;
 
@@ -182,7 +182,7 @@ const SSiteMapBackGroundD2 = styled.div`
 	width: 27.7rem;
 	height: 27.7rem;
 	background-color: #e2edfb;
-	&: hover .mainSiteHover {
+	&:hover .mainSiteHover {
 		display: block;
 		position: relative;
 		background-color: ${Colors.white};
@@ -240,13 +240,13 @@ const SSiteSubHoverA2 = styled(Link)`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center
+	align-items: center;
 	width: 27.7rem;
 	height: 27.7rem;
 	font-size: 1.7rem;
-	&: hover {
+	&:hover {
 		background: ${Colors.blue_hover};
-        transition: all 0.5s;
+		transition: all 0.5s;
 	}
 `;
 
@@ -260,7 +260,7 @@ const SSiteMapBackGroundD3 = styled.div`
 	width: 27.7rem;
 	height: 27.7rem;
 	background-color: #e2edfb;
-	&: hover .mainSiteHover {
+	&:hover .mainSiteHover {
 		display: block;
 		position: relative;
 		background-color: ${Colors.white};
@@ -320,13 +320,13 @@ const SSiteSubHoverA3 = styled(Link)`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center
+	align-items: center;
 	width: 27.7rem;
 	height: 13.85rem;
 	font-size: 1.7rem;
-	&: hover {
+	&:hover {
 		background: ${Colors.blue_hover};
-        transition: all 0.5s;
+		transition: all 0.5s;
 	}
 `;
 
@@ -340,7 +340,7 @@ const SSiteMapBackGroundD4 = styled.div`
 	width: 27.7rem;
 	height: 27.7rem;
 	background-color: #e2edfb;
-	&: hover .mainSiteHover {
+	&:hover .mainSiteHover {
 		display: block;
 		position: relative;
 		background-color: ${Colors.white};
@@ -405,13 +405,13 @@ const SSiteSubHoverA4 = styled(Link)`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center
+	align-items: center;
 	width: 27.7rem;
 	height: 6.925rem;
 	font-size: 1.7rem;
-	&: hover {
+	&:hover {
 		background: ${Colors.blue_hover};
-        transition: all 0.5s;
+		transition: all 0.5s;
 	}
 `;
 
