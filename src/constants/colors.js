@@ -24,4 +24,10 @@ export default class Colors {
 	static circle = '#d9d9d9;';
 
 	static button = '#3b79d0';
+
+	static select1 = '#767676';
+
+	static select2 = '#e0e0e0';
+
+	static menuline = '#8dbcff';
 }
