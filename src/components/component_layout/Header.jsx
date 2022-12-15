@@ -1,236 +1,107 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Colors from '../../constants/colors';
 import Logo from '../../assets/yonsei_highq_1200x630.png';
+import CMenuHover1 from './HeaderHover1';
+import CMenuHover2 from './HeaderHover2';
+import CMenuHover3 from './HeaderHover3';
+import CMenuHover4 from './HeaderHover4';
 
 function Header() {
 	return (
-		<HeaderContainerCss>
-			<Nav>
-				<HeaderLogo />
+		<HeaderContainer>
+			<Navigation>
+				<CLogo />
 
-				<NavMenu />
+				<CMenu />
 
-				<HeaderSelect />
-			</Nav>
-		</HeaderContainerCss>
+				<CSelect />
+			</Navigation>
+		</HeaderContainer>
 	);
 }
 
-/* 전체헤더 CSS */
-
-const HeaderContainerCss = styled.header`
+/* Header Container */
+const HeaderContainer = styled.header`
 	box-shadow: 0px 2px 10px rgb(0 0 0 / 10%);
 `;
 
-/* 전체 nav CSS */
-
-const Nav = styled.nav`
+const Navigation = styled.nav`
 	margin: auto;
-	width: 120rem;
-	height: 9rem;
+	width: 117.501rem;
 	display: grid;
 	grid-template-columns: 1fr 7fr 1fr;
 	align-items: center;
 `;
 
-/* 헤더 로고 컴포넌트 및 CSS */
-
-function HeaderLogo() {
+/* Logo */
+function CLogo() {
 	return (
-		<HeaderLogoCss>
+		<div>
 			<a href='http://localhost:3000/'>
-				<img src={Logo} width='175' height='90' alt='Logo' />
+				<SLogoI src={Logo} alt='Logo' />
 			</a>
-		</HeaderLogoCss>
+		</div>
 	);
 }
 
-const HeaderLogoCss = styled.div`
+const SLogoI = styled.img`
 	width: 18rem;
 	height: 9rem;
+	position: relative;
 `;
 
-/* 헤더 메뉴 */
-
-function NavMenu() {
+/* Menu */
+function CMenu() {
 	return (
-		<NavMenuCss>
-			<NavMenuUlCss>
-				<NavMenuLi1 />
+		<SMenuD>
+			<SMenuU>
+				<CMenuHover1 />
 
-				<NavMenuLi2 />
+				<CMenuHover2 />
 
-				<NavMenuLi3 />
+				<CMenuHover3 />
 
-				<NavMenuLi4 />
-			</NavMenuUlCss>
-		</NavMenuCss>
+				<CMenuHover4 />
+			</SMenuU>
+		</SMenuD>
 	);
 }
 
-/* 헤더 메뉴 컴포넌트 및 CSS */
-
-const NavMenuCss = styled.div`
+const SMenuD = styled.div`
 	width: 60rem;
 	height: 9rem;
 	justify-self: end;
 	display: flex;
 	justify-content: center;
-	margin-right: 5rem;
+	margin-right: 4rem;
+	position: relative;
+	bottom: 0.4rem;
 `;
 
-const NavMenuUlCss = styled.ul`
+const SMenuU = styled.ul`
 	display: flex;
 	justify-content: flex-end;
 	width: 60rem;
 	height: 9rem;
 `;
 
-function NavMenuLi1() {
+/* Select */
+function CSelect() {
 	return (
-		<NavMenuLiCss>
-			<NavMenuACss to='../components/Intro'>ADDS소개</NavMenuACss>
-			<NavSubMenuCss className='dropDownMenu'>
-				<li>
-					<NavSubMenuTopACss to='../components/Intro'>ADDS 소개</NavSubMenuTopACss>
-				</li>
-				<li>
-					<NavSubMenuACss to='../components/Members'>연구진 소개</NavSubMenuACss>
-				</li>
-				<li>
-					<NavSubMenuACss to='../components/Research'>조사설계</NavSubMenuACss>
-				</li>
-			</NavSubMenuCss>
-		</NavMenuLiCss>
-	);
-}
-
-function NavMenuLi2() {
-	return (
-		<NavMenuLiCss>
-			<NavMenuACss to='../components/Publication'>발간물</NavMenuACss>
-			<NavSubMenuCss className='dropDownMenu'>
-				<li>
-					<NavSubMenuTopACss to='../components/Publication'>발간물</NavSubMenuTopACss>
-				</li>
-			</NavSubMenuCss>
-		</NavMenuLiCss>
-	);
-}
-
-function NavMenuLi3() {
-	return (
-		<NavMenuLiCss>
-			<NavMenuACss to='../components/Resources'>데이터</NavMenuACss>
-			<NavSubMenuCss className='dropDownMenu'>
-				<li>
-					<NavSubMenuTopACss to='../components/Resources'>자료안내</NavSubMenuTopACss>
-				</li>
-				<li>
-					<NavSubMenuACss to='../components/Papers'>데이터활용논문</NavSubMenuACss>
-				</li>
-			</NavSubMenuCss>
-		</NavMenuLiCss>
-	);
-}
-
-function NavMenuLi4() {
-	return (
-		<NavMenuLiCss>
-			<NavMenuACss to='../components/Notice'>소통공간</NavMenuACss>
-			<NavSubMenuCss className='dropDownMenu'>
-				<li>
-					<NavSubMenuTopACss to='../components/Notice'>공지사항</NavSubMenuTopACss>
-				</li>
-				<li>
-					<NavSubMenuACss to='../components/Reports'>보도자료</NavSubMenuACss>
-				</li>
-				<li>
-					<NavSubMenuACss to='../components/FAQ'>FAQ</NavSubMenuACss>
-				</li>
-				<li>
-					<NavSubMenuACss to='../components/Contact'>Contact</NavSubMenuACss>
-				</li>
-			</NavSubMenuCss>
-		</NavMenuLiCss>
-	);
-}
-const NavMenuLiCss = styled.li`
-	font-size: 3rem;
-	display: flex;
-	flex-direction: column;
-	width: 13rem;
-	&:hover .dropDownMenu {
-		display: block;
-	}
-`;
-
-const NavMenuACss = styled(Link)`
-	margin-top: 4rem;
-	margin-bottom: 3.2rem;
-	height: 9rem;
-	display: flex;
-	align-self: center;
-	justify-content: center;
-	flex-direction: column;
-`;
-
-const NavSubMenuCss = styled.ul`
-	display: none;
-`;
-
-const NavSubMenuTopACss = styled(Link)`
-	height: 6rem;
-	width: 13rem;
-	display: block;
-	background: ${Colors.blue4};
-	text-align: center;
-	border-top: 4px solid #8dbcff;
-	position: relative;
-	top: -3px;
-	z-index: 1;
-	font-size: 1.5rem;
-	padding-top: 2.2rem;
-	&:hover {
-		background: ${Colors.blue_hover};
-	}
-`;
-
-const NavSubMenuACss = styled(Link)`
-	height: 6rem;
-	width: 13rem;
-	display: block;
-	background: ${Colors.blue4};
-	text-align: center;
-	position: relative;
-	top: -3px;
-	z-index: 1;
-	font-size: 1.5rem;
-	padding-top: 2.2rem;
-	&:hover {
-		background: ${Colors.blue_hover};
-	}
-`;
-
-/* 헤더 셀렉터 컴포넌트 및 CSS */
-
-function HeaderSelect() {
-	return (
-		<HeaderSelectCss>
+		<SSelectS>
 			<option value='한국어'>한국어</option>
 			<option value='영어'>영어</option>
-		</HeaderSelectCss>
+		</SSelectS>
 	);
 }
 
-const HeaderSelectCss = styled.select`
-	color: #767676;
-	border-color: #e0e0e0;
-	width: 11.8rem;
-	height: 3rem;
-	padding: 0 0.3rem;
-	margin-top: 1rem;
+const SSelectS = styled.select`
+	color: ${Colors.select1};
+	border-color: ${Colors.select2};
+	width: 11.6rem;
+	height: 2.901rem;
+	padding: 0 0.48rem;
+	position: relative;
 `;
 
 export default Header;

@@ -4,17 +4,17 @@ import Footer from './Footer';
 
 function Layout() {
 	return (
-		<LayoutContainerCss>
+		<LayoutContainer>
 			<Header />
 
 			<main />
 
 			<Footer />
-		</LayoutContainerCss>
+		</LayoutContainer>
 	);
 }
 
-const LayoutContainerCss = styled.div`
+const LayoutContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
