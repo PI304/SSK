@@ -2,6 +2,27 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Colors from '../../constants/colors';
 
+function HeaderHover() {
+	return (
+		<SMenuU>
+			<CMenuHover1 />
+
+			<CMenuHover2 />
+
+			<CMenuHover3 />
+
+			<CMenuHover4 />
+		</SMenuU>
+	);
+}
+
+const SMenuU = styled.ul`
+	display: flex;
+	justify-content: flex-end;
+	width: 60rem;
+	height: 9rem;
+`;
+
 function CMenuHover1() {
 	return (
 		<SMenuL>
@@ -10,6 +31,43 @@ function CMenuHover1() {
 				<SSubMenuTopA to='../components/Intro'>ADDS 소개</SSubMenuTopA>
 				<SSubMenuA to='../components/Members'>연구진 소개</SSubMenuA>
 				<SSubMenuA to='../components/Research'>조사설계</SSubMenuA>
+			</SSubMenuU>
+		</SMenuL>
+	);
+}
+
+function CMenuHover2() {
+	return (
+		<SMenuL>
+			<SMenuA to='../components/Publication'>발간물</SMenuA>
+			<SSubMenuU>
+				<SSubMenuTopA to='../components/Publication'>발간물</SSubMenuTopA>
+			</SSubMenuU>
+		</SMenuL>
+	);
+}
+
+function CMenuHover3() {
+	return (
+		<SMenuL>
+			<SMenuA to='../components/Resources'>데이터</SMenuA>
+			<SSubMenuU>
+				<SSubMenuTopA to='../components/Resources'>자료안내</SSubMenuTopA>
+				<SSubMenuA to='../components/Papers'>데이터활용논문</SSubMenuA>
+			</SSubMenuU>
+		</SMenuL>
+	);
+}
+
+function CMenuHover4() {
+	return (
+		<SMenuL>
+			<SMenuA to='../components/Notice'>소통공간</SMenuA>
+			<SSubMenuU>
+				<SSubMenuTopA to='../components/Notice'>공지사항</SSubMenuTopA>
+				<SSubMenuA to='../components/Reports'>보도자료</SSubMenuA>
+				<SSubMenuA to='../components/FAQ'>FAQ</SSubMenuA>
+				<SSubMenuA to='../components/Contact'>Contact</SSubMenuA>
 			</SSubMenuU>
 		</SMenuL>
 	);
@@ -74,4 +132,4 @@ const SSubMenuA = styled(Link)`
 	}
 `;
 
-export default CMenuHover1;
+export default HeaderHover;

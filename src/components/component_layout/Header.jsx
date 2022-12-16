@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 import Colors from '../../constants/colors';
 import Logo from '../../assets/yonsei_highq_1200x630.png';
-import CMenuHover1 from './HeaderHover1';
-import CMenuHover2 from './HeaderHover2';
-import CMenuHover3 from './HeaderHover3';
-import CMenuHover4 from './HeaderHover4';
+import HeaderHover from './HeaderHover';
 
 function Header() {
 	return (
@@ -54,15 +51,7 @@ const SLogoI = styled.img`
 function CMenu() {
 	return (
 		<SMenuD>
-			<SMenuU>
-				<CMenuHover1 />
-
-				<CMenuHover2 />
-
-				<CMenuHover3 />
-
-				<CMenuHover4 />
-			</SMenuU>
+			<HeaderHover />
 		</SMenuD>
 	);
 }
@@ -76,13 +65,6 @@ const SMenuD = styled.div`
 	margin-right: 4rem;
 	position: relative;
 	bottom: 0.4rem;
-`;
-
-const SMenuU = styled.ul`
-	display: flex;
-	justify-content: flex-end;
-	width: 60rem;
-	height: 9rem;
 `;
 
 /* Select */
