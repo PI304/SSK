@@ -27,7 +27,7 @@ function Research() {
 			<Header />
 			<MainContainer>
 				<STitle>조사 설계</STitle>
-				<Sidebar nowPage='../components/Research' />
+				<Sidebar />
 				<WrapperCss>
 					<CardContent
 						outTitle='기초 설문조사 (ADDS-C; Core)'

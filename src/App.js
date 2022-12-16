@@ -20,16 +20,16 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route path='/' element={<Main />} />
-				<Route path='components/Intro' element={<Intro />} />
-				<Route path='components/Papers' element={<Papers />} />
-				<Route path='components/Contact' element={<Contact />} />
-				<Route path='components/Research' element={<Research />} />
-				<Route path='components/Publication' element={<Publication />} />
-				<Route path='components/Reports' element={<Reports />} />
-				<Route path='components/FAQ' element={<FAQ />} />
-				<Route path='components/Members' element={<Members />} />
-				<Route path='components/Notice' element={<Notice />} />
-				<Route path='components/Resources' element={<Resources />} />
+				<Route path='/Intro' element={<Intro />} />
+				<Route path='/Papers' element={<Papers />} />
+				<Route path='/Contact' element={<Contact />} />
+				<Route path='/Research' element={<Research />} />
+				<Route path='/Publication' element={<Publication />} />
+				<Route path='/Reports' element={<Reports />} />
+				<Route path='/FAQ' element={<FAQ />} />
+				<Route path='/Members' element={<Members />} />
+				<Route path='/Notice' element={<Notice />} />
+				<Route path='/Resources' element={<Resources />} />
 			</Routes>
 		</BrowserRouter>
 	);
