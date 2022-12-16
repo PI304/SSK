@@ -5,7 +5,7 @@ const MainContainer = styled.div`
 	margin: 5rem auto;
 	margin-bottom: 10rem;
 	display: grid;
-	grid-template-columns: 16rem 100rem;
+	grid-template-columns: 15rem 100rem;
 	grid-gap: 5rem;
 `;
 
