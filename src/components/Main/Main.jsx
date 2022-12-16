@@ -3,6 +3,7 @@ import SLayoutContainer from '../component_layout/LayoutContainer';
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
 import MainSlide from './MainSlide';
+import MainCarousel from './MainCarousel';
 import MainSite from './MainSite';
 
 function Main() {
@@ -14,7 +15,7 @@ function Main() {
 				<SMainContainer>
 					<MainSlide>hi</MainSlide>
 
-					<MainCarouselCss>bye</MainCarouselCss>
+					<MainCarousel />
 
 					<MainSite />
 				</SMainContainer>
@@ -32,13 +33,6 @@ const SMainContainer = styled.div`
 	flex-direction: column;
 	width: 120rem;
 	margin: auto;
-`;
-
-/* 캐러쉘 CSS */
-
-const MainCarouselCss = styled.div`
-	width: 110.4rem;
-	height: 20rem;
 `;
 
 export default Main;
