@@ -26,11 +26,11 @@ const SMenuU = styled.ul`
 function CMenuHover1() {
 	return (
 		<SMenuL>
-			<SMenuA to='../components/Intro'>ADDS소개</SMenuA>
+			<SMenuA to='/Intro'>ADDS소개</SMenuA>
 			<SSubMenuU>
-				<SSubMenuTopA to='../components/Intro'>ADDS 소개</SSubMenuTopA>
-				<SSubMenuA to='../components/Members'>연구진 소개</SSubMenuA>
-				<SSubMenuA to='../components/Research'>조사설계</SSubMenuA>
+				<SSubMenuTopA to='/Intro'>ADDS 소개</SSubMenuTopA>
+				<SSubMenuA to='/Members'>연구진 소개</SSubMenuA>
+				<SSubMenuA to='/Research'>조사설계</SSubMenuA>
 			</SSubMenuU>
 		</SMenuL>
 	);
@@ -39,9 +39,9 @@ function CMenuHover1() {
 function CMenuHover2() {
 	return (
 		<SMenuL>
-			<SMenuA to='../components/Publication'>발간물</SMenuA>
+			<SMenuA to='/Publication'>발간물</SMenuA>
 			<SSubMenuU>
-				<SSubMenuTopA to='../components/Publication'>발간물</SSubMenuTopA>
+				<SSubMenuTopA to='/Publication'>발간물</SSubMenuTopA>
 			</SSubMenuU>
 		</SMenuL>
 	);
@@ -50,10 +50,10 @@ function CMenuHover2() {
 function CMenuHover3() {
 	return (
 		<SMenuL>
-			<SMenuA to='../components/Resources'>데이터</SMenuA>
+			<SMenuA to='/Resources'>데이터</SMenuA>
 			<SSubMenuU>
-				<SSubMenuTopA to='../components/Resources'>자료안내</SSubMenuTopA>
-				<SSubMenuA to='../components/Papers'>데이터활용논문</SSubMenuA>
+				<SSubMenuTopA to='/Resources'>자료안내</SSubMenuTopA>
+				<SSubMenuA to='/Papers'>데이터활용논문</SSubMenuA>
 			</SSubMenuU>
 		</SMenuL>
 	);
