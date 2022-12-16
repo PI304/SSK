@@ -1,30 +1,12 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-function SidebarInner({ selectedPage, handleClick, to, category }) {
-	const urls = {
-		intro: '../components/Intro',
-		members: '../components/Members',
-		research: '../components/Research',
-		publication: '../components/Publication',
-		resources: '../components/Resources',
-		papers: '../components/Papers',
-		notice: '../components/Notice',
-		reports: '../components/Reports',
-		FAQ: '../components/FAQ',
-		contact: '../components/Contact',
-	};
-
-	// const [selectedPage, setSelectedPage] = useState({ nowPage });
-
-	// const handleClick = (to) => {
-	// 	setSelectedPage(to);
-	// };
+function SidebarInner({ to, category }) {
+	const location = useLocation();
 
 	return (
 		<SSidebarListL>
-			<SSidebarLinkL selectedPage={selectedPage} onClick={handleClick} to={to}>
+			<SSidebarLinkL currentPage={location.pathname} to={to}>
 				{category}
 			</SSidebarLinkL>
 		</SSidebarListL>
@@ -37,7 +19,7 @@ const SSidebarListL = styled.li`
 
 const SSidebarLinkL = styled(Link)`
 	font-size: 1.5rem;
-	color: ${({ selectedPage, to }) => (selectedPage === to ? '#639ae9' : undefined)};
+	color: ${({ currentPage, to }) => (currentPage === to ? '#639ae9' : undefined)};
 `;
 
 export default SidebarInner;

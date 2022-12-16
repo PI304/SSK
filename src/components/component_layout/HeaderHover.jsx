@@ -62,12 +62,12 @@ function CMenuHover3() {
 function CMenuHover4() {
 	return (
 		<SMenuL>
-			<SMenuA to='../components/Notice'>소통공간</SMenuA>
+			<SMenuA to='/Notice'>소통공간</SMenuA>
 			<SSubMenuU>
-				<SSubMenuTopA to='../components/Notice'>공지사항</SSubMenuTopA>
-				<SSubMenuA to='../components/Reports'>보도자료</SSubMenuA>
-				<SSubMenuA to='../components/FAQ'>FAQ</SSubMenuA>
-				<SSubMenuA to='../components/Contact'>Contact</SSubMenuA>
+				<SSubMenuTopA to='/Notice'>공지사항</SSubMenuTopA>
+				<SSubMenuA to='/Reports'>보도자료</SSubMenuA>
+				<SSubMenuA to='/FAQ'>FAQ</SSubMenuA>
+				<SSubMenuA to='/Contact'>Contact</SSubMenuA>
 			</SSubMenuU>
 		</SMenuL>
 	);
