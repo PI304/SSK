@@ -23,8 +23,12 @@ function PageButtonContainer() {
 }
 
 const SPageButtonWrapperD = styled.div`
-	text-align: center;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: center;
 	margin-top: 4rem;
+	margin: 4rem auto 0 auto;
 `;
 
 const SArrowButtonB = styled.button`
@@ -76,6 +80,7 @@ const SPageNumL = styled.li`
 	font-size: 1.3rem;
 	width: 2rem;
 	padding-bottom: 0.4rem;
+	text-align: center;
 `;
 
 export default PageButtonContainer;

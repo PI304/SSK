@@ -49,8 +49,7 @@ const ImgWrapper = styled.div`
 
 const PdfWrapper = styled.div`
 	height: 3rem;
-    display: flex;
-}
+	display: flex;
 `;
 
 const PublicationInfoWrapper = styled.div``;
