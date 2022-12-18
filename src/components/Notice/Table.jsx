@@ -1,27 +1,35 @@
 import styled from 'styled-components';
+import SSelectOptionS from './SelectOption';
 
 function Table({ columns, datas }) {
     return (
         <div>
-            <STableT>
-                <thead>
-                <tr>
-                    {columns.map((column) => (
-                        <th key={column}>{column}</th>
-                    ))}
-                </tr>
-                </thead>
-                <tbody>
-                {datas.map((data) => (
-                    <tr key={data.seq}>
-                        <td>{data.seq}</td>
-                        <td>{data.title}</td>
-                        <td>{data.writer}</td>
-                        <td>{data.date}</td>
+            <SSelectWrapperD>
+                <SSelectOptionS>
+                    <option>최신순 정렬</option>
+                </SSelectOptionS>
+            </SSelectWrapperD>
+            <div>
+                <STableT>
+                    <thead>
+                    <tr>
+                        {columns.map((column) => (
+                            <th key={column}>{column}</th>
+                        ))}
                     </tr>
-                ))}
-                </tbody>
-            </STableT>
+                    </thead>
+                    <tbody>
+                    {datas.map((data) => (
+                        <tr key={data.seq}>
+                            <td>{data.seq}</td>
+                            <td>{data.title}</td>
+                            <td>{data.writer}</td>
+                            <td>{data.date}</td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </STableT>
+            </div>
         </div>
     );
 }
@@ -63,6 +71,11 @@ const STableT = styled.table`
     font-size: 1.4rem;
     color: #333333;
   }
+`;
+
+const SSelectWrapperD = styled.div`
+  padding: 0.8rem;
+  overflow: hidden;
 `;
 
 export default Table;
