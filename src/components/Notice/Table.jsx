@@ -74,7 +74,7 @@ const STableT = styled.table`
 `;
 
 const SSelectWrapperD = styled.div`
-  padding: 0.8rem;
+  padding: 0.8rem 0rem;
   overflow: hidden;
 `;
 
