@@ -5,18 +5,19 @@ import STitle from '../component_layout/Title';
 import SLayoutContainer from '../component_layout/LayoutContainer';
 import Sidebar from '../component_layout/Sidebar';
 import Table from '../Notice/Table';
+import PageButtonContainer from '../component_layout/PageButtonContainer';
 
 function Resources() {
 	const columns = ['번호', '제목', '작성자', '날짜'];
 	const datas = [{
 		seq: 1,
-		title: '안녕하세요 제목입니다',
+		title: '안녕하세요 자료안내입니다',
 		writer: '정은솔',
 		date: '2022-12-15'
 	},
 		{
 			seq: 2,
-			title: '안녕하세요 제목입니다',
+			title: '안녕하세요 자료안내입니다',
 			writer: '정은솔',
 			date: '2022-12-15'
 		}
@@ -27,7 +28,10 @@ function Resources() {
 			<MainContainer>
 				<STitle>자료안내</STitle>
 				<Sidebar />
-				<Table columns={columns} datas={datas}/>
+				<div>
+					<Table columns={columns} datas={datas}/>
+					<PageButtonContainer/>
+				</div>
 			</MainContainer>
 			<Footer />
 		</SLayoutContainer>

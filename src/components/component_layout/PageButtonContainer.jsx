@@ -27,7 +27,6 @@ const SPageButtonWrapperD = styled.div`
 	flex-direction: row;
 	align-items: flex-end;
 	justify-content: center;
-	margin-top: 4rem;
 	margin: 4rem auto 0 auto;
 `;
 
@@ -49,7 +48,7 @@ const SButtonSymbolS = styled.span`
 		src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v75/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1n-q_4MrImHCIJIZrDCvHOejbd5zrDAt.woff2)
 			format('woff2');
 	}
-	font-family: 'Material Symbols Outlined';
+	font-family: 'Material Symbols Outlined',serif;
 	font-size: 1.7rem;
 	opacity: 0.5;
 	// font-weight: normal;
