@@ -6,7 +6,7 @@ import MainContainer from '../component_layout/MainContainer';
 import STitle from '../component_layout/Title';
 import SLayoutContainer from '../component_layout/LayoutContainer';
 import PublicationContainer from './PublicationContainer';
-import PageButtonContainer from './PageButtonContainer';
+import PageButtonContainer from '../component_layout/PageButtonContainer';
 import Sidebar from '../component_layout/Sidebar';
 
 function Publication() {

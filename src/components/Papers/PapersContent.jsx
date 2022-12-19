@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 import Colors from '../../constants/colors';
-import Left from '../../assets/arrow_left.svg';
-import Right from '../../assets/arrow_right.svg';
-import DRight from '../../assets/double_arrow_right.svg';
-import DLeft from '../../assets/double_arrow_left.svg';
+import PageButtonContainer from '../component_layout/PageButtonContainer';
 
 function PapersContent() {
 	return (
@@ -32,26 +29,7 @@ function PapersContent() {
 					</SContentBox>
 				</div>
 			</SContentContainer>
-
-			<SPageButtonContainer>
-				<SDoubleB>
-					<SButtonImg src={DLeft} alt='DLeft' />
-				</SDoubleB>
-				<SLeftB>
-					<SButtonImg src={Left} alt='Left' />
-				</SLeftB>
-				<SPageNumberU>
-					<SPageNuberL>
-						<a href='2'>1</a>
-					</SPageNuberL>
-				</SPageNumberU>
-				<SRightB>
-					<SButtonImg src={Right} alt='Right' />
-				</SRightB>
-				<SDoubleB>
-					<SButtonImg src={DRight} alt='DRight' />
-				</SDoubleB>
-			</SPageButtonContainer>
+			<PageButtonContainer/>
 		</div>
 	);
 }
@@ -138,61 +116,6 @@ const SKeywordD = styled.div`
 	padding: 0.24rem 1.2rem;
 	margin: 0.4rem 0.501rem;
 	padding-bottom: 0.368rem;
-`;
-
-/* Page Button */
-const SPageButtonContainer = styled.div`
-	text-align: center;
-	margin-top: 6.4rem;
-`;
-
-const SDoubleB = styled.button`
-	vertical-align: 18%;
-	border: 0.9px solid ${Colors.circle};
-	background: ${Colors.white};
-	cursor: pointer;
-	padding: 0.4rem 0.16rem 0 0.16rem;
-`;
-
-const SLeftB = styled.button`
-	vertical-align: 18%;
-	border: 0.9px solid ${Colors.circle};
-	background: ${Colors.white};
-	cursor: pointer;
-	padding: 0.4rem 0.16rem 0 0.16rem;
-	margin-right: 0.32rem;
-`;
-
-const SRightB = styled.button`
-	vertical-align: 18%;
-	border: 0.9px solid ${Colors.circle};
-	background: ${Colors.white};
-	cursor: pointer;
-	padding: 0.4rem 0.16rem 0 0.16rem;
-	margin-left: 0.32rem;
-`;
-
-const SButtonImg = styled.img`
-	object-fit: cover;
-	opacity: 0.4;
-	width: 2.5rem;
-	height: 2.5rem;
-`;
-
-const SPageNumberU = styled.ul`
-	display: inline-block;
-`;
-
-const SPageNuberL = styled.li`
-	border-bottom: 0.5px solid ${Colors.black};
-	font-weight: 600;
-	margin: 0 0.32rem 0 0.32rem;
-	cursor: pointer;
-	font-size: 2.5rem;
-	width: 2.24rem;
-	padding-bottom: 0.4rem;
-	position: relative;
-	bottom: 1rem;
 `;
 
 export default PapersContent;
