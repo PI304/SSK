@@ -6,25 +6,19 @@ import Colors from '../../constants/colors';
 import STitle from '../component_layout/Title';
 import KimHyeonGyeong from '../../assets/김현경 교수님.png';
 import Sidebar from '../component_layout/Sidebar';
+import SLayoutContainer from '../component_layout/LayoutContainer';
 
 function Members() {
 	return (
-		<LayoutContainerCss>
+		<SLayoutContainer>
 			<Header />
 
 			<Container />
 
 			<Footer />
-		</LayoutContainerCss>
+		</SLayoutContainer>
 	);
 }
-
-const LayoutContainerCss = styled.div`
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	min-height: 100vh;
-`;
 
 function Container() {
 	return (
