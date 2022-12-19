@@ -29,7 +29,6 @@ const LayoutContainerCss = styled.div`
 function Container() {
 	return (
 		<MainContainer>
-			<div />
 			<STitle>연구진소개</STitle>
 			<Sidebar />
 			<Researchers />
