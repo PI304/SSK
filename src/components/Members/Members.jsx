@@ -41,7 +41,6 @@ function Researchers() {
 	return (
 		<MembersCss>
 			<TopMember />
-			<TopMember />
 			<Member />
 			<Member />
 			<Member />
@@ -88,7 +87,39 @@ function TopMember() {
 }
 
 function Member() {
-	return <MemberCss> 여기 정보</MemberCss>;
+	return (
+		<MemberCss>
+			<SMemberImg>
+				<img src={KimHyeonGyeong} alt='img' />
+			</SMemberImg>
+			<SMemberInfoContainer>
+				<SMemberTitle>연구책임자</SMemberTitle>
+				<SMemberName>김현경 교수</SMemberName>
+				<SMemberInfoBox>
+					<SMemberInfoText>
+						| E-mail
+						<br />
+						1234567@yonsei.ac.kr
+					</SMemberInfoText>
+					<SMemberInfoText>
+						| 홈페이지
+						<br />
+						www.yonsei.ac.kr
+					</SMemberInfoText>
+					<SMemberInfoText>
+						| 연락처
+						<br />
+						010-0000-0000
+					</SMemberInfoText>
+				</SMemberInfoBox>
+			</SMemberInfoContainer>
+			<SMemberWorkText>
+				연세대학교 아동가족학과 인간생애와 혁신적 디자인 교수
+				<br />
+				청소년, 바이오마커 수집, 양적 연구 설계 전문성
+			</SMemberWorkText>
+		</MemberCss>
+	);
 }
 
 const MembersCss = styled.div`
@@ -147,12 +178,6 @@ const TopMemberNameCss = styled.div`
 	color: ${Colors.gray50};
 `;
 
-const TopMemberInfoCss = styled.div`
-	border: 2px solid yellow;
-	grid-column-start: 2;
-	grid-column-end: 3;
-`;
-
 const TopMemberInfoBoxCss = styled.div`
 	display: flex;
 	justify-content: space-between;
@@ -188,11 +213,80 @@ const TopMemberWorkTextCss = styled.div`
 
 const MemberCss = styled.div`
 	display: grid;
-	grid-template-columns: auto 1fr;
-	border: 1px solid gray;
+	grid-template-columns: 22.9rem 25.4rem;
+	grid-template-rows: 26.9rem 9.3rem;
 `;
 
-const InfoContainerCss = styled.div`
-	border: 1px solid gray;
+const SMemberImg = styled.div`
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	> img {
+		width: 22.9rem;
+		height: 28.5rem;
+	}
 `;
+const SMemberInfoContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	margin-left: 4.5rem;
+	margin-top: 3.1rem;
+`;
+
+const SMemberTitle = styled.div`
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 2.3rem;
+	color: ${Colors.gray50};
+`;
+const SMemberName = styled.div`
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 3rem;
+	line-height: 4.3rem;
+	color: ${Colors.black};
+`;
+
+const SMemberInfoBox = styled.div`
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.6rem;
+	margin-top: 1.5rem;
+`;
+
+const SMemberInfoText = styled.div`
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.2rem;
+	line-height: 1.7rem;
+	color: ${Colors.black};
+`;
+
+const SMemberWorkText = styled.div`
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+
+	padding-top: 2.3rem;
+	padding-right: 8.2rem;
+	padding-left: 2.9rem;
+	padding-bottom: 2.3rem;
+
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 2.3rem;
+	color: ${Colors.black};
+
+	color: ${Colors.gray50};
+	background: ${Colors.gray};
+`;
+
 export default Members;
