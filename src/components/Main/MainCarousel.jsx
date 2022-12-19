@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useState, useRef, useEffect } from 'react';
 import IMG1 from '../../assets/logo.png';
 import IMG2 from '../../assets/nrf.jpeg';
 import IMG3 from '../../assets/youth.png';
@@ -18,16 +19,26 @@ function MainCarousel() {
 							<SIMGI src={IMG1} alt='IMG1' />
 						</a>
 					</SImgBoxD>
-					<SImgBoxD>
+					<SImgBox2D>
 						<a href='https://www.nrf.re.kr/index' target='_blank' rel='noreferrer'>
 							<SIMGI src={IMG2} alt='IMG2' />
 						</a>
-					</SImgBoxD>
-					<SImgBoxD>
+					</SImgBox2D>
+					<SImgBox3D>
 						<a href='https://yonsei-impact.weebly.com/' target='_blank' rel='noreferrer'>
 							<SIMGI src={IMG3} alt='IMG3' />
 						</a>
-					</SImgBoxD>
+					</SImgBox3D>
+					<SImgBox4D>
+						<a href='https://yonsei-impact.weebly.com/' target='_blank' rel='noreferrer'>
+							<SIMGI src={IMG4} alt='IMG4' />
+						</a>
+					</SImgBox4D>
+					<SImgBox5D>
+						<a href='https://yonsei-impact.weebly.com/' target='_blank' rel='noreferrer'>
+							<SIMGI src={IMG5} alt='IMG5' />
+						</a>
+					</SImgBox5D>
 				</SCarouselBoxD>
 			</SCarouselContainer>
 
@@ -65,22 +76,53 @@ const MainCarouselContainer = styled.div`
 /* 캐러쉘 박스 */
 const SCarouselContainer = styled.div`
 	padding: 3.2rem 8rem 1.6rem 8rem;
-	overflow: hidden;
 `;
 
 const SCarouselBoxD = styled.div`
 	position: relative;
 	display: flex;
 	justify-content: space-around;
+	gap: 3rem;
+	overflow: hidden;
+	width: 94.4rem;
+	height: 11.449rem;
 `;
 
 const SImgBoxD = styled.div`
-	width: 25.6rem;
+	min-width: 25.6rem;
 	height: 9.248rem;
-	overflow: hidden;
 	margin: 1.101rem;
 	display: flex;
-	justify-content: center;
+	align-items: center;
+`;
+
+const SImgBox2D = styled.div`
+	min-width: 25.6rem;
+	height: 9.248rem;
+	margin: 1.101rem;
+	display: flex;
+	align-items: center;
+`;
+
+const SImgBox3D = styled.div`
+	min-width: 25.6rem;
+	height: 9.248rem;
+	margin: 1.101rem;
+	display: flex;
+	align-items: center;
+`;
+
+const SImgBox4D = styled.div`
+	min-width: 25.6rem;
+	height: 9.248rem;
+	margin: 1.101rem;
+`;
+
+const SImgBox5D = styled.div`
+	min-width: 25.6rem;
+	height: 9.248rem;
+	margin: 1.101rem;
+	display: flex;
 	align-items: center;
 `;
 
