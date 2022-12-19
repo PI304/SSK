@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import SSelectOptionS from './SelectOption';
 
+
 function Table({ columns, datas }) {
     return (
         <div>

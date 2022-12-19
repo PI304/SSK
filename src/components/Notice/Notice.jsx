@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
 import MainContainer from '../component_layout/MainContainer';
