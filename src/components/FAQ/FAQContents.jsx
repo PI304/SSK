@@ -11,29 +11,18 @@ function FAQContents() {
 			</STitleContainer>
 			<SContents>
 				<SQuestion>
-<<<<<<< Updated upstream
-					OOOOOO프로젝트에 참여하는 사람입니다. 하루에 세 번 OOOO을 하라고 안내 받았는데, 놓친 날이
-					있다면 어떻게 해야할까요?
-=======
 					OOOOOO프로젝트에 참여하는 사람입니다.
 					<br />
 					하루에 세 번 OOOO을 하라고 안내 받았는데, 놓친 날이 있다면 어떻게 해야할까요?
->>>>>>> Stashed changes
 				</SQuestion>
 				<SA>
 					<SHead>A</SHead>
 					<SAnswer>
-<<<<<<< Updated upstream
-						OOOOOO프로젝트에 참여하시는 분들은 하루에 세 번 OOOO을 하시기를 권장드립니다. 그러나
-						놓친 날이 있는 경우엔 데일리 설문조사에서 놓친 날짜, 시간에 대한 정보를 꼭 기입해주시기
-						바랍니다. 혹시 설문조사에서 쓰지 않은 경우엔 reaiqwhl@yonsei.ac.kr로 연락 주세요.
-=======
 						OOOOOO프로젝트에 참여하시는 분들은 하루에 세 번 OOOO을 하시기를 권장드립니다.
 						<br />
 						그러나 놓친 날이 있는 경우엔 데일리 설문조사에서 놓친 날짜, 시간에 대한 정보를 꼭
 						기입해주시기 바랍니다. 혹시 설문조사에서 쓰지 않은 경우엔 reaiqwhl@yonsei.ac.kr로 연락
 						주세요.
->>>>>>> Stashed changes
 					</SAnswer>
 				</SA>
 				<SArrowImg>
