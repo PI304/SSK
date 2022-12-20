@@ -111,7 +111,10 @@ const SAnswer = styled.div`
 	color: ${Colors.black};
 
 	padding-left: 1.4rem;
+<<<<<<< Updated upstream
 	padding-right: 5rem;
+=======
+>>>>>>> Stashed changes
 `;
 
 /* 화살표 */
