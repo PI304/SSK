@@ -3,7 +3,6 @@ import SLayoutContainer from '../component_layout/LayoutContainer';
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
 import MainSlide from './MainSlide';
-import MainCarousel from './MainCarousel';
 import SimpleSlider from './MainCarousel_2';
 import MainSite from './MainSite';
 
