@@ -1,6 +1,9 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import styled from 'styled-components';
-import { useState, useRef, useEffect } from 'react';
+import React, { Component } from 'react';
 import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import IMG1 from '../../assets/logo.png';
 import IMG2 from '../../assets/nrf.jpeg';
 import IMG3 from '../../assets/youth.png';
@@ -10,77 +13,59 @@ import ArrowRight from '../../assets/arrow_forward_ios_FILL0_wght400_GRAD0_opsz4
 import ArrowLeft from '../../assets/arrow_back_ios_FILL0_wght400_GRAD0_opsz48.png';
 import Colors from '../../constants/colors';
 
-function MainCarousel() {
-	const settings = {
-		dots: true,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-	};
-	return (
-		<MainCarouselContainer>
-			<SCarouselContainer>
-				<SCarouselBoxD>
-					<SImgBoxD>
-						<a href='https://yonsei.ac.kr/sc/' target='_blank' rel='noreferrer'>
-							<SIMGI src={IMG1} alt='IMG1' />
-						</a>
-					</SImgBoxD>
-					<SImgBox2D>
-						<a href='https://www.nrf.re.kr/index' target='_blank' rel='noreferrer'>
-							<SIMGI src={IMG2} alt='IMG2' />
-						</a>
-					</SImgBox2D>
-					<SImgBox3D>
-						<a href='https://yonsei-impact.weebly.com/' target='_blank' rel='noreferrer'>
-							<SIMGI src={IMG3} alt='IMG3' />
-						</a>
-					</SImgBox3D>
-					<SImgBox4D>
-						<a href='https://yonsei-impact.weebly.com/' target='_blank' rel='noreferrer'>
-							<SIMGI src={IMG4} alt='IMG4' />
-						</a>
-					</SImgBox4D>
-					<SImgBox5D>
-						<a href='https://yonsei-impact.weebly.com/' target='_blank' rel='noreferrer'>
-							<SIMGI src={IMG5} alt='IMG5' />
-						</a>
-					</SImgBox5D>
-				</SCarouselBoxD>
-			</SCarouselContainer>
-
-			<SArrowContainer>
-				<SArrowBoxD>
-					<SArrowButtonB>
-						<span>
-							<img src={ArrowLeft} alt='Arrowleft' width='60%' />
-						</span>
-					</SArrowButtonB>
-					<SArrowButtonB>
-						<span>
-							<img src={ArrowRight} alt='Arrowright' width='60%' />
-						</span>
-					</SArrowButtonB>
-				</SArrowBoxD>
-			</SArrowContainer>
-
-			<SCircleContainer>
-				<SCircleD />
-				<SCircleD />
-				<SCircleD />
-				<SCircleD />
-				<SCircleD />
-			</SCircleContainer>
-		</MainCarouselContainer>
-	);
+// eslint-disable-next-line react/prefer-stateless-function
+export default class SimpleSlider extends Component {
+	render() {
+		const settings = {
+			dots: true,
+			infinite: true,
+			speed: 500,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+		};
+		return (
+			<MainCarouselContainer>
+				<Slider {...settings}>
+					<SCarouselContainer>
+						<SCarouselBoxD>
+							<SImgBoxD>
+								<a href='https://yonsei.ac.kr/sc/' target='_blank' rel='noreferrer'>
+									<SIMGI src={IMG1} alt='IMG1' />
+								</a>
+							</SImgBoxD>
+							<SImgBox2D>
+								<a href='https://www.nrf.re.kr/index' target='_blank' rel='noreferrer'>
+									<SIMGI src={IMG2} alt='IMG2' />
+								</a>
+							</SImgBox2D>
+							<SImgBox3D>
+								<a href='https://yonsei-impact.weebly.com/' target='_blank' rel='noreferrer'>
+									<SIMGI src={IMG3} alt='IMG3' />
+								</a>
+							</SImgBox3D>
+							<SImgBox4D>
+								<a href='https://yonsei-impact.weebly.com/' target='_blank' rel='noreferrer'>
+									<SIMGI src={IMG4} alt='IMG4' />
+								</a>
+							</SImgBox4D>
+							<SImgBox5D>
+								<a href='https://yonsei-impact.weebly.com/' target='_blank' rel='noreferrer'>
+									<SIMGI src={IMG5} alt='IMG5' />
+								</a>
+							</SImgBox5D>
+						</SCarouselBoxD>
+					</SCarouselContainer>
+				</Slider>
+			</MainCarouselContainer>
+		);
+	}
 }
 
 const MainCarouselContainer = styled.div`
 	position: relative;
 	margin: 3.2rem 4.8rem;
 	width: 110.4rem;
-	height: 20.089;
+	height: 20.089rem;
 `;
 
 /* 캐러쉘 박스 */
@@ -92,8 +77,7 @@ const SCarouselContainer = styled.div`
 const SCarouselBoxD = styled.div`
 	display: flex;
 	justify-content: space-around;
-	overflow: hidden;
-	gap: 3rem;
+	gap: 9rem;
 `;
 
 const SImgBoxD = styled.div`
@@ -182,5 +166,3 @@ const SCircleD = styled.div`
 const SBlackCircleD = styled.div`
 	background-color: ${Colors.black};
 `;
-
-export default MainCarousel;
