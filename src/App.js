@@ -20,7 +20,7 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path='/' 정element={<Layout/>}>
+				<Route path='/' element={<Layout/>}>
 					<Route path='main' element={<Main />} />
 					<Route path='adds' element={<AddsLayout/>}>
 						<Route path='Notice' element={<Notice />} />
