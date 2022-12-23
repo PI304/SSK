@@ -60,7 +60,7 @@ function CMainSiteHover() {
 			<SHoverContainer>
 				<SSiteHoverU>
 					<SSiteHoverL2>
-						<SSiteSubHoverA2 to='../components/Publication'>발간물</SSiteSubHoverA2>
+						<SSiteSubHoverA2 to='../Publication'>발간물</SSiteSubHoverA2>
 					</SSiteHoverL2>
 				</SSiteHoverU>
 			</SHoverContainer>

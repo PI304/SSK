@@ -69,16 +69,16 @@ function CMainSiteHover() {
 			<SHoverContainer>
 				<SSiteHoverU>
 					<SSiteHoverL4>
-						<SSiteSubHoverA4 to='../components/Notice'>공지사항</SSiteSubHoverA4>
+						<SSiteSubHoverA4 to='../Notice'>공지사항</SSiteSubHoverA4>
 					</SSiteHoverL4>
 					<SSiteHoverL4>
-						<SSiteSubHoverA4 to='../components/Reports'>보도자료</SSiteSubHoverA4>
+						<SSiteSubHoverA4 to='../Reports'>보도자료</SSiteSubHoverA4>
 					</SSiteHoverL4>
 					<SSiteHoverL4>
-						<SSiteSubHoverA4 to='../components/FAQ'>FAQ</SSiteSubHoverA4>
+						<SSiteSubHoverA4 to='../FAQ'>FAQ</SSiteSubHoverA4>
 					</SSiteHoverL4>
 					<SSiteHoverL4>
-						<SSiteSubHoverA4 to='../components/Contact'>contact</SSiteSubHoverA4>
+						<SSiteSubHoverA4 to='../Contact'>contact</SSiteSubHoverA4>
 					</SSiteHoverL4>
 				</SSiteHoverU>
 			</SHoverContainer>

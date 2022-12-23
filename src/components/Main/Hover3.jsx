@@ -64,10 +64,10 @@ function CMainSiteHover() {
 			<SHoverContainer>
 				<SSiteHoverU>
 					<SSiteHoverL3>
-						<SSiteSubHoverA3 to='../components/Resources'>자료안내</SSiteSubHoverA3>
+						<SSiteSubHoverA3 to='../Resources'>자료안내</SSiteSubHoverA3>
 					</SSiteHoverL3>
 					<SSiteHoverL3>
-						<SSiteSubHoverA3 to='../components/Papers'>데이터활용논문</SSiteSubHoverA3>
+						<SSiteSubHoverA3 to='../Papers'>데이터활용논문</SSiteSubHoverA3>
 					</SSiteHoverL3>
 				</SSiteHoverU>
 			</SHoverContainer>

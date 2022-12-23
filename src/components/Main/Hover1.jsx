@@ -70,13 +70,13 @@ function CMainSiteHover() {
 			<SHoverContainer>
 				<SSiteHoverU>
 					<SSiteHoverL>
-						<SSiteSubHoverA to='../components/Intro'>ADDS소개</SSiteSubHoverA>
+						<SSiteSubHoverA to='../Intro'>ADDS소개</SSiteSubHoverA>
 					</SSiteHoverL>
 					<SSiteHoverL>
-						<SSiteSubHoverA to='../components/Members'>연구진소개</SSiteSubHoverA>
+						<SSiteSubHoverA to='../Members'>연구진소개</SSiteSubHoverA>
 					</SSiteHoverL>
 					<SSiteHoverL>
-						<SSiteSubHoverA to='../components/Research'>조사설계</SSiteSubHoverA>
+						<SSiteSubHoverA to='../Research'>조사설계</SSiteSubHoverA>
 					</SSiteHoverL>
 				</SSiteHoverU>
 			</SHoverContainer>
