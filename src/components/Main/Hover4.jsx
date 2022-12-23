@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Colors from '../../constants/colors';
 import IMG4 from '../../assets/info.svg';
+import urls from '../../constants/Urls';
 
 function CSite4() {
 	const [isHover, setIsHover] = useState(false);
@@ -69,16 +70,16 @@ function CMainSiteHover() {
 			<SHoverContainer>
 				<SSiteHoverU>
 					<SSiteHoverL4>
-						<SSiteSubHoverA4 to='../Notice'>공지사항</SSiteSubHoverA4>
+						<SSiteSubHoverA4 to={urls.notice}>공지사항</SSiteSubHoverA4>
 					</SSiteHoverL4>
 					<SSiteHoverL4>
-						<SSiteSubHoverA4 to='../Reports'>보도자료</SSiteSubHoverA4>
+						<SSiteSubHoverA4 to={urls.reports}>보도자료</SSiteSubHoverA4>
 					</SSiteHoverL4>
 					<SSiteHoverL4>
-						<SSiteSubHoverA4 to='../FAQ'>FAQ</SSiteSubHoverA4>
+						<SSiteSubHoverA4 to={urls.FAQ}>FAQ</SSiteSubHoverA4>
 					</SSiteHoverL4>
 					<SSiteHoverL4>
-						<SSiteSubHoverA4 to='../Contact'>contact</SSiteSubHoverA4>
+						<SSiteSubHoverA4 to={urls.contact}>contact</SSiteSubHoverA4>
 					</SSiteHoverL4>
 				</SSiteHoverU>
 			</SHoverContainer>

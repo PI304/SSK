@@ -34,7 +34,7 @@ const Navigation = styled.nav`
 function CLogo() {
 	return (
 		<div>
-			<a href='http://localhost:3000/'>
+			<a href='http://localhost:3000/main'>
 				<SLogoI src={Logo} alt='Logo' />
 			</a>
 		</div>

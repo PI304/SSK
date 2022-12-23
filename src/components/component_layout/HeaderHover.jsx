@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Colors from '../../constants/colors';
+import urls from '../../constants/Urls';
 
 function HeaderHover() {
 	return (
@@ -26,11 +27,11 @@ const SMenuU = styled.ul`
 function CMenuHover1() {
 	return (
 		<SMenuL>
-			<SMenuA to='/Intro'>ADDS소개</SMenuA>
+			<SMenuA to={urls.intro}>ADDS소개</SMenuA>
 			<SSubMenuU>
-				<SSubMenuTopA to='/Intro'>ADDS 소개</SSubMenuTopA>
-				<SSubMenuA to='/Members'>연구진 소개</SSubMenuA>
-				<SSubMenuA to='/Research'>조사설계</SSubMenuA>
+				<SSubMenuTopA to={urls.intro}>ADDS 소개</SSubMenuTopA>
+				<SSubMenuA to={urls.members}>연구진 소개</SSubMenuA>
+				<SSubMenuA to={urls.research}>조사설계</SSubMenuA>
 			</SSubMenuU>
 		</SMenuL>
 	);
@@ -39,9 +40,9 @@ function CMenuHover1() {
 function CMenuHover2() {
 	return (
 		<SMenuL>
-			<SMenuA to='/Publication'>발간물</SMenuA>
+			<SMenuA to={urls.publication}>발간물</SMenuA>
 			<SSubMenuU>
-				<SSubMenuTopA to='/Publication'>발간물</SSubMenuTopA>
+				<SSubMenuTopA to={urls.publication}>발간물</SSubMenuTopA>
 			</SSubMenuU>
 		</SMenuL>
 	);
@@ -50,10 +51,10 @@ function CMenuHover2() {
 function CMenuHover3() {
 	return (
 		<SMenuL>
-			<SMenuA to='/Resources'>데이터</SMenuA>
+			<SMenuA to={urls.resources}>데이터</SMenuA>
 			<SSubMenuU>
-				<SSubMenuTopA to='/Resources'>자료안내</SSubMenuTopA>
-				<SSubMenuA to='/Papers'>데이터활용논문</SSubMenuA>
+				<SSubMenuTopA to={urls.resources}>자료안내</SSubMenuTopA>
+				<SSubMenuA to={urls.papers}>데이터활용논문</SSubMenuA>
 			</SSubMenuU>
 		</SMenuL>
 	);
@@ -62,12 +63,12 @@ function CMenuHover3() {
 function CMenuHover4() {
 	return (
 		<SMenuL>
-			<SMenuA to='/Notice'>소통공간</SMenuA>
+			<SMenuA to={urls.notice}>소통공간</SMenuA>
 			<SSubMenuU>
-				<SSubMenuTopA to='/Notice'>공지사항</SSubMenuTopA>
-				<SSubMenuA to='/Reports'>보도자료</SSubMenuA>
-				<SSubMenuA to='/FAQ'>FAQ</SSubMenuA>
-				<SSubMenuA to='/Contact'>Contact</SSubMenuA>
+				<SSubMenuTopA to={urls.notice}>공지사항</SSubMenuTopA>
+				<SSubMenuA to={urls.reports}>보도자료</SSubMenuA>
+				<SSubMenuA to={urls.FAQ}>FAQ</SSubMenuA>
+				<SSubMenuA to={urls.contact}>Contact</SSubMenuA>
 			</SSubMenuU>
 		</SMenuL>
 	);

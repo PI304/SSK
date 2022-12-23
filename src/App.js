@@ -13,23 +13,28 @@ import Members from './components/Members/Members';
 import Notice from './components/Notice/Notice';
 import Resources from './components/Resources/Resources';
 import Layout from './components/component_layout/Layout';
+import AddsLayout from './components/component_layout/AddsLayout';
 import './styles/reset.module.css';
 
 function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path='/' element={<Main />} />
-				<Route path='/Intro' element={<Intro />} />
-				<Route path='/Papers' element={<Papers />} />
-				<Route path='/Contact' element={<Contact />} />
-				<Route path='/Research' element={<Research />} />
-				<Route path='/Publication' element={<Publication />} />
-				<Route path='/Reports' element={<Reports />} />
-				<Route path='/FAQ' element={<FAQ />} />
-				<Route path='/Members' element={<Members />} />
-				<Route path='/Notice' element={<Notice />} />
-				<Route path='/Resources' element={<Resources />} />
+				<Route path='/' 정element={<Layout/>}>
+					<Route path='main' element={<Main />} />
+					<Route path='adds' element={<AddsLayout/>}>
+						<Route path='Notice' element={<Notice />} />
+						<Route path='Intro' element={<Intro />} />
+						<Route path='Papers' element={<Papers />} />
+						<Route path='Contact' element={<Contact />} />
+						<Route path='Research' element={<Research />} />
+						<Route path='Publication' element={<Publication />} />
+						<Route path='Reports' element={<Reports />} />
+						<Route path='FAQ' element={<FAQ />} />
+						<Route path='Members' element={<Members />} />
+						<Route path='Resources' element={<Resources />} />
+					</Route>
+				</Route>
 			</Routes>
 		</BrowserRouter>
 	);
