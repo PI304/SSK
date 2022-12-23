@@ -1,32 +1,10 @@
 import styled from 'styled-components';
-import Header from '../component_layout/Header';
-import Footer from '../component_layout/Footer';
-import MainContainer from '../component_layout/MainContainer';
 import Colors from '../../constants/colors';
-import STitle from '../component_layout/Title';
 import KimHyeonGyeong from '../../assets/김현경 교수님.png';
-import Sidebar from '../component_layout/Sidebar';
-import SLayoutContainer from '../component_layout/LayoutContainer';
 
 function Members() {
 	return (
-		<SLayoutContainer>
-			<Header />
-
-			<Container />
-
-			<Footer />
-		</SLayoutContainer>
-	);
-}
-
-function Container() {
-	return (
-		<MainContainer>
-			<STitle>연구진소개</STitle>
-			<Sidebar />
 			<Researchers />
-		</MainContainer>
 	);
 }
 

@@ -1,9 +1,3 @@
-import Header from '../component_layout/Header';
-import Footer from '../component_layout/Footer';
-import MainContainer from '../component_layout/MainContainer';
-import STitle from '../component_layout/Title';
-import SLayoutContainer from '../component_layout/LayoutContainer';
-import Sidebar from '../component_layout/Sidebar';
 import Table from '../Notice/Table';
 import PageButtonContainer from '../component_layout/PageButtonContainer';
 
@@ -23,18 +17,10 @@ function Resources() {
 		}
 	];
 	return (
-		<SLayoutContainer>
-			<Header />
-			<MainContainer>
-				<STitle>자료안내</STitle>
-				<Sidebar />
 				<div>
 					<Table columns={columns} datas={datas}/>
 					<PageButtonContainer/>
 				</div>
-			</MainContainer>
-			<Footer />
-		</SLayoutContainer>
 	);
 }
 

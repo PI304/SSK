@@ -1,20 +1,9 @@
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 import SidebarInner from './SidebarInner';
+import urls from '../../constants/Urls';
 
 function Sidebar() {
-	const urls = {
-		intro: '/Intro',
-		members: '/Members',
-		research: '/Research',
-		publication: '/Publication',
-		resources: '/Resources',
-		papers: '/Papers',
-		notice: '/Notice',
-		reports: '/Reports',
-		FAQ: '/FAQ',
-		contact: '/Contact',
-	};
 
 	const TitleUrl = {
 		intro: [urls.intro, urls.members, urls.research],

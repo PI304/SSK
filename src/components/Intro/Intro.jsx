@@ -1,18 +1,8 @@
-/* eslint-disable import/no-cycle */
-import SLayoutContainer from '../component_layout/LayoutContainer';
-import Header from '../component_layout/Header';
-import Footer from '../component_layout/Footer';
-import IntroMain from './IntroMain';
+import IntroContent from './IntroMainContent';
 
 function Intro() {
 	return (
-		<SLayoutContainer>
-			<Header />
-
-			<IntroMain />
-
-			<Footer />
-		</SLayoutContainer>
+			<IntroContent />
 	);
 }
 

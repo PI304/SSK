@@ -1,13 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-// eslint-disable-next-line import/no-cycle
-import Header from '../component_layout/Header';
-import Footer from '../component_layout/Footer';
 import CardContent from './CardContent';
-import MainContainer from '../component_layout/MainContainer';
-import STitle from '../component_layout/Title';
-import SLayoutContainer from '../component_layout/LayoutContainer';
-import Sidebar from '../component_layout/Sidebar';
 
 function Research() {
 	const [under, setUnder] = useState(true);
@@ -23,11 +16,6 @@ function Research() {
 	};
 
 	return (
-		<SLayoutContainer>
-			<Header />
-			<MainContainer>
-				<STitle>조사 설계</STitle>
-				<Sidebar />
 				<WrapperCss>
 					<CardContent
 						outTitle='기초 설문조사 (ADDS-C; Core)'
@@ -102,9 +90,6 @@ function Research() {
 						under={num === 5 ? under : undefined}
 					/>
 				</WrapperCss>
-			</MainContainer>
-			<Footer />
-		</SLayoutContainer>
 	);
 }
 
