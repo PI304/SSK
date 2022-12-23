@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { useState, useRef, useEffect } from 'react';
-import Slider from 'react-slick';
 import IMG1 from '../../assets/logo.png';
 import IMG2 from '../../assets/nrf.jpeg';
 import IMG3 from '../../assets/youth.png';
@@ -11,13 +10,6 @@ import ArrowLeft from '../../assets/arrow_back_ios_FILL0_wght400_GRAD0_opsz48.pn
 import Colors from '../../constants/colors';
 
 function MainCarousel() {
-	const settings = {
-		dots: true,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-	};
 	return (
 		<MainCarouselContainer>
 			<SCarouselContainer>
@@ -80,7 +72,7 @@ const MainCarouselContainer = styled.div`
 	position: relative;
 	margin: 3.2rem 4.8rem;
 	width: 110.4rem;
-	height: 20.089;
+	height: 20.089rem;
 `;
 
 /* 캐러쉘 박스 */

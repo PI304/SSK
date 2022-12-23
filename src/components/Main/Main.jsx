@@ -3,7 +3,7 @@ import SLayoutContainer from '../component_layout/LayoutContainer';
 import Header from '../component_layout/Header';
 import Footer from '../component_layout/Footer';
 import MainSlide from './MainSlide';
-import SimpleSlider from './MainCarousel_2';
+import MainCarousel from './MainCarousel';
 import MainSite from './MainSite';
 
 function Main() {
@@ -15,7 +15,7 @@ function Main() {
 				<SMainContainer>
 					<MainSlide>hi</MainSlide>
 
-					<SimpleSlider />
+					<MainCarousel />
 
 					<MainSite />
 				</SMainContainer>
