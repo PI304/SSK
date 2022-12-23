@@ -79,12 +79,12 @@ const MainCarouselContainer = styled.div`
 const SCarouselContainer = styled.div`
 	padding: 3.2rem 8rem 1.6rem 8rem;
 	transition: all 1s;
+	overflow: hidden;
 `;
 
 const SCarouselBoxD = styled.div`
 	display: flex;
 	justify-content: space-around;
-	overflow: hidden;
 	gap: 3rem;
 `;
 
@@ -116,7 +116,6 @@ const SImgBox4D = styled.div`
 	min-width: 25.6rem;
 	height: 9.248rem;
 	margin: 1.101rem;
-	padding-top: 2rem;
 `;
 
 const SImgBox5D = styled.div`
