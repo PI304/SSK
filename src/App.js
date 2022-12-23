@@ -13,7 +13,7 @@ import Members from './components/Members/Members';
 import Notice from './components/Notice/Notice';
 import Resources from './components/Resources/Resources';
 import Layout from './components/component_layout/Layout';
-import reset from './styles/reset.module.css';
+import './styles/reset.module.css';
 
 function App() {
 	return (
