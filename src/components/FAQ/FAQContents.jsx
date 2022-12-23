@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Colors from '../../constants/colors';
-import arrow from '../../assets/arrow.svg';
+import arrow from '../../assets/faqArrow.svg';
 
 function FAQContents() {
 	return (
@@ -115,8 +115,10 @@ const SAnswer = styled.div`
 
 /* 화살표 */
 const SArrowImg = styled.div`
+	align-self: center;
+
 	> img {
-		width: 2.2;
+		width: 2.2rem;
 		height: 1.2rem;
 	}
 `;
