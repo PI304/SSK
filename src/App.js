@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Main from './components/Main/Main';
 import Intro from './components/Intro/Intro';
 import Papers from './components/Papers/Papers';
@@ -21,6 +21,7 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route path='/' element={<Layout/>}>
+					<Route exact path='/' element={<Navigate to="/main"/>}/>
 					<Route path='main' element={<Main />} />
 					<Route path='adds' element={<AddsLayout/>}>
 						<Route path='Notice' element={<Notice />} />
