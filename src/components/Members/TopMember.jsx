@@ -8,7 +8,7 @@ function TopMember({ profileImg, position, name, email, homepage, phoneNum, titl
 				<img src={profileImg} alt='img' />
 			</TopMemberImgCss>
 			<TopMemberPositionCss>{position}</TopMemberPositionCss>
-			<TopMemberNameCss>{name} 교수</TopMemberNameCss>
+			<TopMemberNameCss>{name}</TopMemberNameCss>
 			<TopMemberInfoBoxCss>
 				<TopMemberInfoText>
 					| E-mail
