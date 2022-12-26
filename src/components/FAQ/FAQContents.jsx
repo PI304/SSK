@@ -5,34 +5,26 @@ import arrow from '../../assets/faqArrow.svg';
 
 function FAQContent({ num, title, question, answer }) {
 	return (
-		<SFAQMain>
-			<SFAQContainer>
-				<STitleContainer>
-					<SHead>Q {num}</SHead>
-					<STitle>{title}</STitle>
-				</STitleContainer>
-				<SContents>
-					<SQuestion>{question}</SQuestion>
-					<SA>
-						<SHead>A</SHead>
-						<SAnswer>{answer}</SAnswer>
-					</SA>
-					<SArrowImg>
-						<img src={arrow} alt='img' />
-					</SArrowImg>
-				</SContents>
-			</SFAQContainer>
-		</SFAQMain>
+		<SFAQContainer>
+			<STitleContainer>
+				<SHead>Q {num}</SHead>
+				<STitle>{title}</STitle>
+			</STitleContainer>
+			<SContents>
+				<SQuestion>{question}</SQuestion>
+				<SA>
+					<SHead>A</SHead>
+					<SAnswer>{answer}</SAnswer>
+				</SA>
+				<SArrowImg>
+					<img src={arrow} alt='img' />
+				</SArrowImg>
+			</SContents>
+		</SFAQContainer>
 	);
 }
 
 /* 레이아웃 */
-const SFAQMain = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 3rem;
-`;
-
 const SFAQContainer = styled.div`
 	display: flex;
 	flex-direction: column;
