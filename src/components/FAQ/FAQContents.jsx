@@ -1,54 +1,21 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import styled from 'styled-components';
 import Colors from '../../constants/colors';
 import arrow from '../../assets/faqArrow.svg';
 
-function FAQContents() {
+function FAQContent({ num, title, question, answer }) {
 	return (
 		<SFAQMain>
 			<SFAQContainer>
 				<STitleContainer>
-					<SHead>Q 25</SHead>
-					<STitle>OOOO0OO프로젝트</STitle>
+					<SHead>Q {num}</SHead>
+					<STitle>{title}</STitle>
 				</STitleContainer>
 				<SContents>
-					<SQuestion>
-						OOOOOO프로젝트에 참여하는 사람입니다. 하루에 세 번 OOOO을 하라고 안내 받았는데, 놓친
-						날이 있다면 어떻게 해야할까요?
-					</SQuestion>
+					<SQuestion>{question}</SQuestion>
 					<SA>
 						<SHead>A</SHead>
-						<SAnswer>
-							OOOOOO프로젝트에 참여하시는 분들은 하루에 세 번 OOOO을 하시기를 권장드립니다. 그러나
-							놓친 날이 있는 경우엔 데일리 설문조사에서 놓친 날짜, 시간에 대한 정보를 꼭
-							기입해주시기 바랍니다. 혹시 설문조사에서 쓰지 않은 경우엔 reaiqwhl@yonsei.ac.kr로 연락
-							주세요.
-						</SAnswer>
-					</SA>
-					<SArrowImg>
-						<img src={arrow} alt='img' />
-					</SArrowImg>
-				</SContents>
-			</SFAQContainer>
-
-			<SFAQContainer>
-				<STitleContainer>
-					<SHead>Q 25</SHead>
-					<STitle>OOOO0OO프로젝트</STitle>
-				</STitleContainer>
-				<SContents>
-					<SQuestion>
-						OOOOOO프로젝트에 참여하는 사람입니다. 하루에 세 번 OOOO을 하라고 안내 받았는데, 놓친
-						날이 있다면 어떻게 해야할까요?
-					</SQuestion>
-					<SA>
-						<SHead>A</SHead>
-						<SAnswer>
-							OOOOOO프로젝트에 참여하시는 분들은 하루에 세 번 OOOO을 하시기를 권장드립니다. 그러나
-							놓친 날이 있는 경우엔 데일리 설문조사에서 놓친 날짜, 시간에 대한 정보를 꼭
-							기입해주시기 바랍니다. 혹시 설문조사에서 쓰지 않은 경우엔 reaiqwhl@yonsei.ac.kr로 연락
-							주세요.
-						</SAnswer>
+						<SAnswer>{answer}</SAnswer>
 					</SA>
 					<SArrowImg>
 						<img src={arrow} alt='img' />
@@ -155,4 +122,4 @@ const SArrowImg = styled.div`
 	}
 `;
 
-export default FAQContents;
+export default FAQContent;
