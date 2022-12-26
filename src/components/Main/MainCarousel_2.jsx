@@ -66,7 +66,7 @@ function MainCarousel() {
 						</SContentBoxD>
 						<SContentBoxD>
 							<a href='http://hlid.yonsei.ac.kr/' target='_blank' rel='noreferrer'>
-								<SContentIMG src={IMG5} alt='IMG4' />
+								<SContentIMG src={IMG4} alt='IMG4' />
 							</a>
 						</SContentBoxD>
 						<SContentBoxD>
@@ -148,10 +148,9 @@ const SContentBoxD = styled.div`
 `;
 
 const SContentIMG = styled.img`
-	max-width: 100%;
-	max-height: 100%;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
-	z-index: 1;
 `;
 
 /* 캐러쉘 circle */
