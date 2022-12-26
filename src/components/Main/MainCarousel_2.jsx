@@ -10,7 +10,7 @@ import ArrowLeft from '../../assets/arrow_back_ios_FILL0_wght400_GRAD0_opsz48.pn
 import Colors from '../../constants/colors';
 
 function MainCarousel() {
-	const TOTAL_SLIDES = 4;
+	const TOTAL_SLIDES = 1;
 	const [isSlide, setIsSlide] = useState(0);
 	const slideRef = useRef(null);
 
@@ -41,11 +41,11 @@ function MainCarousel() {
 	return (
 		<div>
 			<CarouselContainer>
-				<div>
+				<SArrowBoxD>
 					<SArrowB onClick={PrevSlide}>
 						<img src={ArrowLeft} alt='arrowleft' width='60%' />
 					</SArrowB>
-				</div>
+				</SArrowBoxD>
 
 				<ContentWindow ref={slideRef}>
 					<SContentWrapperD>
@@ -66,7 +66,7 @@ function MainCarousel() {
 						</SContentBoxD>
 						<SContentBoxD>
 							<a href='http://hlid.yonsei.ac.kr/' target='_blank' rel='noreferrer'>
-								<SContentIMG src={IMG4} alt='IMG4' />
+								<SContentIMG src={IMG5} alt='IMG4' />
 							</a>
 						</SContentBoxD>
 						<SContentBoxD>
@@ -74,14 +74,19 @@ function MainCarousel() {
 								<SContentIMG src={IMG5} alt='IMG5' />
 							</a>
 						</SContentBoxD>
+						<SContentBoxD>
+							<a href='https://www.yonsei.ac.kr/sc/' target='_blank' rel='noreferrer'>
+								<SContentIMG src={IMG1} alt='IMG1' />
+							</a>
+						</SContentBoxD>
 					</SContentWrapperD>
 				</ContentWindow>
 
-				<div>
+				<SArrowBoxD>
 					<SArrowB onClick={NextSlide}>
 						<img src={ArrowRight} alt='arrowright' width='60%' />
 					</SArrowB>
-				</div>
+				</SArrowBoxD>
 			</CarouselContainer>
 
 			<SCircleContainer>
@@ -96,27 +101,34 @@ function MainCarousel() {
 }
 
 const CarouselContainer = styled.div`
-	width: 120rem;
 	height: 14.089rem;
-	padding: 0 5rem;
+	margin: 0 4.3rem;
 	display: flex;
 	align-items: center;
 	overflow: hidden;
 `;
 
 /* Arrow Button */
+const SArrowBoxD = styled.div`
+	height: 100%;
+`;
+
 const SArrowB = styled.button`
 	border: 0;
 	color: black;
 	background-color: transparent;
 	cursor: pointer;
+	position: relative;
+	z-index: 10;
+	height: 100%;
+	background-color: ${Colors.white};
 `;
 
 /* Content */
 const ContentWindow = styled.div`
 	width: 99.4rem;
 	height: 11.449rem;
-	overflow: hidden;
+	//overflow: hidden;
 	display: flex;
 `;
 
@@ -124,7 +136,7 @@ const SContentWrapperD = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 6.5rem;
+	gap: 5.8rem;
 `;
 
 const SContentBoxD = styled.div`
