@@ -7,7 +7,7 @@ function Members() {
 	return (
 		<MembersCss>
 			<TopMember
-				profileImg='KimHyeonGyeong'
+				profileImg={KimHyeonGyeong}
 				position='연구책임자'
 				name='김현경 교수'
 				email='1234567@yonsei.ac.kr'
@@ -17,7 +17,7 @@ function Members() {
 				work='청소년, 바이오마커 수집, 양적 연구 설계 전문성'
 			/>
 			<Member
-				profileImg='KimHyeonGyeong'
+				profileImg={KimHyeonGyeong}
 				position='연구책임자'
 				name='김현경 교수'
 				email='1234567@yonsei.ac.kr'
@@ -27,7 +27,7 @@ function Members() {
 				work='청소년, 바이오마커 수집, 양적 연구 설계 전문성'
 			/>
 			<Member
-				profileImg='KimHyeonGyeong'
+				profileImg={KimHyeonGyeong}
 				position='연구책임자'
 				name='김현경 교수'
 				email='1234567@yonsei.ac.kr'
@@ -37,7 +37,7 @@ function Members() {
 				work='청소년, 바이오마커 수집, 양적 연구 설계 전문성'
 			/>
 			<Member
-				profileImg='KimHyeonGyeong'
+				profileImg={KimHyeonGyeong}
 				position='연구책임자'
 				name='김현경 교수'
 				email='1234567@yonsei.ac.kr'
@@ -47,7 +47,7 @@ function Members() {
 				work='청소년, 바이오마커 수집, 양적 연구 설계 전문성'
 			/>
 			<Member
-				profileImg='KimHyeonGyeong'
+				profileImg={KimHyeonGyeong}
 				position='연구책임자'
 				name='김현경 교수'
 				email='1234567@yonsei.ac.kr'
@@ -57,7 +57,7 @@ function Members() {
 				work='청소년, 바이오마커 수집, 양적 연구 설계 전문성'
 			/>
 			<Member
-				profileImg='KimHyeonGyeong'
+				profileImg={KimHyeonGyeong}
 				position='연구책임자'
 				name='김현경 교수'
 				email='1234567@yonsei.ac.kr'
@@ -67,7 +67,7 @@ function Members() {
 				work='청소년, 바이오마커 수집, 양적 연구 설계 전문성'
 			/>
 			<Member
-				profileImg='KimHyeonGyeong'
+				profileImg={KimHyeonGyeong}
 				position='연구책임자'
 				name='김현경 교수'
 				email='1234567@yonsei.ac.kr'

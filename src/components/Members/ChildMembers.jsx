@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Colors from '../../constants/colors';
-import KimHyeonGyeong from '../../assets/김현경 교수님.png';
 
 function Member({ profileImg, position, name, email, homepage, phoneNum, title, work }) {
 	return (
