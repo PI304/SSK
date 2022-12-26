@@ -1,3 +1,11 @@
+import {
+	Accordion,
+	AccordionItem,
+	AccordionItemHeading,
+	AccordionItemButton,
+	AccordionItemPanel,
+} from 'react-accessible-accordion';
+
 import styled from 'styled-components';
 import FAQContents from './FAQContents';
 

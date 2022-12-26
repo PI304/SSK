@@ -1,9 +1,23 @@
-// import { useState } from 'react';
+import {
+	Accordion,
+	AccordionItem,
+	AccordionItemHeading,
+	AccordionItemButton,
+	AccordionItemPanel,
+} from 'react-accessible-accordion';
+
+import { useState } from 'react';
 import styled from 'styled-components';
 import Colors from '../../constants/colors';
 import arrow from '../../assets/faqArrow.svg';
 
 function FAQContent({ num, title, question, answer }) {
+	const [visible, setVisible] = useState(false);
+
+	const onClick = () => {
+		setVisible(!visible);
+	};
+
 	return (
 		<SFAQContainer>
 			<STitleContainer>
@@ -90,6 +104,7 @@ const SQuestion = styled.div`
 
 const SA = styled.div`
 	display: flex;
+	display: ${(props) => (props.visible ? 'block' : 'none')};
 	flex-direction: row;
 	padding-bottom: 2.7rem;
 `;
