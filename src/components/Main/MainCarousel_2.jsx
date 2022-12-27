@@ -5,30 +5,35 @@ import IMG2 from '../../assets/nrf.jpeg';
 import IMG3 from '../../assets/youth.png';
 import IMG4 from '../../assets/life.svg';
 import IMG5 from '../../assets/ssk.png';
-import ArrowRight from '../../assets/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.png';
-import ArrowLeft from '../../assets/arrow_back_ios_FILL0_wght400_GRAD0_opsz48.png';
+import ArrowRight from '../../assets/arrow_right.svg';
+import ArrowLeft from '../../assets/arrow_left.svg';
 import Colors from '../../constants/colors';
 
 function MainCarousel() {
-	const TOTAL_SLIDES = 1;
 	const [isSlide, setIsSlide] = useState(0);
 	const slideRef = useRef(null);
 
 	// Next 버튼 클릭 시
-	const NextSlide = () => {
-		if (isSlide >= TOTAL_SLIDES) {
-			setIsSlide(0);
-		} else {
-			setIsSlide(isSlide + 1);
+	const PrevSlide = () => {
+		slideRef.current.style.transition = '0.3s ease';
+		setIsSlide(isSlide - 1);
+		if (isSlide === 0) {
+			setTimeout(() => {
+				slideRef.current.style.transition = 'none';
+				setIsSlide(1);
+			}, 300);
 		}
 	};
 
 	// Prev 버튼 클릭시
-	const PrevSlide = () => {
-		if (isSlide === 0) {
-			setIsSlide(TOTAL_SLIDES);
-		} else {
-			setIsSlide(isSlide - 1);
+	const NextSlide = () => {
+		slideRef.current.style.transition = '0.3s ease';
+		setIsSlide(isSlide + 1);
+		if (isSlide === 1) {
+			setTimeout(() => {
+				slideRef.current.style.transition = 'none';
+				setIsSlide(0);
+			}, 300);
 		}
 	};
 
@@ -128,7 +133,7 @@ const SArrowB = styled.button`
 const ContentWindow = styled.div`
 	width: 99.4rem;
 	height: 11.449rem;
-	//overflow: hidden;
+	padding-left: 1rem;
 	display: flex;
 `;
 
@@ -156,20 +161,17 @@ const SContentIMG = styled.img`
 /* 캐러쉘 circle */
 const SCircleContainer = styled.div`
 	display: flex;
-	justify-content: space-between;
-	width: 9.6rem;
-	margin: auto;
-	margin-bottom: 7.2rem;
+	justify-content: center;
+	gap: 1.3rem;
+	padding: 1.2rem 0;
+	margin-bottom: 7.6rem;
 `;
 
 const SCircleD = styled.div`
-	border: 1px solid ${Colors.black};
+	width: 0.9rem;
+	height: 0.9rem;
 	border-radius: 50%;
-	width: 0.64rem;
-	height: 0.64rem;
+	border: 0.1rem solid ${Colors.gray400};
 `;
 
-const SBlackCircleD = styled.div`
-	background-color: ${Colors.black};
-`;
 export default MainCarousel;
