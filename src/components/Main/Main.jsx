@@ -5,15 +5,15 @@ import MainSite from './MainSite';
 
 function Main() {
 	return (
-			<main>
-				<SMainContainer>
-					<MainSlide>hi</MainSlide>
+		<main>
+			<SMainContainer>
+				<MainSlide>hi</MainSlide>
 
-					<MainCarousel />
+				<MainCarousel />
 
-					<MainSite />
-				</SMainContainer>
-			</main>
+				<MainSite />
+			</SMainContainer>
+		</main>
 	);
 }
 
