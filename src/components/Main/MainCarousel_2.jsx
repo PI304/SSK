@@ -39,7 +39,6 @@ function MainCarousel() {
 
 	// Slider의 정보
 	useEffect(() => {
-		slideRef.current.style.transition = 'all 0.5s ease-in-out';
 		slideRef.current.style.transform = `translateX(-${isSlide}00%)`;
 	}, [isSlide]);
 

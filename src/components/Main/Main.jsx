@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import MainSlide from './MainSlide';
-import MainCarousel from './MainCarousel_2';
+import MainCarousel from './MainCarousel_3';
 import MainSite from './MainSite';
 
 function Main() {
