@@ -49,8 +49,8 @@ function MainCarousel() {
 					<img src={ArrowLeft} alt='arrowleft' />
 				</ButtonBox>
 
-				<SContentWindow ref={slideRef}>
-					<SContentWrapper>
+				<SContentWindow>
+					<SContentWrapper ref={slideRef}>
 						<SContentBox>
 							<SContentIMG src={IMG1} alt='IMG1' />
 						</SContentBox>
@@ -94,9 +94,7 @@ function MainCarousel() {
 }
 
 const CarouselContainer = styled.section`
-	border: 1px solid black;
 	margin-bottom: 7.6rem;
-	overflow: hidden;
 
 	// Carousel Content
 	> div:first-of-type {
@@ -114,6 +112,8 @@ const CarouselContainer = styled.section`
 	}
 `;
 
+/* Carousel Content */
+
 const SContentWindow = styled.div`
 	overflow: hidden;
 `;
@@ -121,20 +121,8 @@ const SContentWindow = styled.div`
 const SContentWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
-	gap: 3.45rem;
+	gap: 4.8rem;
 	transition: 0.3s ease;
-	padding-left: 2.1rem;
-`;
-
-const ButtonBox = styled.button`
-	position: relative;
-	z-index: 10;
-	cursor: pointer;
-	height: 9.45rem;
-	display: flex;
-	align-items: center;
-	background-color: ${Colors.white};
-	border: none;
 `;
 
 const SContentBox = styled.div`
@@ -148,6 +136,21 @@ const SContentIMG = styled.img`
 	height: 100%;
 	object-fit: contain;
 `;
+
+/* Carousel Button */
+
+const ButtonBox = styled.button`
+	position: relative;
+	z-index: 10;
+	cursor: pointer;
+	height: 9.45rem;
+	display: flex;
+	align-items: center;
+	background-color: ${Colors.white};
+	border: none;
+`;
+
+/* Circle */
 
 const SCircleD = styled.div`
 	width: 0.9rem;
