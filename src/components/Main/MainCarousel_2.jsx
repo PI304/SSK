@@ -51,8 +51,8 @@ function MainCarousel() {
 					</SArrowB>
 				</SArrowBoxD>
 
-				<ContentWindow ref={slideRef}>
-					<SContentWrapperD>
+				<ContentWindow>
+					<SContentWrapperD ref={slideRef}>
 						<SContentBoxD>
 							<a href='https://www.yonsei.ac.kr/sc/' target='_blank' rel='noreferrer'>
 								<SContentIMG src={IMG1} alt='IMG1' />
@@ -109,7 +109,6 @@ const CarouselContainer = styled.div`
 	margin: 0 4.3rem;
 	display: flex;
 	align-items: center;
-	overflow: hidden;
 `;
 
 /* Arrow Button */
@@ -134,6 +133,7 @@ const ContentWindow = styled.div`
 	height: 11.449rem;
 	padding-left: 1rem;
 	display: flex;
+	overflow: hidden;
 `;
 
 const SContentWrapperD = styled.div`
