@@ -20,7 +20,7 @@ function MainCarousel() {
 		if (isSlide === 0) {
 			setTimeout(() => {
 				slideRef.current.style.transition = 'none';
-				setIsSlide(1);
+				setIsSlide(4);
 			}, 300);
 		}
 	};
@@ -29,7 +29,7 @@ function MainCarousel() {
 	const NextSlide = () => {
 		slideRef.current.style.transition = '0.3s ease';
 		setIsSlide(isSlide + 1);
-		if (isSlide === 1) {
+		if (isSlide === 4) {
 			setTimeout(() => {
 				slideRef.current.style.transition = 'none';
 				setIsSlide(0);
@@ -83,11 +83,11 @@ function MainCarousel() {
 			</div>
 
 			<div>
-				<SCircleD />
-				<SCircleD />
-				<SCircleD />
-				<SCircleD />
-				<SCircleD />
+				<SCircleD isCircle={isSlide === 0 || isSlide === 5} />
+				<SCircleD isCircle={isSlide === 1} />
+				<SCircleD isCircle={isSlide === 2} />
+				<SCircleD isCircle={isSlide === 3} />
+				<SCircleD isCircle={isSlide === 4 || isSlide === -1} />
 			</div>
 		</CarouselContainer>
 	);
@@ -157,6 +157,7 @@ const SCircleD = styled.div`
 	height: 0.9rem;
 	border-radius: 50%;
 	border: 0.1rem solid ${Colors.gray400};
+	background-color: ${(props) => props.isCircle && Colors.black};
 `;
 
 export default MainCarousel;
