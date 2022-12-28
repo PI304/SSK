@@ -13,7 +13,7 @@ function MainCarousel() {
 	const [isSlide, setIsSlide] = useState(0);
 	const slideRef = useRef(null);
 
-	// Next 버튼 클릭 시
+	// Prev 버튼 클릭 시
 	const PrevSlide = () => {
 		slideRef.current.style.transition = '0.3s ease';
 		setIsSlide(isSlide - 1);
@@ -25,7 +25,7 @@ function MainCarousel() {
 		}
 	};
 
-	// Prev 버튼 클릭시
+	// Next 버튼 클릭시
 	const NextSlide = () => {
 		slideRef.current.style.transition = '0.3s ease';
 		setIsSlide(isSlide + 1);
@@ -50,7 +50,7 @@ function MainCarousel() {
 				</ButtonBox>
 
 				<SContentWindow>
-					<SContentWrapper ref={slideRef}>
+					<SContentWrapper isSlide={isSlide} ref={slideRef}>
 						<SContentBox>
 							<SContentIMG src={IMG1} alt='IMG1' />
 						</SContentBox>
@@ -73,6 +73,14 @@ function MainCarousel() {
 
 						<SContentBox>
 							<SContentIMG src={IMG1} alt='IMG1' />
+						</SContentBox>
+
+						<SContentBox>
+							<SContentIMG src={IMG2} alt='IMG2' />
+						</SContentBox>
+
+						<SContentBox>
+							<SContentIMG src={IMG3} alt='IMG3' />
 						</SContentBox>
 					</SContentWrapper>
 				</SContentWindow>
@@ -123,6 +131,7 @@ const SContentWrapper = styled.div`
 	justify-content: space-between;
 	gap: 4.8rem;
 	transition: 0.3s ease;
+	left: calc((30.1rem + 4.8rem) * -1 * (${(props) => props.isSlide} + 1));
 `;
 
 const SContentBox = styled.div`
