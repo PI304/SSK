@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import IMG1 from '../../assets/logo.png';
 import IMG2 from '../../assets/nrf.jpeg';
 import IMG3 from '../../assets/youth.png';
@@ -37,11 +37,6 @@ function MainCarousel() {
 		}
 	};
 
-	// Slider의 정보
-	useEffect(() => {
-		slideRef.current.style.transform = `translateX(-${isSlide}00%)`;
-	}, [isSlide]);
-
 	return (
 		<CarouselContainer>
 			<div>
@@ -51,6 +46,10 @@ function MainCarousel() {
 
 				<SContentWindow>
 					<SContentWrapper isSlide={isSlide} ref={slideRef}>
+						<SContentBox>
+							<SContentIMG src={IMG5} alt='IMG1' />
+						</SContentBox>
+
 						<SContentBox>
 							<SContentIMG src={IMG1} alt='IMG1' />
 						</SContentBox>
@@ -130,8 +129,7 @@ const SContentWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	gap: 4.8rem;
-	transition: 0.3s ease;
-	left: calc((30.1rem + 4.8rem) * -1 * (${(props) => props.isSlide} + 1));
+	transform: translateX(calc(-1 * (${(props) => props.isSlide} + 1) * 34.9rem));
 `;
 
 const SContentBox = styled.div`
