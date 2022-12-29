@@ -47,39 +47,57 @@ function MainCarousel() {
 				<SContentWindow>
 					<SContentWrapper isSlide={isSlide} ref={slideRef}>
 						<SContentBox>
-							<SContentIMG src={IMG5} alt='IMG1' />
+							<a href='http://sskn.kr/main/main.php' target='_blank' rel='noreferrer'>
+								<SContentIMG src={IMG5} alt='IMG5' />
+							</a>
 						</SContentBox>
 
 						<SContentBox>
-							<SContentIMG src={IMG1} alt='IMG1' />
+							<a href='https://www.yonsei.ac.kr/sc/' target='_blank' rel='noreferrer'>
+								<SContentIMG src={IMG1} alt='IMG1' />
+							</a>
 						</SContentBox>
 
 						<SContentBox>
-							<SContentIMG src={IMG2} alt='IMG2' />
+							<a href='https://www.nrf.re.kr/index' target='_blank' rel='noreferrer'>
+								<SContentIMG src={IMG2} alt='IMG2' />
+							</a>
 						</SContentBox>
 
 						<SContentBox>
-							<SContentIMG src={IMG3} alt='IMG3' />
+							<a href='https://yonsei-impact.weebly.com/' target='_blank' rel='noreferrer'>
+								<SContentIMG src={IMG3} alt='IMG3' />
+							</a>
 						</SContentBox>
 
 						<SContentBox>
-							<SContentIMG src={IMG4} alt='IMG4' />
+							<a href='http://hlid.yonsei.ac.kr/' target='_blank' rel='noreferrer'>
+								<SContentIMG src={IMG4} alt='IMG4' />
+							</a>
 						</SContentBox>
 
 						<SContentBox>
-							<SContentIMG src={IMG5} alt='IMG5' />
+							<a href='http://sskn.kr/main/main.php' target='_blank' rel='noreferrer'>
+								<SContentIMG src={IMG5} alt='IMG5' />
+							</a>
 						</SContentBox>
 
 						<SContentBox>
-							<SContentIMG src={IMG1} alt='IMG1' />
+							<a href='https://www.yonsei.ac.kr/sc/' target='_blank' rel='noreferrer'>
+								<SContentIMG src={IMG1} alt='IMG1' />
+							</a>
 						</SContentBox>
 
 						<SContentBox>
-							<SContentIMG src={IMG2} alt='IMG2' />
+							<a href='https://www.nrf.re.kr/index' target='_blank' rel='noreferrer'>
+								<SContentIMG src={IMG2} alt='IMG2' />
+							</a>
 						</SContentBox>
 
 						<SContentBox>
-							<SContentIMG src={IMG3} alt='IMG3' />
+							<a href='https://yonsei-impact.weebly.com/' target='_blank' rel='noreferrer'>
+								<SContentIMG src={IMG3} alt='IMG3' />
+							</a>
 						</SContentBox>
 					</SContentWrapper>
 				</SContentWindow>
