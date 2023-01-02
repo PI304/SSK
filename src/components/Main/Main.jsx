@@ -7,7 +7,7 @@ function Main() {
 	return (
 		<main>
 			<SMainContainer>
-				<MainSlide>hi</MainSlide>
+				<MainSlide />
 
 				<MainCarousel />
 

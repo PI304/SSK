@@ -108,11 +108,11 @@ function MainCarousel() {
 			</div>
 
 			<div>
-				<SCircleD isCircle={isSlide === 0 || isSlide === 5} />
-				<SCircleD isCircle={isSlide === 1} />
-				<SCircleD isCircle={isSlide === 2} />
-				<SCircleD isCircle={isSlide === 3} />
-				<SCircleD isCircle={isSlide === 4 || isSlide === -1} />
+				<SCircleD isCurrent={isSlide === 0 || isSlide === 5} />
+				<SCircleD isCurrent={isSlide === 1} />
+				<SCircleD isCurrent={isSlide === 2} />
+				<SCircleD isCurrent={isSlide === 3} />
+				<SCircleD isCurrent={isSlide === 4 || isSlide === -1} />
 			</div>
 		</CarouselContainer>
 	);
@@ -126,6 +126,7 @@ const CarouselContainer = styled.section`
 		display: flex;
 		align-items: center;
 		gap: 2.5rem;
+		margin-bottom: 1rem;
 	}
 
 	// Circle
@@ -182,7 +183,7 @@ const SCircleD = styled.div`
 	height: 0.9rem;
 	border-radius: 50%;
 	border: 0.1rem solid ${Colors.gray400};
-	background-color: ${(props) => props.isCircle && Colors.black};
+	background-color: ${(props) => props.isCurrent && Colors.black};
 `;
 
 export default MainCarousel;
