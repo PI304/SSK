@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import Colors from '../../constants/colors';
 import Logo from '../../assets/yonsei_highq_1200x630.png';
 import HeaderHover from './HeaderHover';
+import urls from '../../constants/Urls';
 
 function Header() {
 	return (
@@ -34,9 +36,9 @@ const Navigation = styled.nav`
 function CLogo() {
 	return (
 		<div>
-			<a href='http://localhost:3000/main'>
+			<Link to={urls.Main}>
 				<SLogoI src={Logo} alt='Logo' />
-			</a>
+			</Link>
 		</div>
 	);
 }
