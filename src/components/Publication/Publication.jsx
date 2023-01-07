@@ -4,17 +4,17 @@ import PageButtonContainer from '../component_layout/PageButtonContainer';
 
 function Publication() {
 	return (
-			<div>
-				<SelectWrapper>
-					<SortSelect>
-						<SortingSelection>
-							<option>최신순 정렬</option>
-						</SortingSelection>
-					</SortSelect>
-				</SelectWrapper>
-				<PublicationContainer title='[연구 설명회] 2022년도 OO진흥원 OO' content='관리자' />
-				<PageButtonContainer />
-			</div>
+		<div>
+			<SelectWrapper>
+				<SortSelect>
+					<SortingSelection>
+						<option>최신순 정렬</option>
+					</SortingSelection>
+				</SortSelect>
+			</SelectWrapper>
+			<PublicationContainer title='[연구 설명회] 2022년도 OO진흥원 OO' content='관리자' />
+			<PageButtonContainer />
+		</div>
 	);
 }
 const SelectWrapper = styled.div`
