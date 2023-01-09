@@ -1,0 +1,19 @@
+name: SSK
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  CI_CD:
+    name: CI/CD
+    runs-on: [self-hosted, unduckrunner]
+    steps:
+      - name: Deploy
+        run: |
+          cd ~/SSK
+          git fetch --all && git reset --hard origin/master && git pull origin master
+          cp -r ../cached_modules/* ./node_modules/
+          npm install
+          npm run build
+          sudo cp -r ./build/* /var/www/html/
