@@ -21,11 +21,11 @@ function Table({ columns, datas }) {
                     </thead>
                     <tbody>
                     {datas.map((data) => (
-                        <tr key={data.seq}>
-                            <td>{data.seq}</td>
+                        <tr key={data.id}>
+                            <td>{data.id}</td>
                             <td>{data.title}</td>
                             <td>{data.writer}</td>
-                            <td>{data.date}</td>
+                            <td>{data.created_date}</td>
                         </tr>
                     ))}
                     </tbody>
