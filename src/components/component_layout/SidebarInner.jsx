@@ -6,7 +6,7 @@ function SidebarInner({ to, category }) {
 
 	return (
 		<SSidebarListL>
-			<SSidebarLinkL currentPage={location.pathname} to={to}>
+			<SSidebarLinkL currentpage={location.pathname} to={to}>
 				{category}
 			</SSidebarLinkL>
 		</SSidebarListL>
@@ -19,7 +19,7 @@ const SSidebarListL = styled.li`
 
 const SSidebarLinkL = styled(Link)`
 	font-size: 1.5rem;
-	color: ${({ currentPage, to }) => (currentPage === to ? '#639ae9' : undefined)};
+	color: ${({ currentpage, to }) => (currentpage === to ? '#639ae9' : undefined)};
 `;
 
 export default SidebarInner;
