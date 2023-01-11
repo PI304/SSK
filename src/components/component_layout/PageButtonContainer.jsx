@@ -1,6 +1,18 @@
 import styled from 'styled-components';
+import { useEffect, useState } from 'react';
+import Colors from '../../constants/colors';
 
-function PageButtonContainer() {
+function PageButtonContainer({ total, size, setCurrentPage }) {
+
+	const [pageArray, setPageArray] = useState([]);
+
+	useEffect(() =>  {
+		if(total && size){
+			const pageCount = Math.ceil(parseInt(total, 10) / parseInt(size, 10));
+			setPageArray([...new Array(pageCount)].map((_, i) => i + 1));
+		}
+	}, [total, size]);
+
 	return (
 		<SPageButtonWrapperD>
 			<SArrowButtonB>
@@ -10,7 +22,11 @@ function PageButtonContainer() {
 				<SButtonSymbolS>keyboard_arrow_left</SButtonSymbolS>
 			</SArrowButtonB>
 			<SPageListU>
-				<SPageNumL>1</SPageNumL>
+				 {
+					pageArray.length > 0 && pageArray.map((pageNum) => (
+						<SUnselectPageNumB key={pageNum} type='button' value={pageNum} onClick={e => setCurrentPage(e.target.value)}>{pageNum}</SUnselectPageNumB>
+					))
+				 }
 			</SPageListU>
 			<SArrowButtonB>
 				<SButtonSymbolS>keyboard_arrow_right</SButtonSymbolS>
@@ -31,7 +47,6 @@ const SPageButtonWrapperD = styled.div`
 `;
 
 const SArrowButtonB = styled.button`
-	// vertical-align: 18%;
 	border: 0.9px solid #d9d9d9;
 	background: #ffffff;
 	cursor: pointer;
@@ -51,16 +66,6 @@ const SButtonSymbolS = styled.span`
 	font-family: 'Material Symbols Outlined',serif;
 	font-size: 1.7rem;
 	opacity: 0.5;
-	// font-weight: normal;
-	// font-style: normal;
-	// font-size: 24px;
-	// line-height: 1;
-	// letter-spacing: normal;
-	// text-transform: none;
-	// display: inline-block;
-	// white-space: nowrap;
-	// word-wrap: normal;
-	// direction: ltr;
 `;
 
 const SPageListU = styled.ul`
@@ -70,7 +75,7 @@ const SPageListU = styled.ul`
 	margin: 0;
 `;
 
-const SPageNumL = styled.li`
+const SPageNumL = styled.button`
 	border-bottom: 0.5px solid #333333;
 	float: left;
 	margin: 0 0.4rem 0 0.4rem;
@@ -80,6 +85,25 @@ const SPageNumL = styled.li`
 	width: 2rem;
 	padding-bottom: 0.4rem;
 	text-align: center;
+`;
+
+	const SUnselectPageNumB = styled.button`
+		color: gray;
+		border: none;
+		background-color: transparent;
+		float: left;
+		margin: 0 0.4rem 0 0.4rem;
+		cursor: pointer;
+		font-weight: 700;
+		font-size: 1.3rem;
+		width: 2rem;
+		padding-bottom: 0.4rem;
+		text-align: center;
+		
+		:focus {
+			color: ${Colors.black};
+			text-decoration: underline;
+		}
 `;
 
 export default PageButtonContainer;
