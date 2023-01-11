@@ -1,8 +1,6 @@
 import styled from 'styled-components';
-import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
-import MuiAccordion from '@mui/material/Accordion';
+import { Accordion, AccordionSummary } from '@mui/material';
 import SidebarInner from './SidebarInner';
 import urls from '../../constants/Urls';
 
@@ -14,7 +12,7 @@ function Sidebar() {
 		notice: [urls.notice, urls.reports, urls.FAQ, urls.contact],
 	};
 
-	const currentURL = useLocation().pathname;
+	const currenturl = useLocation().pathname;
 
 	return (
 		<div>
@@ -23,7 +21,7 @@ function Sidebar() {
 					boxShadow: 'none',
 				}}
 				disableGutters
-				expanded={TitleUrl.intro.includes(currentURL)}>
+				expanded={TitleUrl.intro.includes(currenturl)}>
 				<AccordionSummary
 					sx={{
 						padding: 0,
@@ -32,7 +30,7 @@ function Sidebar() {
 							display: 'block',
 						},
 					}}>
-					<SSidebarTitleD currentURL={currentURL} location={TitleUrl.intro} to={urls.intro}>
+					<SSidebarTitleD currenturl={currenturl} location={TitleUrl.intro} to={urls.intro}>
 						ADDS소개
 					</SSidebarTitleD>
 				</AccordionSummary>
@@ -47,7 +45,7 @@ function Sidebar() {
 					boxShadow: 'none',
 				}}
 				disableGutters
-				expanded={TitleUrl.publication.includes(currentURL)}>
+				expanded={TitleUrl.publication.includes(currenturl)}>
 				<AccordionSummary
 					sx={{
 						padding: 0,
@@ -57,7 +55,7 @@ function Sidebar() {
 						},
 					}}>
 					<SSidebarTitleD
-						currentURL={currentURL}
+						currenturl={currenturl}
 						location={TitleUrl.publication}
 						to={urls.publication}>
 						발간물
@@ -73,7 +71,7 @@ function Sidebar() {
 					boxShadow: 'none',
 				}}
 				disableGutters
-				expanded={TitleUrl.resources.includes(currentURL)}>
+				expanded={TitleUrl.resources.includes(currenturl)}>
 				<AccordionSummary
 					sx={{
 						padding: 0,
@@ -82,7 +80,7 @@ function Sidebar() {
 							display: 'block',
 						},
 					}}>
-					<SSidebarTitleD currentURL={currentURL} location={TitleUrl.resources} to={urls.resources}>
+					<SSidebarTitleD currenturl={currenturl} location={TitleUrl.resources} to={urls.resources}>
 						데이터
 					</SSidebarTitleD>
 				</AccordionSummary>
@@ -97,7 +95,7 @@ function Sidebar() {
 					boxShadow: 'none',
 				}}
 				disableGutters
-				expanded={TitleUrl.notice.includes(currentURL)}>
+				expanded={TitleUrl.notice.includes(currenturl)}>
 				<AccordionSummary
 					sx={{
 						padding: 0,
@@ -106,7 +104,7 @@ function Sidebar() {
 							display: 'block',
 						},
 					}}>
-					<SSidebarTitleD currentURL={currentURL} location={TitleUrl.notice} to={urls.notice}>
+					<SSidebarTitleD currenturl={currenturl} location={TitleUrl.notice} to={urls.notice}>
 						소통공간
 					</SSidebarTitleD>
 				</AccordionSummary>
@@ -125,8 +123,8 @@ function Sidebar() {
 const SSidebarTitleD = styled(Link)`
 	border-bottom: solid 1px #767676;
 	padding: 1.8rem 3rem 1.8rem 1.6rem;
-	background-color: ${({ location, currentURL }) =>
-		location.includes(currentURL) ? '#e2edfb' : undefined};
+	background-color: ${({ location, currenturl }) =>
+		location.includes(currenturl) ? '#e2edfb' : undefined};
 	cursor: pointer;
 	font-size: 1.8rem;
 	font-weight: 400;
