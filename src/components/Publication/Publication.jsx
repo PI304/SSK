@@ -1,8 +1,23 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import styled from 'styled-components';
 import PublicationContainer from './PublicationContainer';
 import PageButtonContainer from '../component_layout/PageButtonContainer';
 
 function Publication() {
+	const [items, setItems] = useState([]);
+	const [total, setTotal] = useState();
+	const [size, setSize] = useState();
+	const [currentPage, setCurrentPage] = useState(1);
+
+	useEffect(() => {
+		axios.get(`http://3.37.111.137:8000/publication?page=${currentPage}`).then((response) => {
+			setItems(response.data.items);
+			setTotal(response.data.total);
+			setSize(response.data.size);
+		});
+	}, [currentPage]);
+
 	return (
 		<div>
 			<SelectWrapper>
@@ -12,11 +27,26 @@ function Publication() {
 					</SortingSelection>
 				</SortSelect>
 			</SelectWrapper>
-			<PublicationContainer title='[연구 설명회] 2022년도 OO진흥원 OO' content='관리자' />
-			<PageButtonContainer />
+			<PublicationWrapper>
+				{items.map((item) => (
+					<div key={item.id}>
+						<PublicationContainer title={item.title} content='관리자' />
+					</div>
+				))}
+			</PublicationWrapper>
+			<PageButtonContainer total={total} size={size} setCurrentPage={setCurrentPage} />
 		</div>
 	);
 }
+const PublicationWrapper = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: fit-content;
+	grid-column-gap: 8rem;
+	grid-row-gap: 7rem;
+	margin-top: 2.563rem;
+`;
+
 const SelectWrapper = styled.div`
 	position: relative;
 	height: 2.3rem;

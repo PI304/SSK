@@ -4,36 +4,25 @@ import PdfButton from '../../assets/pdfOn.png';
 
 function PublicationContainer({ title, content }) {
 	return (
-		<PublicationWrapper>
-			<PublicationContentWrapper>
-				<ImgWrapper>
-					<img src={PublicationImage} width='100%' alt='library img' />
-				</ImgWrapper>
-				<PdfWrapper>
-					<a
-						href='http://3.37.111.137:8000/publication/1/'
-						// href='https://s3.ap-northeast-2.amazonaws.com/sookyeong-ssk/publication/628_data.xlsx'
-						cursor='pointer'>
-						<img width='100%' height='100%' src={PdfButton} alt='pdf' />
-					</a>
-				</PdfWrapper>
-				<PublicationInfoWrapper>
-					<PublicationTitle>{title}</PublicationTitle>
-					<PublicationContent>{content}</PublicationContent>
-				</PublicationInfoWrapper>
-			</PublicationContentWrapper>
-		</PublicationWrapper>
+		<PublicationContentWrapper>
+			<ImgWrapper>
+				<img src={PublicationImage} width='100%' alt='library img' />
+			</ImgWrapper>
+			<PdfWrapper>
+				<a
+					href='http://3.37.111.137:8000/publication/1/'
+					// href='https://s3.ap-northeast-2.amazonaws.com/sookyeong-ssk/publication/628_data.xlsx'
+					cursor='pointer'>
+					<img width='100%' height='100%' src={PdfButton} alt='pdf' />
+				</a>
+			</PdfWrapper>
+			<PublicationInfoWrapper>
+				<PublicationTitle>{title}</PublicationTitle>
+				<PublicationContent>{content}</PublicationContent>
+			</PublicationInfoWrapper>
+		</PublicationContentWrapper>
 	);
 }
-
-const PublicationWrapper = styled.div`
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	width: fit-content;
-	grid-column-gap: 8rem;
-	grid-row-gap: 7rem;
-	margin-top: 2.563rem;
-`;
 
 const PublicationContentWrapper = styled.div`
 	display: grid;
