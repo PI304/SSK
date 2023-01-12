@@ -18,6 +18,11 @@ function Publication() {
 		});
 	}, [currentPage]);
 
+	const stringToJson = (string) => {
+		const file = JSON.parse(string);
+		return file.length && file[0];
+	};
+
 	return (
 		<div>
 			<SelectWrapper>
@@ -30,7 +35,12 @@ function Publication() {
 			<PublicationWrapper>
 				{items.map((item) => (
 					<div key={item.id}>
-						<PublicationContainer title={item.title} content='관리자' />
+						<PublicationContainer
+							title={item.title}
+							img={stringToJson(item.img)}
+							pdf={stringToJson(item.pdf)}
+							content='관리자'
+						/>
 					</div>
 				))}
 			</PublicationWrapper>

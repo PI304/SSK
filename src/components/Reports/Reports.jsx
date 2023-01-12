@@ -1,8 +1,22 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import styled from 'styled-components';
 import PageButtonContainer from '../component_layout/PageButtonContainer';
 import ReportsCotent from './ReportsContent';
 
 function Reports() {
+	const [items, setItems] = useState([]);
+	const [total, setTotal] = useState();
+	const [size, setSize] = useState();
+	const [currentPage, setCurrentPage] = useState(1);
+
+	useEffect(() => {
+		axios.get(`http://3.37.111.137:8000/community/notice?page=${currentPage}`).then((response) => {
+			setItems(response.data.items);
+			setTotal(response.data.total);
+			setSize(response.data.size);
+		});
+	}, [currentPage]);
 	return (
 		<div>
 			<SelectWrapper>
@@ -13,7 +27,12 @@ function Reports() {
 				</SortSelect>
 			</SelectWrapper>
 			<ReportsCotent />
-			<PageButtonContainer />
+			{items.map((item) => (
+				<div key={item.id}>
+					<ReportsCotent />
+				</div>
+			))}
+			<PageButtonContainer total={total} size={size} setCurrentPage={setCurrentPage} />
 		</div>
 	);
 }
