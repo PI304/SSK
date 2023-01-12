@@ -11,34 +11,56 @@ function Reports() {
 	const [currentPage, setCurrentPage] = useState(1);
 
 	useEffect(() => {
-		axios.get(`http://3.37.111.137:8000/community/notice?page=${currentPage}`).then((response) => {
+		axios.get(`http://3.37.111.137:8000/community/press?page=${currentPage}`).then((response) => {
 			setItems(response.data.items);
 			setTotal(response.data.total);
 			setSize(response.data.size);
 		});
 	}, [currentPage]);
+
 	return (
 		<div>
-			<SelectWrapper>
-				<SortSelect>
-					<SortingSelection>
-						<option>최신순 정렬</option>
-					</SortingSelection>
-				</SortSelect>
-			</SelectWrapper>
-			<ReportsCotent />
-			{items.map((item) => (
-				<div key={item.id}>
-					<ReportsCotent />
-				</div>
-			))}
+			<SContainerD>
+				<SelectWrapper>
+					<SortSelect>
+						<SortingSelection>
+							<option>최신순 정렬</option>
+						</SortingSelection>
+					</SortSelect>
+				</SelectWrapper>
+				<ReportsContainer>
+					{items.map((item) => (
+						<div key={item.id}>
+							<ReportsCotent
+								title={item.title}
+								body={item.body}
+								url={item.url}
+								createdDate={item.created_date}
+							/>
+						</div>
+					))}
+				</ReportsContainer>
+			</SContainerD>
 			<PageButtonContainer total={total} size={size} setCurrentPage={setCurrentPage} />
 		</div>
 	);
 }
+
+const ReportsContainer = styled.div`
+	> div:first-of-type > div {
+		border-top: 1.2px solid #767676;
+	}
+`;
+const SContainerD = styled.div`
+	width: 100%;
+	margin: auto;
+	box-sizing: border-box;
+	word-break: break-all;
+`;
+
 const SelectWrapper = styled.div`
 	position: relative;
-	height: 2.3rem;
+	height: 4rem;
 `;
 
 const SortSelect = styled.div`
