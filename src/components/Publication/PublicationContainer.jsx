@@ -1,17 +1,19 @@
 import styled from 'styled-components';
-import PublicationImage from '../../assets/2.jpg';
 import PdfButton from '../../assets/pdfOn.png';
 
-function PublicationContainer({ title, content }) {
+function PublicationContainer({ title, content, img, pdf }) {
 	return (
 		<PublicationContentWrapper>
 			<ImgWrapper>
-				<img src={PublicationImage} width='100%' alt='library img' />
+				<img
+					src={`https://s3.ap-northeast-2.amazonaws.com/sookyeong-ssk/publication/${img.key}`}
+					width='100%'
+					alt='library img'
+				/>
 			</ImgWrapper>
 			<PdfWrapper>
 				<a
-					href='http://3.37.111.137:8000/publication/1/'
-					// href='https://s3.ap-northeast-2.amazonaws.com/sookyeong-ssk/publication/628_data.xlsx'
+					href={`https://s3.ap-northeast-2.amazonaws.com/sookyeong-ssk/publication/${pdf.key}`}
 					cursor='pointer'>
 					<img width='100%' height='100%' src={PdfButton} alt='pdf' />
 				</a>
