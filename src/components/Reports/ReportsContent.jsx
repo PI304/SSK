@@ -1,10 +1,17 @@
 import styled from 'styled-components';
 import ReportImg from '../../assets/press.jpg';
 
-function ReportsCotent() {
+function ReportsCotent({ title, body, url, createdDate }) {
 	return (
 		<SReportsWrapperD>
 			<SReportsIMGD />
+			<SReportsInfoD>
+				<div className='title'>
+					<a href={`${url}`}>{title}</a>
+				</div>
+				<div className='body'>{body}</div>
+				<div className='date'>{createdDate}</div>
+			</SReportsInfoD>
 		</SReportsWrapperD>
 	);
 }
@@ -12,11 +19,7 @@ function ReportsCotent() {
 const SReportsWrapperD = styled.div`
 	display: flex;
 	align-items: center;
-	border-bottom: 1px solid #c2c2c2;
-
-	& > div {
-		border-top: 1px solid #767676;
-	}
+	border-bottom: 1.2px solid #c2c2c2;
 `;
 
 const SReportsIMGD = styled.div`
@@ -24,11 +27,43 @@ const SReportsIMGD = styled.div`
 	background-size: cover;
 	width: 26rem;
 	height: 15.5rem;
-	/* text-align: center; */
-	/* background-color: #d9d9d9; */
-	margin: 3rem 2.7rem;
-	/* align-self: stretch; */
-	/* flex-shrink: 0; */
+	margin: 2.6rem 2.7rem;
+	align-self: stretch;
+	flex-shrink: 0;
+`;
+
+const SReportsInfoD = styled.div`
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	margin: 2.3rem 1.5rem;
+	margin-left: 0;
+
+	> div > a:hover {
+		color: #639ae9;
+		cursor: pointer;
+		transition: 0.2s ease;
+	}
+
+	> .title {
+		font-weight: 500;
+		font-size: 3.4rem;
+	}
+
+	> .body {
+		margin-top: 1.2rem;
+		overflow: hidden;
+		max-height: auto;
+		white-space: word-break;
+		font-weight: 400;
+		font-size: 1.7rem;
+	}
+	> .date {
+		font-size: 1.3rem;
+		font-weight: 350;
+		margin-top: auto;
+		margin-bottom: 0.2rem;
+	}
 `;
 
 export default ReportsCotent;
