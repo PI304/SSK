@@ -23,7 +23,7 @@ function Resources() {
 	return (
 				<div>
 					<Table columns={columns} datas={items}/>
-					<PageButtonContainer total={total} size={size} setCurrentPage={setCurrentPage}/>
+					<PageButtonContainer total={total} size={size} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
 				</div>
 	);
 }
