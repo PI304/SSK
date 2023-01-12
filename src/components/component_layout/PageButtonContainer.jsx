@@ -2,10 +2,9 @@ import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import Colors from '../../constants/colors';
 
-function PageButtonContainer({ total, size, setCurrentPage }) {
+function PageButtonContainer({ total, size, setCurrentPage, currentPage }) {
 
 	const [pageArray, setPageArray] = useState([]);
-
 	useEffect(() =>  {
 		if(total && size){
 			const pageCount = Math.ceil(parseInt(total, 10) / parseInt(size, 10));
@@ -15,23 +14,23 @@ function PageButtonContainer({ total, size, setCurrentPage }) {
 
 	return (
 		<SPageButtonWrapperD>
-			<SArrowButtonB>
+			<SArrowButtonB type='button' onClick={() => setCurrentPage(1)}>
 				<SButtonSymbolS>keyboard_double_arrow_left</SButtonSymbolS>
 			</SArrowButtonB>
-			<SArrowButtonB>
+			<SArrowButtonB type='button' onClick={() => currentPage !== 1 && setCurrentPage(currentPage - 1)}>
 				<SButtonSymbolS>keyboard_arrow_left</SButtonSymbolS>
 			</SArrowButtonB>
 			<SPageListU>
 				 {
 					pageArray.length > 0 && pageArray.map((pageNum) => (
-						<SUnselectPageNumB key={pageNum} type='button' value={pageNum} onClick={e => setCurrentPage(e.target.value)}>{pageNum}</SUnselectPageNumB>
+						<SUnselectPageNumB isCurrent={pageNum === currentPage} key={pageNum} type='button' value={pageNum} onClick={e => setCurrentPage(parseInt(e.target.value, 10))}>{pageNum}</SUnselectPageNumB>
 					))
 				 }
 			</SPageListU>
-			<SArrowButtonB>
+			<SArrowButtonB type='button' onClick={() => currentPage !== pageArray.length && setCurrentPage(currentPage + 1)}>
 				<SButtonSymbolS>keyboard_arrow_right</SButtonSymbolS>
 			</SArrowButtonB>
-			<SArrowButtonB>
+			<SArrowButtonB type='button' onClick={() => setCurrentPage(pageArray.length)}>
 				<SButtonSymbolS>keyboard_double_arrow_right</SButtonSymbolS>
 			</SArrowButtonB>
 		</SPageButtonWrapperD>
@@ -75,8 +74,9 @@ const SPageListU = styled.ul`
 	margin: 0;
 `;
 
-const SPageNumL = styled.button`
-	border-bottom: 0.5px solid #333333;
+const SUnselectPageNumB = styled.button`
+	border: none;
+	background-color: transparent;
 	float: left;
 	margin: 0 0.4rem 0 0.4rem;
 	cursor: pointer;
@@ -85,25 +85,8 @@ const SPageNumL = styled.button`
 	width: 2rem;
 	padding-bottom: 0.4rem;
 	text-align: center;
-`;
-
-	const SUnselectPageNumB = styled.button`
-		color: gray;
-		border: none;
-		background-color: transparent;
-		float: left;
-		margin: 0 0.4rem 0 0.4rem;
-		cursor: pointer;
-		font-weight: 700;
-		font-size: 1.3rem;
-		width: 2rem;
-		padding-bottom: 0.4rem;
-		text-align: center;
-		
-		:focus {
-			color: ${Colors.black};
-			text-decoration: underline;
-		}
+	color: ${props => props.isCurrent ? `${Colors.black}` : 'gray'};
+	text-decoration: ${props => props.isCurrent ? 'underline' : 'none'};
 `;
 
 export default PageButtonContainer;
