@@ -1,15 +1,20 @@
 import styled from 'styled-components';
 import PdfButton from '../../assets/pdfOn.png';
+import placeholderImg from '../../assets/2.jpg';
 
 function PublicationContainer({ title, content, img, pdf }) {
 	return (
 		<PublicationContentWrapper>
 			<ImgWrapper>
-				<img
-					src={`https://s3.ap-northeast-2.amazonaws.com/sookyeong-ssk/publication/${img.key}`}
-					width='100%'
-					alt='library img'
-				/>
+				{img ? (
+					<img
+						src={`https://s3.ap-northeast-2.amazonaws.com/sookyeong-ssk/publication/${img.key}`}
+						width='100%'
+						alt='library img'
+					/>
+				) : (
+					<img src={placeholderImg} width='100%' alt='placeholder' />
+				)}
 			</ImgWrapper>
 			<PdfWrapper>
 				<a
