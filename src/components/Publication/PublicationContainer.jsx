@@ -51,7 +51,7 @@ const PublicationTitle = styled.div`
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-	margin-top: 1.2rem;
+	padding-top: 1.2rem;
 `;
 
 const PublicationContent = styled.div`
@@ -60,7 +60,7 @@ const PublicationContent = styled.div`
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-	margin-top: 1rem;
+	padding-top: 1rem;
 	padding-left: 0.2rem;
 `;
 

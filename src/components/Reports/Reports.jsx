@@ -41,7 +41,12 @@ function Reports() {
 					))}
 				</ReportsContainer>
 			</SContainerD>
-			<PageButtonContainer total={total} size={size} setCurrentPage={setCurrentPage} />
+			<PageButtonContainer
+				total={total}
+				size={size}
+				setCurrentPage={setCurrentPage}
+				currentPage={currentPage}
+			/>
 		</div>
 	);
 }
