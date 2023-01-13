@@ -44,7 +44,12 @@ function Publication() {
 					</div>
 				))}
 			</PublicationWrapper>
-			<PageButtonContainer total={total} size={size} setCurrentPage={setCurrentPage} />
+			<PageButtonContainer
+				total={total}
+				size={size}
+				setCurrentPage={setCurrentPage}
+				currentPage={currentPage}
+			/>
 		</div>
 	);
 }

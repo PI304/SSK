@@ -42,7 +42,6 @@ const SReportsInfoD = styled.div`
 	> div > a:hover {
 		color: #639ae9;
 		cursor: pointer;
-		transition: 0.2s ease;
 	}
 
 	> .title {
@@ -51,12 +50,12 @@ const SReportsInfoD = styled.div`
 	}
 
 	> .body {
-		margin-top: 1.2rem;
+		padding-top: 1rem;
 		overflow: hidden;
-		max-height: auto;
 		white-space: word-break;
 		font-weight: 400;
 		font-size: 1.7rem;
+		line-height: 2.3rem;
 	}
 	> .date {
 		font-size: 1.3rem;
